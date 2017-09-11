@@ -10,6 +10,7 @@
     "url": "git+https://github.com/ceilfors/realtime-ww2-alexa.git"
   },
   "devDependencies": {
+    "alexa-sdk": "^1.0.14",
     "babel-core": "^6.25.0",
     "babel-loader": "^7.1.1",
     "babel-plugin-transform-runtime": "^6.23.0",

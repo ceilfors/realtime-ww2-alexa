@@ -10,7 +10,7 @@ provider:
   region: eu-west-1
 
 functions:
-  first:
-    handler: handler.luckyNumber
+  alexa-skill:
+    handler: handler.handler
     events:
     - alexaSkill
