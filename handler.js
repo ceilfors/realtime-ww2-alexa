@@ -1,6 +1,7 @@
 'use strict';
 
 const Alexa = require('alexa-sdk');
+const moment = require('moment');
 
 const HELP_MESSAGE = 'You can say tell me the latest news, or, you can say exit... What can I help you with?';
 const HELP_REPROMPT = 'What can I help you with?';
@@ -11,7 +12,8 @@ const handlers = {
       this.emit('GetLatestIntent');
   },
   'GetLatestIntent': function () {
-      const speechOutput = 'Nazi SS troops dressed as Poles are attacking German radio station in Gleiwitz, to provide false pretext for German attack on Poland.';
+      const datetime = moment('1966-09-01T20:51:57+0000')
+      const speechOutput = `<say-as interpret-as="date">${datetime.format('YYYYMMDD')}</say-as>. ${datetime.format('LT')}. Nazi SS troops dressed as Poles are attacking German radio station in Gleiwitz, to provide false pretext for German attack on Poland.`;
       this.emit(':tell', speechOutput);
   },
   'AMAZON.HelpIntent': function () {
