@@ -13,7 +13,9 @@ const handlers = {
   },
   'GetLatestIntent': function () {
       const datetime = moment('1966-09-01T20:51:57+0000')
-      const speechOutput = `<say-as interpret-as="date">${datetime.format('YYYYMMDD')}</say-as>. ${datetime.format('LT')}. Nazi SS troops dressed as Poles are attacking German radio station in Gleiwitz, to provide false pretext for German attack on Poland.`;
+      const speechOutput = `<s><say-as interpret-as="date">${datetime.format('YYYYMMDD')}</say-as></s>` +
+        `<s>${datetime.format('LT')}</s>` + 
+        '<s>Nazi SS troops dressed as Poles are attacking German radio station in Gleiwitz, to provide false pretext for German attack on Poland</s>'
       this.emit(':tell', speechOutput);
   },
   'AMAZON.HelpIntent': function () {
