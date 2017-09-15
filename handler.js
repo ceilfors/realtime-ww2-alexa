@@ -1,38 +1,38 @@
-'use strict';
+'use strict'
 
-const Alexa = require('alexa-sdk');
-const moment = require('moment');
+const Alexa = require('alexa-sdk')
+const moment = require('moment')
 
-const HELP_MESSAGE = 'You can say tell me the latest news, or, you can say exit... What can I help you with?';
-const HELP_REPROMPT = 'What can I help you with?';
-const STOP_MESSAGE = 'Goodbye!';
+const HELP_MESSAGE = 'You can say tell me the latest news, or, you can say exit... What can I help you with?'
+const HELP_REPROMPT = 'What can I help you with?'
+const STOP_MESSAGE = 'Goodbye!'
 
 const handlers = {
   'LaunchRequest': function () {
-      this.emit('GetLatestIntent');
+    this.emit('GetLatestIntent')
   },
   'GetLatestIntent': function () {
-      const datetime = moment('1966-09-01T20:51:57+0000')
-      const speechOutput = `<s><say-as interpret-as="date">${datetime.format('YYYYMMDD')}</say-as></s>` +
-        `<s>${datetime.format('LT')}</s>` + 
+    const datetime = moment('1966-09-01T20:51:57+0000')
+    const speechOutput = `<s><say-as interpret-as="date">${datetime.format('YYYYMMDD')}</say-as></s>` +
+        `<s>${datetime.format('LT')}</s>` +
         '<s>Nazi SS troops dressed as Poles are attacking German radio station in Gleiwitz, to provide false pretext for German attack on Poland</s>'
-      this.emit(':tell', speechOutput);
+    this.emit(':tell', speechOutput)
   },
   'AMAZON.HelpIntent': function () {
-      this.response.speak(HELP_MESSAGE).listen(HELP_REPROMPT);
-      this.emit(':responseReady');
+    this.response.speak(HELP_MESSAGE).listen(HELP_REPROMPT)
+    this.emit(':responseReady')
   },
   'AMAZON.CancelIntent': function () {
-      this.emit(':tell', STOP_MESSAGE);
+    this.emit(':tell', STOP_MESSAGE)
   },
   'AMAZON.StopIntent': function () {
-      this.emit(':tell', STOP_MESSAGE);
-  },
-};
+    this.emit(':tell', STOP_MESSAGE)
+  }
+}
 
 exports.handler = function (event, context, callback) {
-  const alexa = Alexa.handler(event, context, callback);
+  const alexa = Alexa.handler(event, context, callback)
   alexa.appId = 'amzn1.ask.skill.8955b37b-4975-4462-a4d9-4aba0ad647f0'
-  alexa.registerHandlers(handlers);
-  alexa.execute();
-};
+  alexa.registerHandlers(handlers)
+  alexa.execute()
+}

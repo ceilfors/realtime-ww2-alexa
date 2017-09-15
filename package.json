@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "description": "Realtime WW2",
   "scripts": {
+    "pretest": "standard",
     "test": "echo \"Error: no test specified\" && exit 1",
     "acceptanceTest": "AWS_REGION=eu-west-1 mocha --compilers js:babel-core/register test/acceptance.spec.js"
   },
