@@ -3,7 +3,8 @@
   "version": "0.1.0",
   "description": "Realtime WW2",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "acceptanceTest": "AWS_REGION=eu-west-1 mocha --compilers js:babel-core/register test/acceptance.spec.js"
   },
   "repository": {
     "type": "git",
@@ -11,13 +12,23 @@
   },
   "devDependencies": {
     "alexa-sdk": "^1.0.14",
+    "aws-sdk": "^2.115.0",
     "babel-core": "^6.25.0",
     "babel-loader": "^7.1.1",
     "babel-plugin-transform-runtime": "^6.23.0",
     "babel-polyfill": "^6.23.0",
     "babel-preset-env": "^1.6.0",
+    "chai": "^4.1.2",
+    "mocha": "^3.5.3",
     "serverless-webpack": "^2.2.0",
+    "sinon": "^3.2.1",
+    "standard": "^10.0.3",
     "webpack": "^3.3.0"
+  },
+  "babel": {
+    "presets": [
+      "env"
+    ]
   },
   "author": "ceilfors",
   "license": "Apache-2.0",
