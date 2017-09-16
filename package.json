@@ -38,7 +38,5 @@
     "url": "https://github.com/ceilfors/realtime-ww2-alexa/issues"
   },
   "homepage": "https://github.com/ceilfors/realtime-ww2-alexa#readme",
-  "dependencies": {
-    "moment": "^2.18.1"
-  }
+  "private": true
 }

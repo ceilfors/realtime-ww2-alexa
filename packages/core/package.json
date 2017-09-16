@@ -1,0 +1,11 @@
+{
+  "name": "@realtime-ww2-alexa/core",
+  "version": "0.1.0",
+  "description": "The core alexa skill",
+  "author": "ceilfors",
+  "license": "Apache-2.0",
+  "private": true,
+  "dependencies": {
+    "moment": "^2.18.1"
+  }
+}
