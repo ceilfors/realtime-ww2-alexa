@@ -1,6 +1,7 @@
 const path = require('path')
 // eslint-disable-next-line import/no-unresolved
 const slsw = require('serverless-webpack')
+const CopyWebpackPlugin = require('copy-webpack-plugin')
 
 module.exports = {
   entry: slsw.lib.entries,
@@ -20,5 +21,10 @@ module.exports = {
   },
   externals: [
     'aws-sdk'
+  ],
+  plugins: [
+    new CopyWebpackPlugin([
+          { from: '.serverless-secret.json' }
+    ])
   ]
 }

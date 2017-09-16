@@ -3,11 +3,16 @@ service:
 
 plugins:
   - serverless-webpack
+  - serverless-crypt
 
 provider:
   name: aws
   runtime: nodejs6.10
   region: eu-west-1
+
+package:
+  include:
+    - .serverless-secret.json
 
 custom:
   stage: ${opt:stage, self:provider.stage}
@@ -15,6 +20,7 @@ custom:
     twitterRestBaseUrl: https://api.twitter.com/1.1
   dev:
     twitterRestBaseUrl: { "Fn::Join" : ["", [ "https://", { "Ref" : "ApiGatewayRestApi" }, ".execute-api.${self:provider.region}.amazonaws.com/${self:custom.stage}" ] ]  }
+  cryptKeyId: c7ce8560-aaf1-4780-be8c-b048a0a749f2
 
 functions:
   alexa-skill:

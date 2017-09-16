@@ -8,9 +8,9 @@ describe('acceptance', () => {
 
   it('retrieves the latest news from twitter', () => {
     return realtimeWw2.getLatestNews().then(latestNews => {
-      expect(latestNews.date).to.equal('19660901')
-      expect(latestNews.time).to.equal('8:51 PM')
-      expect(latestNews.content).to.equal('Nazi SS troops dressed as Poles are attacking German radio station in Gleiwitz, to provide false pretext for German attack on Poland')
+      expect(latestNews.content).to.equal('Soviet Union has so far remained neutral in war in Poland on its western border, following Nazi-Soviet nonaggression pact signed 3 weeks ago https://t.co/BqLYzxUa9G')
+      expect(latestNews.date).to.equal('20170914')
+      expect(latestNews.time).to.equal('5:09 PM')
     })
   })
 })
