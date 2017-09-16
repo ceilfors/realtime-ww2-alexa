@@ -9,8 +9,21 @@ provider:
   runtime: nodejs6.10
   region: eu-west-1
 
+custom:
+  stage: ${opt:stage, self:provider.stage}
+  prod:
+    twitterRestBaseUrl: https://api.twitter.com/1.1
+  dev:
+    twitterRestBaseUrl: { "Fn::Join" : ["", [ "https://", { "Ref" : "ApiGatewayRestApi" }, ".execute-api.${self:provider.region}.amazonaws.com/${self:custom.stage}" ] ]  }
+
 functions:
   alexa-skill:
     handler: handler.handler
     events:
-    - alexaSkill
+      - alexaSkill
+    environment:
+      TWITTER_REST_BASE_URL: ${self:custom.${self:custom.stage}.twitterRestBaseUrl}
+  fake-twitter:
+    handler: packages/fake-twitter/handler.handler
+    events:
+      - http: GET statuses/user_timeline.json

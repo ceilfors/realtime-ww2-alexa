@@ -20,6 +20,7 @@
     "babel-polyfill": "^6.23.0",
     "babel-preset-env": "^1.6.0",
     "chai": "^4.1.2",
+    "lerna": "^2.2.0",
     "mocha": "^3.5.3",
     "serverless-webpack": "^2.2.0",
     "sinon": "^3.2.1",

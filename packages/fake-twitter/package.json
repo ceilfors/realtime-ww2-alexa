@@ -1,0 +1,7 @@
+{
+  "name": "@realtime-ww2-alexa/fake-twitter",
+  "version": "0.1.0",
+  "description": "Fake twitter",
+  "author": "ceilfors",
+  "license": "Apache-2.0"
+}

@@ -1,0 +1,3382 @@
+[
+    {
+        "created_at": "Thu Sep 14 17:09:04 +0000 2017",
+        "id": 908377066873212900,
+        "id_str": "908377066873212928",
+        "full_text": "Soviet Union has so far remained neutral in war in Poland on its western border, following Nazi-Soviet nonaggression pact signed 3 weeks ago https://t.co/BqLYzxUa9G",
+        "truncated": false,
+        "display_text_range": [
+            0,
+            140
+        ],
+        "entities": {
+            "hashtags": [],
+            "symbols": [],
+            "user_mentions": [],
+            "urls": [],
+            "media": [
+                {
+                    "id": 908376696029622300,
+                    "id_str": "908376696029622273",
+                    "indices": [
+                        141,
+                        164
+                    ],
+                    "media_url": "http://pbs.twimg.com/media/DJszytEWsAEwGrf.jpg",
+                    "media_url_https": "https://pbs.twimg.com/media/DJszytEWsAEwGrf.jpg",
+                    "url": "https://t.co/BqLYzxUa9G",
+                    "display_url": "pic.twitter.com/BqLYzxUa9G",
+                    "expanded_url": "https://twitter.com/RealTimeWWII/status/908377066873212928/photo/1",
+                    "type": "photo",
+                    "sizes": {
+                        "large": {
+                            "w": 1104,
+                            "h": 844,
+                            "resize": "fit"
+                        },
+                        "small": {
+                            "w": 680,
+                            "h": 520,
+                            "resize": "fit"
+                        },
+                        "medium": {
+                            "w": 1104,
+                            "h": 844,
+                            "resize": "fit"
+                        },
+                        "thumb": {
+                            "w": 150,
+                            "h": 150,
+                            "resize": "crop"
+                        }
+                    }
+                }
+            ]
+        },
+        "extended_entities": {
+            "media": [
+                {
+                    "id": 908376696029622300,
+                    "id_str": "908376696029622273",
+                    "indices": [
+                        141,
+                        164
+                    ],
+                    "media_url": "http://pbs.twimg.com/media/DJszytEWsAEwGrf.jpg",
+                    "media_url_https": "https://pbs.twimg.com/media/DJszytEWsAEwGrf.jpg",
+                    "url": "https://t.co/BqLYzxUa9G",
+                    "display_url": "pic.twitter.com/BqLYzxUa9G",
+                    "expanded_url": "https://twitter.com/RealTimeWWII/status/908377066873212928/photo/1",
+                    "type": "photo",
+                    "sizes": {
+                        "large": {
+                            "w": 1104,
+                            "h": 844,
+                            "resize": "fit"
+                        },
+                        "small": {
+                            "w": 680,
+                            "h": 520,
+                            "resize": "fit"
+                        },
+                        "medium": {
+                            "w": 1104,
+                            "h": 844,
+                            "resize": "fit"
+                        },
+                        "thumb": {
+                            "w": 150,
+                            "h": 150,
+                            "resize": "crop"
+                        }
+                    }
+                }
+            ]
+        },
+        "source": "<a href=\"http://twitter.com\" rel=\"nofollow\">Twitter Web Client</a>",
+        "in_reply_to_status_id": null,
+        "in_reply_to_status_id_str": null,
+        "in_reply_to_user_id": null,
+        "in_reply_to_user_id_str": null,
+        "in_reply_to_screen_name": null,
+        "user": {
+            "id": 364488011,
+            "id_str": "364488011",
+            "name": "WW2 Tweets from 1939",
+            "screen_name": "RealTimeWWII",
+            "location": "Britain",
+            "description": "I livetweet the 2nd World War\n, as it happened on this day in 1939 & for 6 years to come (2nd time around). Created by Alwyn Collinson, realtimewwii@gmail.com",
+            "url": null,
+            "entities": {
+                "description": {
+                    "urls": []
+                }
+            },
+            "protected": false,
+            "followers_count": 492341,
+            "friends_count": 455,
+            "listed_count": 5494,
+            "created_at": "Mon Aug 29 21:13:38 +0000 2011",
+            "favourites_count": 26,
+            "utc_offset": 3600,
+            "time_zone": "London",
+            "geo_enabled": true,
+            "verified": false,
+            "statuses_count": 10786,
+            "lang": "en",
+            "contributors_enabled": false,
+            "is_translator": false,
+            "is_translation_enabled": false,
+            "profile_background_color": "C0DEED",
+            "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+            "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+            "profile_background_tile": false,
+            "profile_image_url": "http://pbs.twimg.com/profile_images/903352195520847872/jh5wz6_5_normal.jpg",
+            "profile_image_url_https": "https://pbs.twimg.com/profile_images/903352195520847872/jh5wz6_5_normal.jpg",
+            "profile_banner_url": "https://pbs.twimg.com/profile_banners/364488011/1504255818",
+            "profile_link_color": "1DA1F2",
+            "profile_sidebar_border_color": "C0DEED",
+            "profile_sidebar_fill_color": "DDEEF6",
+            "profile_text_color": "333333",
+            "profile_use_background_image": true,
+            "has_extended_profile": true,
+            "default_profile": true,
+            "default_profile_image": false,
+            "following": true,
+            "follow_request_sent": false,
+            "notifications": false,
+            "translator_type": "none"
+        },
+        "geo": null,
+        "coordinates": null,
+        "place": {
+            "id": "4303d1afc1e98c37",
+            "url": "https://api.twitter.com/1.1/geo/id/4303d1afc1e98c37.json",
+            "place_type": "city",
+            "name": "Moscow",
+            "full_name": "Moscow, Russia",
+            "country_code": "RU",
+            "country": "Russia",
+            "contained_within": [],
+            "bounding_box": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            36.8878157,
+                            55.4883244
+                        ],
+                        [
+                            37.9674694,
+                            55.4883244
+                        ],
+                        [
+                            37.9674694,
+                            56.0212511
+                        ],
+                        [
+                            36.8878157,
+                            56.0212511
+                        ]
+                    ]
+                ]
+            },
+            "attributes": {}
+        },
+        "contributors": null,
+        "is_quote_status": false,
+        "retweet_count": 117,
+        "favorite_count": 221,
+        "favorited": false,
+        "retweeted": false,
+        "possibly_sensitive": false,
+        "lang": "en"
+    },
+    {
+        "created_at": "Thu Sep 14 17:05:41 +0000 2017",
+        "id": 908376218092924900,
+        "id_str": "908376218092924928",
+        "full_text": "The Soviet newspaper Pravda has launched an anti-Polish campaign, with articles alleging Polish mistreatment of ethnic minorities. https://t.co/LlSRjeomrD",
+        "truncated": false,
+        "display_text_range": [
+            0,
+            130
+        ],
+        "entities": {
+            "hashtags": [],
+            "symbols": [],
+            "user_mentions": [],
+            "urls": [],
+            "media": [
+                {
+                    "id": 908375803842494500,
+                    "id_str": "908375803842494464",
+                    "indices": [
+                        131,
+                        154
+                    ],
+                    "media_url": "http://pbs.twimg.com/media/DJsy-xaXgAALbXx.jpg",
+                    "media_url_https": "https://pbs.twimg.com/media/DJsy-xaXgAALbXx.jpg",
+                    "url": "https://t.co/LlSRjeomrD",
+                    "display_url": "pic.twitter.com/LlSRjeomrD",
+                    "expanded_url": "https://twitter.com/RealTimeWWII/status/908376218092924928/photo/1",
+                    "type": "photo",
+                    "sizes": {
+                        "thumb": {
+                            "w": 150,
+                            "h": 150,
+                            "resize": "crop"
+                        },
+                        "large": {
+                            "w": 501,
+                            "h": 705,
+                            "resize": "fit"
+                        },
+                        "small": {
+                            "w": 483,
+                            "h": 680,
+                            "resize": "fit"
+                        },
+                        "medium": {
+                            "w": 501,
+                            "h": 705,
+                            "resize": "fit"
+                        }
+                    }
+                }
+            ]
+        },
+        "extended_entities": {
+            "media": [
+                {
+                    "id": 908375803842494500,
+                    "id_str": "908375803842494464",
+                    "indices": [
+                        131,
+                        154
+                    ],
+                    "media_url": "http://pbs.twimg.com/media/DJsy-xaXgAALbXx.jpg",
+                    "media_url_https": "https://pbs.twimg.com/media/DJsy-xaXgAALbXx.jpg",
+                    "url": "https://t.co/LlSRjeomrD",
+                    "display_url": "pic.twitter.com/LlSRjeomrD",
+                    "expanded_url": "https://twitter.com/RealTimeWWII/status/908376218092924928/photo/1",
+                    "type": "photo",
+                    "sizes": {
+                        "thumb": {
+                            "w": 150,
+                            "h": 150,
+                            "resize": "crop"
+                        },
+                        "large": {
+                            "w": 501,
+                            "h": 705,
+                            "resize": "fit"
+                        },
+                        "small": {
+                            "w": 483,
+                            "h": 680,
+                            "resize": "fit"
+                        },
+                        "medium": {
+                            "w": 501,
+                            "h": 705,
+                            "resize": "fit"
+                        }
+                    }
+                }
+            ]
+        },
+        "source": "<a href=\"http://twitter.com\" rel=\"nofollow\">Twitter Web Client</a>",
+        "in_reply_to_status_id": null,
+        "in_reply_to_status_id_str": null,
+        "in_reply_to_user_id": null,
+        "in_reply_to_user_id_str": null,
+        "in_reply_to_screen_name": null,
+        "user": {
+            "id": 364488011,
+            "id_str": "364488011",
+            "name": "WW2 Tweets from 1939",
+            "screen_name": "RealTimeWWII",
+            "location": "Britain",
+            "description": "I livetweet the 2nd World War\n, as it happened on this day in 1939 & for 6 years to come (2nd time around). Created by Alwyn Collinson, realtimewwii@gmail.com",
+            "url": null,
+            "entities": {
+                "description": {
+                    "urls": []
+                }
+            },
+            "protected": false,
+            "followers_count": 492341,
+            "friends_count": 455,
+            "listed_count": 5494,
+            "created_at": "Mon Aug 29 21:13:38 +0000 2011",
+            "favourites_count": 26,
+            "utc_offset": 3600,
+            "time_zone": "London",
+            "geo_enabled": true,
+            "verified": false,
+            "statuses_count": 10786,
+            "lang": "en",
+            "contributors_enabled": false,
+            "is_translator": false,
+            "is_translation_enabled": false,
+            "profile_background_color": "C0DEED",
+            "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+            "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+            "profile_background_tile": false,
+            "profile_image_url": "http://pbs.twimg.com/profile_images/903352195520847872/jh5wz6_5_normal.jpg",
+            "profile_image_url_https": "https://pbs.twimg.com/profile_images/903352195520847872/jh5wz6_5_normal.jpg",
+            "profile_banner_url": "https://pbs.twimg.com/profile_banners/364488011/1504255818",
+            "profile_link_color": "1DA1F2",
+            "profile_sidebar_border_color": "C0DEED",
+            "profile_sidebar_fill_color": "DDEEF6",
+            "profile_text_color": "333333",
+            "profile_use_background_image": true,
+            "has_extended_profile": true,
+            "default_profile": true,
+            "default_profile_image": false,
+            "following": true,
+            "follow_request_sent": false,
+            "notifications": false,
+            "translator_type": "none"
+        },
+        "geo": null,
+        "coordinates": null,
+        "place": {
+            "id": "4303d1afc1e98c37",
+            "url": "https://api.twitter.com/1.1/geo/id/4303d1afc1e98c37.json",
+            "place_type": "city",
+            "name": "Moscow",
+            "full_name": "Moscow, Russia",
+            "country_code": "RU",
+            "country": "Russia",
+            "contained_within": [],
+            "bounding_box": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            36.8878157,
+                            55.4883244
+                        ],
+                        [
+                            37.9674694,
+                            55.4883244
+                        ],
+                        [
+                            37.9674694,
+                            56.0212511
+                        ],
+                        [
+                            36.8878157,
+                            56.0212511
+                        ]
+                    ]
+                ]
+            },
+            "attributes": {}
+        },
+        "contributors": null,
+        "is_quote_status": false,
+        "retweet_count": 224,
+        "favorite_count": 331,
+        "favorited": false,
+        "retweeted": false,
+        "possibly_sensitive": false,
+        "lang": "en"
+    },
+    {
+        "created_at": "Thu Sep 14 13:53:37 +0000 2017",
+        "id": 908327881545220100,
+        "id_str": "908327881545220099",
+        "full_text": "Retreating Polish troops have blown up bridges to slow Germans, but Wehrmacht combat engineers throw up pontoons to keep blitzkreig rolling: https://t.co/Z27rTY5fJl",
+        "truncated": false,
+        "display_text_range": [
+            0,
+            140
+        ],
+        "entities": {
+            "hashtags": [],
+            "symbols": [],
+            "user_mentions": [],
+            "urls": [],
+            "media": [
+                {
+                    "id": 908327180698087400,
+                    "id_str": "908327180698087424",
+                    "indices": [
+                        141,
+                        164
+                    ],
+                    "media_url": "http://pbs.twimg.com/media/DJsGwiFXcAACA0A.jpg",
+                    "media_url_https": "https://pbs.twimg.com/media/DJsGwiFXcAACA0A.jpg",
+                    "url": "https://t.co/Z27rTY5fJl",
+                    "display_url": "pic.twitter.com/Z27rTY5fJl",
+                    "expanded_url": "https://twitter.com/RealTimeWWII/status/908327881545220099/photo/1",
+                    "type": "photo",
+                    "sizes": {
+                        "small": {
+                            "w": 680,
+                            "h": 461,
+                            "resize": "fit"
+                        },
+                        "thumb": {
+                            "w": 150,
+                            "h": 150,
+                            "resize": "crop"
+                        },
+                        "medium": {
+                            "w": 750,
+                            "h": 509,
+                            "resize": "fit"
+                        },
+                        "large": {
+                            "w": 750,
+                            "h": 509,
+                            "resize": "fit"
+                        }
+                    }
+                }
+            ]
+        },
+        "extended_entities": {
+            "media": [
+                {
+                    "id": 908327180698087400,
+                    "id_str": "908327180698087424",
+                    "indices": [
+                        141,
+                        164
+                    ],
+                    "media_url": "http://pbs.twimg.com/media/DJsGwiFXcAACA0A.jpg",
+                    "media_url_https": "https://pbs.twimg.com/media/DJsGwiFXcAACA0A.jpg",
+                    "url": "https://t.co/Z27rTY5fJl",
+                    "display_url": "pic.twitter.com/Z27rTY5fJl",
+                    "expanded_url": "https://twitter.com/RealTimeWWII/status/908327881545220099/photo/1",
+                    "type": "photo",
+                    "sizes": {
+                        "small": {
+                            "w": 680,
+                            "h": 461,
+                            "resize": "fit"
+                        },
+                        "thumb": {
+                            "w": 150,
+                            "h": 150,
+                            "resize": "crop"
+                        },
+                        "medium": {
+                            "w": 750,
+                            "h": 509,
+                            "resize": "fit"
+                        },
+                        "large": {
+                            "w": 750,
+                            "h": 509,
+                            "resize": "fit"
+                        }
+                    }
+                },
+                {
+                    "id": 908327192144306200,
+                    "id_str": "908327192144306176",
+                    "indices": [
+                        141,
+                        164
+                    ],
+                    "media_url": "http://pbs.twimg.com/media/DJsGxMuW4AAsaIe.jpg",
+                    "media_url_https": "https://pbs.twimg.com/media/DJsGxMuW4AAsaIe.jpg",
+                    "url": "https://t.co/Z27rTY5fJl",
+                    "display_url": "pic.twitter.com/Z27rTY5fJl",
+                    "expanded_url": "https://twitter.com/RealTimeWWII/status/908327881545220099/photo/1",
+                    "type": "photo",
+                    "sizes": {
+                        "small": {
+                            "w": 680,
+                            "h": 459,
+                            "resize": "fit"
+                        },
+                        "large": {
+                            "w": 750,
+                            "h": 506,
+                            "resize": "fit"
+                        },
+                        "thumb": {
+                            "w": 150,
+                            "h": 150,
+                            "resize": "crop"
+                        },
+                        "medium": {
+                            "w": 750,
+                            "h": 506,
+                            "resize": "fit"
+                        }
+                    }
+                }
+            ]
+        },
+        "source": "<a href=\"http://twitter.com\" rel=\"nofollow\">Twitter Web Client</a>",
+        "in_reply_to_status_id": null,
+        "in_reply_to_status_id_str": null,
+        "in_reply_to_user_id": null,
+        "in_reply_to_user_id_str": null,
+        "in_reply_to_screen_name": null,
+        "user": {
+            "id": 364488011,
+            "id_str": "364488011",
+            "name": "WW2 Tweets from 1939",
+            "screen_name": "RealTimeWWII",
+            "location": "Britain",
+            "description": "I livetweet the 2nd World War\n, as it happened on this day in 1939 & for 6 years to come (2nd time around). Created by Alwyn Collinson, realtimewwii@gmail.com",
+            "url": null,
+            "entities": {
+                "description": {
+                    "urls": []
+                }
+            },
+            "protected": false,
+            "followers_count": 492341,
+            "friends_count": 455,
+            "listed_count": 5494,
+            "created_at": "Mon Aug 29 21:13:38 +0000 2011",
+            "favourites_count": 26,
+            "utc_offset": 3600,
+            "time_zone": "London",
+            "geo_enabled": true,
+            "verified": false,
+            "statuses_count": 10786,
+            "lang": "en",
+            "contributors_enabled": false,
+            "is_translator": false,
+            "is_translation_enabled": false,
+            "profile_background_color": "C0DEED",
+            "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+            "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+            "profile_background_tile": false,
+            "profile_image_url": "http://pbs.twimg.com/profile_images/903352195520847872/jh5wz6_5_normal.jpg",
+            "profile_image_url_https": "https://pbs.twimg.com/profile_images/903352195520847872/jh5wz6_5_normal.jpg",
+            "profile_banner_url": "https://pbs.twimg.com/profile_banners/364488011/1504255818",
+            "profile_link_color": "1DA1F2",
+            "profile_sidebar_border_color": "C0DEED",
+            "profile_sidebar_fill_color": "DDEEF6",
+            "profile_text_color": "333333",
+            "profile_use_background_image": true,
+            "has_extended_profile": true,
+            "default_profile": true,
+            "default_profile_image": false,
+            "following": true,
+            "follow_request_sent": false,
+            "notifications": false,
+            "translator_type": "none"
+        },
+        "geo": null,
+        "coordinates": null,
+        "place": {
+            "id": "09f6a7707f18e0b1",
+            "url": "https://api.twitter.com/1.1/geo/id/09f6a7707f18e0b1.json",
+            "place_type": "city",
+            "name": "Paris",
+            "full_name": "Paris, France",
+            "country_code": "FR",
+            "country": "France",
+            "contained_within": [],
+            "bounding_box": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            2.2241006,
+                            48.8155214
+                        ],
+                        [
+                            2.4699053,
+                            48.8155214
+                        ],
+                        [
+                            2.4699053,
+                            48.9021461
+                        ],
+                        [
+                            2.2241006,
+                            48.9021461
+                        ]
+                    ]
+                ]
+            },
+            "attributes": {}
+        },
+        "contributors": null,
+        "is_quote_status": false,
+        "retweet_count": 155,
+        "favorite_count": 351,
+        "favorited": false,
+        "retweeted": false,
+        "possibly_sensitive": false,
+        "lang": "en"
+    },
+    {
+        "created_at": "Thu Sep 14 13:49:44 +0000 2017",
+        "id": 908326905618804700,
+        "id_str": "908326905618804736",
+        "full_text": "German troops have broken Polish defences on the Narew river. They are advancing across the plains north of Warsaw, encircling the capital. https://t.co/pfFqvtCGU4",
+        "truncated": false,
+        "display_text_range": [
+            0,
+            139
+        ],
+        "entities": {
+            "hashtags": [],
+            "symbols": [],
+            "user_mentions": [],
+            "urls": [],
+            "media": [
+                {
+                    "id": 908326892582965200,
+                    "id_str": "908326892582965251",
+                    "indices": [
+                        140,
+                        163
+                    ],
+                    "media_url": "http://pbs.twimg.com/media/DJsGfwxXkAMalr8.jpg",
+                    "media_url_https": "https://pbs.twimg.com/media/DJsGfwxXkAMalr8.jpg",
+                    "url": "https://t.co/pfFqvtCGU4",
+                    "display_url": "pic.twitter.com/pfFqvtCGU4",
+                    "expanded_url": "https://twitter.com/RealTimeWWII/status/908326905618804736/photo/1",
+                    "type": "photo",
+                    "sizes": {
+                        "large": {
+                            "w": 750,
+                            "h": 490,
+                            "resize": "fit"
+                        },
+                        "small": {
+                            "w": 680,
+                            "h": 444,
+                            "resize": "fit"
+                        },
+                        "thumb": {
+                            "w": 150,
+                            "h": 150,
+                            "resize": "crop"
+                        },
+                        "medium": {
+                            "w": 750,
+                            "h": 490,
+                            "resize": "fit"
+                        }
+                    }
+                }
+            ]
+        },
+        "extended_entities": {
+            "media": [
+                {
+                    "id": 908326892582965200,
+                    "id_str": "908326892582965251",
+                    "indices": [
+                        140,
+                        163
+                    ],
+                    "media_url": "http://pbs.twimg.com/media/DJsGfwxXkAMalr8.jpg",
+                    "media_url_https": "https://pbs.twimg.com/media/DJsGfwxXkAMalr8.jpg",
+                    "url": "https://t.co/pfFqvtCGU4",
+                    "display_url": "pic.twitter.com/pfFqvtCGU4",
+                    "expanded_url": "https://twitter.com/RealTimeWWII/status/908326905618804736/photo/1",
+                    "type": "photo",
+                    "sizes": {
+                        "large": {
+                            "w": 750,
+                            "h": 490,
+                            "resize": "fit"
+                        },
+                        "small": {
+                            "w": 680,
+                            "h": 444,
+                            "resize": "fit"
+                        },
+                        "thumb": {
+                            "w": 150,
+                            "h": 150,
+                            "resize": "crop"
+                        },
+                        "medium": {
+                            "w": 750,
+                            "h": 490,
+                            "resize": "fit"
+                        }
+                    }
+                }
+            ]
+        },
+        "source": "<a href=\"http://twitter.com\" rel=\"nofollow\">Twitter Web Client</a>",
+        "in_reply_to_status_id": null,
+        "in_reply_to_status_id_str": null,
+        "in_reply_to_user_id": null,
+        "in_reply_to_user_id_str": null,
+        "in_reply_to_screen_name": null,
+        "user": {
+            "id": 364488011,
+            "id_str": "364488011",
+            "name": "WW2 Tweets from 1939",
+            "screen_name": "RealTimeWWII",
+            "location": "Britain",
+            "description": "I livetweet the 2nd World War\n, as it happened on this day in 1939 & for 6 years to come (2nd time around). Created by Alwyn Collinson, realtimewwii@gmail.com",
+            "url": null,
+            "entities": {
+                "description": {
+                    "urls": []
+                }
+            },
+            "protected": false,
+            "followers_count": 492341,
+            "friends_count": 455,
+            "listed_count": 5494,
+            "created_at": "Mon Aug 29 21:13:38 +0000 2011",
+            "favourites_count": 26,
+            "utc_offset": 3600,
+            "time_zone": "London",
+            "geo_enabled": true,
+            "verified": false,
+            "statuses_count": 10786,
+            "lang": "en",
+            "contributors_enabled": false,
+            "is_translator": false,
+            "is_translation_enabled": false,
+            "profile_background_color": "C0DEED",
+            "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+            "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+            "profile_background_tile": false,
+            "profile_image_url": "http://pbs.twimg.com/profile_images/903352195520847872/jh5wz6_5_normal.jpg",
+            "profile_image_url_https": "https://pbs.twimg.com/profile_images/903352195520847872/jh5wz6_5_normal.jpg",
+            "profile_banner_url": "https://pbs.twimg.com/profile_banners/364488011/1504255818",
+            "profile_link_color": "1DA1F2",
+            "profile_sidebar_border_color": "C0DEED",
+            "profile_sidebar_fill_color": "DDEEF6",
+            "profile_text_color": "333333",
+            "profile_use_background_image": true,
+            "has_extended_profile": true,
+            "default_profile": true,
+            "default_profile_image": false,
+            "following": true,
+            "follow_request_sent": false,
+            "notifications": false,
+            "translator_type": "none"
+        },
+        "geo": null,
+        "coordinates": null,
+        "place": {
+            "id": "09f6a7707f18e0b1",
+            "url": "https://api.twitter.com/1.1/geo/id/09f6a7707f18e0b1.json",
+            "place_type": "city",
+            "name": "Paris",
+            "full_name": "Paris, France",
+            "country_code": "FR",
+            "country": "France",
+            "contained_within": [],
+            "bounding_box": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            2.2241006,
+                            48.8155214
+                        ],
+                        [
+                            2.4699053,
+                            48.8155214
+                        ],
+                        [
+                            2.4699053,
+                            48.9021461
+                        ],
+                        [
+                            2.2241006,
+                            48.9021461
+                        ]
+                    ]
+                ]
+            },
+            "attributes": {}
+        },
+        "contributors": null,
+        "is_quote_status": false,
+        "retweet_count": 96,
+        "favorite_count": 230,
+        "favorited": false,
+        "retweeted": false,
+        "possibly_sensitive": false,
+        "lang": "en"
+    },
+    {
+        "created_at": "Thu Sep 14 13:18:15 +0000 2017",
+        "id": 908318980594655200,
+        "id_str": "908318980594655234",
+        "full_text": "French Prime Minister Édouard Daladier has formed a war cabinet. He is personally responsible for foreign affairs, war, &amp; national defence. https://t.co/ulXImnS5gG",
+        "truncated": false,
+        "display_text_range": [
+            0,
+            143
+        ],
+        "entities": {
+            "hashtags": [],
+            "symbols": [],
+            "user_mentions": [],
+            "urls": [],
+            "media": [
+                {
+                    "id": 908318947606503400,
+                    "id_str": "908318947606503424",
+                    "indices": [
+                        144,
+                        167
+                    ],
+                    "media_url": "http://pbs.twimg.com/media/DJr_RTbXoAAVkfS.jpg",
+                    "media_url_https": "https://pbs.twimg.com/media/DJr_RTbXoAAVkfS.jpg",
+                    "url": "https://t.co/ulXImnS5gG",
+                    "display_url": "pic.twitter.com/ulXImnS5gG",
+                    "expanded_url": "https://twitter.com/RealTimeWWII/status/908318980594655234/photo/1",
+                    "type": "photo",
+                    "sizes": {
+                        "small": {
+                            "w": 486,
+                            "h": 675,
+                            "resize": "fit"
+                        },
+                        "thumb": {
+                            "w": 150,
+                            "h": 150,
+                            "resize": "crop"
+                        },
+                        "medium": {
+                            "w": 486,
+                            "h": 675,
+                            "resize": "fit"
+                        },
+                        "large": {
+                            "w": 486,
+                            "h": 675,
+                            "resize": "fit"
+                        }
+                    }
+                }
+            ]
+        },
+        "extended_entities": {
+            "media": [
+                {
+                    "id": 908318947606503400,
+                    "id_str": "908318947606503424",
+                    "indices": [
+                        144,
+                        167
+                    ],
+                    "media_url": "http://pbs.twimg.com/media/DJr_RTbXoAAVkfS.jpg",
+                    "media_url_https": "https://pbs.twimg.com/media/DJr_RTbXoAAVkfS.jpg",
+                    "url": "https://t.co/ulXImnS5gG",
+                    "display_url": "pic.twitter.com/ulXImnS5gG",
+                    "expanded_url": "https://twitter.com/RealTimeWWII/status/908318980594655234/photo/1",
+                    "type": "photo",
+                    "sizes": {
+                        "small": {
+                            "w": 486,
+                            "h": 675,
+                            "resize": "fit"
+                        },
+                        "thumb": {
+                            "w": 150,
+                            "h": 150,
+                            "resize": "crop"
+                        },
+                        "medium": {
+                            "w": 486,
+                            "h": 675,
+                            "resize": "fit"
+                        },
+                        "large": {
+                            "w": 486,
+                            "h": 675,
+                            "resize": "fit"
+                        }
+                    }
+                }
+            ]
+        },
+        "source": "<a href=\"http://twitter.com\" rel=\"nofollow\">Twitter Web Client</a>",
+        "in_reply_to_status_id": null,
+        "in_reply_to_status_id_str": null,
+        "in_reply_to_user_id": null,
+        "in_reply_to_user_id_str": null,
+        "in_reply_to_screen_name": null,
+        "user": {
+            "id": 364488011,
+            "id_str": "364488011",
+            "name": "WW2 Tweets from 1939",
+            "screen_name": "RealTimeWWII",
+            "location": "Britain",
+            "description": "I livetweet the 2nd World War\n, as it happened on this day in 1939 & for 6 years to come (2nd time around). Created by Alwyn Collinson, realtimewwii@gmail.com",
+            "url": null,
+            "entities": {
+                "description": {
+                    "urls": []
+                }
+            },
+            "protected": false,
+            "followers_count": 492341,
+            "friends_count": 455,
+            "listed_count": 5494,
+            "created_at": "Mon Aug 29 21:13:38 +0000 2011",
+            "favourites_count": 26,
+            "utc_offset": 3600,
+            "time_zone": "London",
+            "geo_enabled": true,
+            "verified": false,
+            "statuses_count": 10786,
+            "lang": "en",
+            "contributors_enabled": false,
+            "is_translator": false,
+            "is_translation_enabled": false,
+            "profile_background_color": "C0DEED",
+            "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+            "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+            "profile_background_tile": false,
+            "profile_image_url": "http://pbs.twimg.com/profile_images/903352195520847872/jh5wz6_5_normal.jpg",
+            "profile_image_url_https": "https://pbs.twimg.com/profile_images/903352195520847872/jh5wz6_5_normal.jpg",
+            "profile_banner_url": "https://pbs.twimg.com/profile_banners/364488011/1504255818",
+            "profile_link_color": "1DA1F2",
+            "profile_sidebar_border_color": "C0DEED",
+            "profile_sidebar_fill_color": "DDEEF6",
+            "profile_text_color": "333333",
+            "profile_use_background_image": true,
+            "has_extended_profile": true,
+            "default_profile": true,
+            "default_profile_image": false,
+            "following": true,
+            "follow_request_sent": false,
+            "notifications": false,
+            "translator_type": "none"
+        },
+        "geo": null,
+        "coordinates": null,
+        "place": {
+            "id": "09f6a7707f18e0b1",
+            "url": "https://api.twitter.com/1.1/geo/id/09f6a7707f18e0b1.json",
+            "place_type": "city",
+            "name": "Paris",
+            "full_name": "Paris, France",
+            "country_code": "FR",
+            "country": "France",
+            "contained_within": [],
+            "bounding_box": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            2.2241006,
+                            48.8155214
+                        ],
+                        [
+                            2.4699053,
+                            48.8155214
+                        ],
+                        [
+                            2.4699053,
+                            48.9021461
+                        ],
+                        [
+                            2.2241006,
+                            48.9021461
+                        ]
+                    ]
+                ]
+            },
+            "attributes": {}
+        },
+        "contributors": null,
+        "is_quote_status": false,
+        "retweet_count": 53,
+        "favorite_count": 185,
+        "favorited": false,
+        "retweeted": false,
+        "possibly_sensitive": false,
+        "lang": "en"
+    },
+    {
+        "created_at": "Wed Sep 13 17:17:51 +0000 2017",
+        "id": 908016889036726300,
+        "id_str": "908016889036726272",
+        "full_text": "\"It is felt that Mussolini was up to no good with his scheme for holding a peace conference and spoiling what has become everybody's war.\"",
+        "truncated": false,
+        "display_text_range": [
+            0,
+            138
+        ],
+        "entities": {
+            "hashtags": [],
+            "symbols": [],
+            "user_mentions": [],
+            "urls": []
+        },
+        "source": "<a href=\"http://twitter.com\" rel=\"nofollow\">Twitter Web Client</a>",
+        "in_reply_to_status_id": 908016071394955300,
+        "in_reply_to_status_id_str": "908016071394955264",
+        "in_reply_to_user_id": 364488011,
+        "in_reply_to_user_id_str": "364488011",
+        "in_reply_to_screen_name": "RealTimeWWII",
+        "user": {
+            "id": 364488011,
+            "id_str": "364488011",
+            "name": "WW2 Tweets from 1939",
+            "screen_name": "RealTimeWWII",
+            "location": "Britain",
+            "description": "I livetweet the 2nd World War\n, as it happened on this day in 1939 & for 6 years to come (2nd time around). Created by Alwyn Collinson, realtimewwii@gmail.com",
+            "url": null,
+            "entities": {
+                "description": {
+                    "urls": []
+                }
+            },
+            "protected": false,
+            "followers_count": 492341,
+            "friends_count": 455,
+            "listed_count": 5494,
+            "created_at": "Mon Aug 29 21:13:38 +0000 2011",
+            "favourites_count": 26,
+            "utc_offset": 3600,
+            "time_zone": "London",
+            "geo_enabled": true,
+            "verified": false,
+            "statuses_count": 10786,
+            "lang": "en",
+            "contributors_enabled": false,
+            "is_translator": false,
+            "is_translation_enabled": false,
+            "profile_background_color": "C0DEED",
+            "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+            "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+            "profile_background_tile": false,
+            "profile_image_url": "http://pbs.twimg.com/profile_images/903352195520847872/jh5wz6_5_normal.jpg",
+            "profile_image_url_https": "https://pbs.twimg.com/profile_images/903352195520847872/jh5wz6_5_normal.jpg",
+            "profile_banner_url": "https://pbs.twimg.com/profile_banners/364488011/1504255818",
+            "profile_link_color": "1DA1F2",
+            "profile_sidebar_border_color": "C0DEED",
+            "profile_sidebar_fill_color": "DDEEF6",
+            "profile_text_color": "333333",
+            "profile_use_background_image": true,
+            "has_extended_profile": true,
+            "default_profile": true,
+            "default_profile_image": false,
+            "following": true,
+            "follow_request_sent": false,
+            "notifications": false,
+            "translator_type": "none"
+        },
+        "geo": null,
+        "coordinates": null,
+        "place": {
+            "id": "535f0c2de0121451",
+            "url": "https://api.twitter.com/1.1/geo/id/535f0c2de0121451.json",
+            "place_type": "city",
+            "name": "Warsaw",
+            "full_name": "Warsaw, Poland",
+            "country_code": "PL",
+            "country": "Poland",
+            "contained_within": [],
+            "bounding_box": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            20.8525518,
+                            52.0977088
+                        ],
+                        [
+                            21.2710282,
+                            52.0977088
+                        ],
+                        [
+                            21.2710282,
+                            52.3679617
+                        ],
+                        [
+                            20.8525518,
+                            52.3679617
+                        ]
+                    ]
+                ]
+            },
+            "attributes": {}
+        },
+        "contributors": null,
+        "is_quote_status": false,
+        "retweet_count": 46,
+        "favorite_count": 155,
+        "favorited": false,
+        "retweeted": false,
+        "lang": "en"
+    },
+    {
+        "created_at": "Wed Sep 13 17:14:36 +0000 2017",
+        "id": 908016071394955300,
+        "id_str": "908016071394955264",
+        "full_text": "In New Yorker magazine, Molly Panter-Downes's Letter from London: \"If there wasn't a war it would be a bloody shame\" https://t.co/wdfvKd3AuJ",
+        "truncated": false,
+        "display_text_range": [
+            0,
+            140
+        ],
+        "entities": {
+            "hashtags": [],
+            "symbols": [],
+            "user_mentions": [],
+            "urls": [
+                {
+                    "url": "https://t.co/wdfvKd3AuJ",
+                    "expanded_url": "https://www.theguardian.com/world/2009/sep/06/second-world-war-phoney-london",
+                    "display_url": "theguardian.com/world/2009/sep…",
+                    "indices": [
+                        117,
+                        140
+                    ]
+                }
+            ]
+        },
+        "source": "<a href=\"http://twitter.com\" rel=\"nofollow\">Twitter Web Client</a>",
+        "in_reply_to_status_id": null,
+        "in_reply_to_status_id_str": null,
+        "in_reply_to_user_id": null,
+        "in_reply_to_user_id_str": null,
+        "in_reply_to_screen_name": null,
+        "user": {
+            "id": 364488011,
+            "id_str": "364488011",
+            "name": "WW2 Tweets from 1939",
+            "screen_name": "RealTimeWWII",
+            "location": "Britain",
+            "description": "I livetweet the 2nd World War\n, as it happened on this day in 1939 & for 6 years to come (2nd time around). Created by Alwyn Collinson, realtimewwii@gmail.com",
+            "url": null,
+            "entities": {
+                "description": {
+                    "urls": []
+                }
+            },
+            "protected": false,
+            "followers_count": 492341,
+            "friends_count": 455,
+            "listed_count": 5494,
+            "created_at": "Mon Aug 29 21:13:38 +0000 2011",
+            "favourites_count": 26,
+            "utc_offset": 3600,
+            "time_zone": "London",
+            "geo_enabled": true,
+            "verified": false,
+            "statuses_count": 10786,
+            "lang": "en",
+            "contributors_enabled": false,
+            "is_translator": false,
+            "is_translation_enabled": false,
+            "profile_background_color": "C0DEED",
+            "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+            "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+            "profile_background_tile": false,
+            "profile_image_url": "http://pbs.twimg.com/profile_images/903352195520847872/jh5wz6_5_normal.jpg",
+            "profile_image_url_https": "https://pbs.twimg.com/profile_images/903352195520847872/jh5wz6_5_normal.jpg",
+            "profile_banner_url": "https://pbs.twimg.com/profile_banners/364488011/1504255818",
+            "profile_link_color": "1DA1F2",
+            "profile_sidebar_border_color": "C0DEED",
+            "profile_sidebar_fill_color": "DDEEF6",
+            "profile_text_color": "333333",
+            "profile_use_background_image": true,
+            "has_extended_profile": true,
+            "default_profile": true,
+            "default_profile_image": false,
+            "following": true,
+            "follow_request_sent": false,
+            "notifications": false,
+            "translator_type": "none"
+        },
+        "geo": null,
+        "coordinates": null,
+        "place": {
+            "id": "535f0c2de0121451",
+            "url": "https://api.twitter.com/1.1/geo/id/535f0c2de0121451.json",
+            "place_type": "city",
+            "name": "Warsaw",
+            "full_name": "Warsaw, Poland",
+            "country_code": "PL",
+            "country": "Poland",
+            "contained_within": [],
+            "bounding_box": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            20.8525518,
+                            52.0977088
+                        ],
+                        [
+                            21.2710282,
+                            52.0977088
+                        ],
+                        [
+                            21.2710282,
+                            52.3679617
+                        ],
+                        [
+                            20.8525518,
+                            52.3679617
+                        ]
+                    ]
+                ]
+            },
+            "attributes": {}
+        },
+        "contributors": null,
+        "is_quote_status": false,
+        "retweet_count": 59,
+        "favorite_count": 157,
+        "favorited": false,
+        "retweeted": false,
+        "possibly_sensitive": false,
+        "lang": "en"
+    },
+    {
+        "created_at": "Wed Sep 13 12:22:48 +0000 2017",
+        "id": 907942639642796000,
+        "id_str": "907942639642796032",
+        "full_text": "US war photographer Julien Bryan, only foreign correspondent in Warsaw, comforts Kazimiera after she saw sister machine-gunned by Luftwaffe. https://t.co/DN61BmKLih",
+        "truncated": false,
+        "display_text_range": [
+            0,
+            140
+        ],
+        "entities": {
+            "hashtags": [],
+            "symbols": [],
+            "user_mentions": [],
+            "urls": [],
+            "media": [
+                {
+                    "id": 907942138448678900,
+                    "id_str": "907942138448678913",
+                    "indices": [
+                        141,
+                        164
+                    ],
+                    "media_url": "http://pbs.twimg.com/media/DJmokH7XkAEf4Hc.jpg",
+                    "media_url_https": "https://pbs.twimg.com/media/DJmokH7XkAEf4Hc.jpg",
+                    "url": "https://t.co/DN61BmKLih",
+                    "display_url": "pic.twitter.com/DN61BmKLih",
+                    "expanded_url": "https://twitter.com/RealTimeWWII/status/907942639642796032/photo/1",
+                    "type": "photo",
+                    "sizes": {
+                        "medium": {
+                            "w": 526,
+                            "h": 800,
+                            "resize": "fit"
+                        },
+                        "thumb": {
+                            "w": 150,
+                            "h": 150,
+                            "resize": "crop"
+                        },
+                        "small": {
+                            "w": 447,
+                            "h": 680,
+                            "resize": "fit"
+                        },
+                        "large": {
+                            "w": 526,
+                            "h": 800,
+                            "resize": "fit"
+                        }
+                    }
+                }
+            ]
+        },
+        "extended_entities": {
+            "media": [
+                {
+                    "id": 907942138448678900,
+                    "id_str": "907942138448678913",
+                    "indices": [
+                        141,
+                        164
+                    ],
+                    "media_url": "http://pbs.twimg.com/media/DJmokH7XkAEf4Hc.jpg",
+                    "media_url_https": "https://pbs.twimg.com/media/DJmokH7XkAEf4Hc.jpg",
+                    "url": "https://t.co/DN61BmKLih",
+                    "display_url": "pic.twitter.com/DN61BmKLih",
+                    "expanded_url": "https://twitter.com/RealTimeWWII/status/907942639642796032/photo/1",
+                    "type": "photo",
+                    "sizes": {
+                        "medium": {
+                            "w": 526,
+                            "h": 800,
+                            "resize": "fit"
+                        },
+                        "thumb": {
+                            "w": 150,
+                            "h": 150,
+                            "resize": "crop"
+                        },
+                        "small": {
+                            "w": 447,
+                            "h": 680,
+                            "resize": "fit"
+                        },
+                        "large": {
+                            "w": 526,
+                            "h": 800,
+                            "resize": "fit"
+                        }
+                    }
+                }
+            ]
+        },
+        "source": "<a href=\"http://twitter.com\" rel=\"nofollow\">Twitter Web Client</a>",
+        "in_reply_to_status_id": 907940184917991400,
+        "in_reply_to_status_id_str": "907940184917991424",
+        "in_reply_to_user_id": 364488011,
+        "in_reply_to_user_id_str": "364488011",
+        "in_reply_to_screen_name": "RealTimeWWII",
+        "user": {
+            "id": 364488011,
+            "id_str": "364488011",
+            "name": "WW2 Tweets from 1939",
+            "screen_name": "RealTimeWWII",
+            "location": "Britain",
+            "description": "I livetweet the 2nd World War\n, as it happened on this day in 1939 & for 6 years to come (2nd time around). Created by Alwyn Collinson, realtimewwii@gmail.com",
+            "url": null,
+            "entities": {
+                "description": {
+                    "urls": []
+                }
+            },
+            "protected": false,
+            "followers_count": 492341,
+            "friends_count": 455,
+            "listed_count": 5494,
+            "created_at": "Mon Aug 29 21:13:38 +0000 2011",
+            "favourites_count": 26,
+            "utc_offset": 3600,
+            "time_zone": "London",
+            "geo_enabled": true,
+            "verified": false,
+            "statuses_count": 10786,
+            "lang": "en",
+            "contributors_enabled": false,
+            "is_translator": false,
+            "is_translation_enabled": false,
+            "profile_background_color": "C0DEED",
+            "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+            "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+            "profile_background_tile": false,
+            "profile_image_url": "http://pbs.twimg.com/profile_images/903352195520847872/jh5wz6_5_normal.jpg",
+            "profile_image_url_https": "https://pbs.twimg.com/profile_images/903352195520847872/jh5wz6_5_normal.jpg",
+            "profile_banner_url": "https://pbs.twimg.com/profile_banners/364488011/1504255818",
+            "profile_link_color": "1DA1F2",
+            "profile_sidebar_border_color": "C0DEED",
+            "profile_sidebar_fill_color": "DDEEF6",
+            "profile_text_color": "333333",
+            "profile_use_background_image": true,
+            "has_extended_profile": true,
+            "default_profile": true,
+            "default_profile_image": false,
+            "following": true,
+            "follow_request_sent": false,
+            "notifications": false,
+            "translator_type": "none"
+        },
+        "geo": null,
+        "coordinates": null,
+        "place": {
+            "id": "535f0c2de0121451",
+            "url": "https://api.twitter.com/1.1/geo/id/535f0c2de0121451.json",
+            "place_type": "city",
+            "name": "Warsaw",
+            "full_name": "Warsaw, Poland",
+            "country_code": "PL",
+            "country": "Poland",
+            "contained_within": [],
+            "bounding_box": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            20.8525518,
+                            52.0977088
+                        ],
+                        [
+                            21.2710282,
+                            52.0977088
+                        ],
+                        [
+                            21.2710282,
+                            52.3679617
+                        ],
+                        [
+                            20.8525518,
+                            52.3679617
+                        ]
+                    ]
+                ]
+            },
+            "attributes": {}
+        },
+        "contributors": null,
+        "is_quote_status": false,
+        "retweet_count": 313,
+        "favorite_count": 670,
+        "favorited": false,
+        "retweeted": false,
+        "possibly_sensitive": false,
+        "lang": "en"
+    },
+    {
+        "created_at": "Wed Sep 13 12:13:03 +0000 2017",
+        "id": 907940184917991400,
+        "id_str": "907940184917991424",
+        "full_text": "Sisters Andia &amp; Kazimiera Kostewicz, 14 &amp; 12, picking potatoes on outskirts of Warsaw, have been strafed by a German plane. Andia is dead. https://t.co/OzP5Xd1fmG",
+        "truncated": false,
+        "display_text_range": [
+            0,
+            146
+        ],
+        "entities": {
+            "hashtags": [],
+            "symbols": [],
+            "user_mentions": [],
+            "urls": [],
+            "media": [
+                {
+                    "id": 907939441414721500,
+                    "id_str": "907939441414721536",
+                    "indices": [
+                        147,
+                        170
+                    ],
+                    "media_url": "http://pbs.twimg.com/media/DJmmHIsXUAArCqJ.jpg",
+                    "media_url_https": "https://pbs.twimg.com/media/DJmmHIsXUAArCqJ.jpg",
+                    "url": "https://t.co/OzP5Xd1fmG",
+                    "display_url": "pic.twitter.com/OzP5Xd1fmG",
+                    "expanded_url": "https://twitter.com/RealTimeWWII/status/907940184917991424/photo/1",
+                    "type": "photo",
+                    "sizes": {
+                        "small": {
+                            "w": 454,
+                            "h": 680,
+                            "resize": "fit"
+                        },
+                        "thumb": {
+                            "w": 150,
+                            "h": 150,
+                            "resize": "crop"
+                        },
+                        "large": {
+                            "w": 627,
+                            "h": 939,
+                            "resize": "fit"
+                        },
+                        "medium": {
+                            "w": 627,
+                            "h": 939,
+                            "resize": "fit"
+                        }
+                    }
+                }
+            ]
+        },
+        "extended_entities": {
+            "media": [
+                {
+                    "id": 907939441414721500,
+                    "id_str": "907939441414721536",
+                    "indices": [
+                        147,
+                        170
+                    ],
+                    "media_url": "http://pbs.twimg.com/media/DJmmHIsXUAArCqJ.jpg",
+                    "media_url_https": "https://pbs.twimg.com/media/DJmmHIsXUAArCqJ.jpg",
+                    "url": "https://t.co/OzP5Xd1fmG",
+                    "display_url": "pic.twitter.com/OzP5Xd1fmG",
+                    "expanded_url": "https://twitter.com/RealTimeWWII/status/907940184917991424/photo/1",
+                    "type": "photo",
+                    "sizes": {
+                        "small": {
+                            "w": 454,
+                            "h": 680,
+                            "resize": "fit"
+                        },
+                        "thumb": {
+                            "w": 150,
+                            "h": 150,
+                            "resize": "crop"
+                        },
+                        "large": {
+                            "w": 627,
+                            "h": 939,
+                            "resize": "fit"
+                        },
+                        "medium": {
+                            "w": 627,
+                            "h": 939,
+                            "resize": "fit"
+                        }
+                    }
+                }
+            ]
+        },
+        "source": "<a href=\"http://twitter.com\" rel=\"nofollow\">Twitter Web Client</a>",
+        "in_reply_to_status_id": null,
+        "in_reply_to_status_id_str": null,
+        "in_reply_to_user_id": null,
+        "in_reply_to_user_id_str": null,
+        "in_reply_to_screen_name": null,
+        "user": {
+            "id": 364488011,
+            "id_str": "364488011",
+            "name": "WW2 Tweets from 1939",
+            "screen_name": "RealTimeWWII",
+            "location": "Britain",
+            "description": "I livetweet the 2nd World War\n, as it happened on this day in 1939 & for 6 years to come (2nd time around). Created by Alwyn Collinson, realtimewwii@gmail.com",
+            "url": null,
+            "entities": {
+                "description": {
+                    "urls": []
+                }
+            },
+            "protected": false,
+            "followers_count": 492341,
+            "friends_count": 455,
+            "listed_count": 5494,
+            "created_at": "Mon Aug 29 21:13:38 +0000 2011",
+            "favourites_count": 26,
+            "utc_offset": 3600,
+            "time_zone": "London",
+            "geo_enabled": true,
+            "verified": false,
+            "statuses_count": 10786,
+            "lang": "en",
+            "contributors_enabled": false,
+            "is_translator": false,
+            "is_translation_enabled": false,
+            "profile_background_color": "C0DEED",
+            "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+            "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+            "profile_background_tile": false,
+            "profile_image_url": "http://pbs.twimg.com/profile_images/903352195520847872/jh5wz6_5_normal.jpg",
+            "profile_image_url_https": "https://pbs.twimg.com/profile_images/903352195520847872/jh5wz6_5_normal.jpg",
+            "profile_banner_url": "https://pbs.twimg.com/profile_banners/364488011/1504255818",
+            "profile_link_color": "1DA1F2",
+            "profile_sidebar_border_color": "C0DEED",
+            "profile_sidebar_fill_color": "DDEEF6",
+            "profile_text_color": "333333",
+            "profile_use_background_image": true,
+            "has_extended_profile": true,
+            "default_profile": true,
+            "default_profile_image": false,
+            "following": true,
+            "follow_request_sent": false,
+            "notifications": false,
+            "translator_type": "none"
+        },
+        "geo": null,
+        "coordinates": null,
+        "place": {
+            "id": "535f0c2de0121451",
+            "url": "https://api.twitter.com/1.1/geo/id/535f0c2de0121451.json",
+            "place_type": "city",
+            "name": "Warsaw",
+            "full_name": "Warsaw, Poland",
+            "country_code": "PL",
+            "country": "Poland",
+            "contained_within": [],
+            "bounding_box": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            20.8525518,
+                            52.0977088
+                        ],
+                        [
+                            21.2710282,
+                            52.0977088
+                        ],
+                        [
+                            21.2710282,
+                            52.3679617
+                        ],
+                        [
+                            20.8525518,
+                            52.3679617
+                        ]
+                    ]
+                ]
+            },
+            "attributes": {}
+        },
+        "contributors": null,
+        "is_quote_status": false,
+        "retweet_count": 592,
+        "favorite_count": 883,
+        "favorited": false,
+        "retweeted": false,
+        "possibly_sensitive": false,
+        "lang": "en"
+    },
+    {
+        "created_at": "Wed Sep 13 08:10:04 +0000 2017",
+        "id": 907879037233705000,
+        "id_str": "907879037233704960",
+        "full_text": "Warsaw- in fact, all unoccupied Poland- is under constant German air attack, both indiscriminate bombing &amp; strafing people on the ground. https://t.co/vzk0bYbXiV",
+        "truncated": false,
+        "display_text_range": [
+            0,
+            141
+        ],
+        "entities": {
+            "hashtags": [],
+            "symbols": [],
+            "user_mentions": [],
+            "urls": [],
+            "media": [
+                {
+                    "id": 907879031495786500,
+                    "id_str": "907879031495786498",
+                    "indices": [
+                        142,
+                        165
+                    ],
+                    "media_url": "http://pbs.twimg.com/media/DJlvK0NVAAIHA-X.jpg",
+                    "media_url_https": "https://pbs.twimg.com/media/DJlvK0NVAAIHA-X.jpg",
+                    "url": "https://t.co/vzk0bYbXiV",
+                    "display_url": "pic.twitter.com/vzk0bYbXiV",
+                    "expanded_url": "https://twitter.com/RealTimeWWII/status/907879037233704960/photo/1",
+                    "type": "photo",
+                    "sizes": {
+                        "small": {
+                            "w": 568,
+                            "h": 680,
+                            "resize": "fit"
+                        },
+                        "thumb": {
+                            "w": 150,
+                            "h": 150,
+                            "resize": "crop"
+                        },
+                        "medium": {
+                            "w": 1002,
+                            "h": 1200,
+                            "resize": "fit"
+                        },
+                        "large": {
+                            "w": 1024,
+                            "h": 1226,
+                            "resize": "fit"
+                        }
+                    }
+                }
+            ]
+        },
+        "extended_entities": {
+            "media": [
+                {
+                    "id": 907879031495786500,
+                    "id_str": "907879031495786498",
+                    "indices": [
+                        142,
+                        165
+                    ],
+                    "media_url": "http://pbs.twimg.com/media/DJlvK0NVAAIHA-X.jpg",
+                    "media_url_https": "https://pbs.twimg.com/media/DJlvK0NVAAIHA-X.jpg",
+                    "url": "https://t.co/vzk0bYbXiV",
+                    "display_url": "pic.twitter.com/vzk0bYbXiV",
+                    "expanded_url": "https://twitter.com/RealTimeWWII/status/907879037233704960/photo/1",
+                    "type": "photo",
+                    "sizes": {
+                        "small": {
+                            "w": 568,
+                            "h": 680,
+                            "resize": "fit"
+                        },
+                        "thumb": {
+                            "w": 150,
+                            "h": 150,
+                            "resize": "crop"
+                        },
+                        "medium": {
+                            "w": 1002,
+                            "h": 1200,
+                            "resize": "fit"
+                        },
+                        "large": {
+                            "w": 1024,
+                            "h": 1226,
+                            "resize": "fit"
+                        }
+                    }
+                }
+            ]
+        },
+        "source": "<a href=\"https://twittimer.com\" rel=\"nofollow\">Twittimer</a>",
+        "in_reply_to_status_id": null,
+        "in_reply_to_status_id_str": null,
+        "in_reply_to_user_id": null,
+        "in_reply_to_user_id_str": null,
+        "in_reply_to_screen_name": null,
+        "user": {
+            "id": 364488011,
+            "id_str": "364488011",
+            "name": "WW2 Tweets from 1939",
+            "screen_name": "RealTimeWWII",
+            "location": "Britain",
+            "description": "I livetweet the 2nd World War\n, as it happened on this day in 1939 & for 6 years to come (2nd time around). Created by Alwyn Collinson, realtimewwii@gmail.com",
+            "url": null,
+            "entities": {
+                "description": {
+                    "urls": []
+                }
+            },
+            "protected": false,
+            "followers_count": 492341,
+            "friends_count": 455,
+            "listed_count": 5494,
+            "created_at": "Mon Aug 29 21:13:38 +0000 2011",
+            "favourites_count": 26,
+            "utc_offset": 3600,
+            "time_zone": "London",
+            "geo_enabled": true,
+            "verified": false,
+            "statuses_count": 10786,
+            "lang": "en",
+            "contributors_enabled": false,
+            "is_translator": false,
+            "is_translation_enabled": false,
+            "profile_background_color": "C0DEED",
+            "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+            "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+            "profile_background_tile": false,
+            "profile_image_url": "http://pbs.twimg.com/profile_images/903352195520847872/jh5wz6_5_normal.jpg",
+            "profile_image_url_https": "https://pbs.twimg.com/profile_images/903352195520847872/jh5wz6_5_normal.jpg",
+            "profile_banner_url": "https://pbs.twimg.com/profile_banners/364488011/1504255818",
+            "profile_link_color": "1DA1F2",
+            "profile_sidebar_border_color": "C0DEED",
+            "profile_sidebar_fill_color": "DDEEF6",
+            "profile_text_color": "333333",
+            "profile_use_background_image": true,
+            "has_extended_profile": true,
+            "default_profile": true,
+            "default_profile_image": false,
+            "following": true,
+            "follow_request_sent": false,
+            "notifications": false,
+            "translator_type": "none"
+        },
+        "geo": null,
+        "coordinates": null,
+        "place": null,
+        "contributors": null,
+        "is_quote_status": false,
+        "retweet_count": 98,
+        "favorite_count": 220,
+        "favorited": false,
+        "retweeted": false,
+        "possibly_sensitive": false,
+        "lang": "en"
+    },
+    {
+        "created_at": "Wed Sep 13 07:39:30 +0000 2017",
+        "id": 907871342653042700,
+        "id_str": "907871342653042688",
+        "full_text": "Flour has run out in Warsaw. Parties of women digging for potatoes on abandoned farms &amp; stripping dead horses of meat to feed their families https://t.co/lJpgzpjQSt",
+        "truncated": false,
+        "display_text_range": [
+            0,
+            144
+        ],
+        "entities": {
+            "hashtags": [],
+            "symbols": [],
+            "user_mentions": [],
+            "urls": [],
+            "media": [
+                {
+                    "id": 907871214328336400,
+                    "id_str": "907871214328336384",
+                    "indices": [
+                        145,
+                        168
+                    ],
+                    "media_url": "http://pbs.twimg.com/media/DJloDy_X0AA07an.jpg",
+                    "media_url_https": "https://pbs.twimg.com/media/DJloDy_X0AA07an.jpg",
+                    "url": "https://t.co/lJpgzpjQSt",
+                    "display_url": "pic.twitter.com/lJpgzpjQSt",
+                    "expanded_url": "https://twitter.com/RealTimeWWII/status/907871342653042688/photo/1",
+                    "type": "photo",
+                    "sizes": {
+                        "medium": {
+                            "w": 784,
+                            "h": 560,
+                            "resize": "fit"
+                        },
+                        "thumb": {
+                            "w": 150,
+                            "h": 150,
+                            "resize": "crop"
+                        },
+                        "small": {
+                            "w": 680,
+                            "h": 486,
+                            "resize": "fit"
+                        },
+                        "large": {
+                            "w": 784,
+                            "h": 560,
+                            "resize": "fit"
+                        }
+                    }
+                }
+            ]
+        },
+        "extended_entities": {
+            "media": [
+                {
+                    "id": 907871214328336400,
+                    "id_str": "907871214328336384",
+                    "indices": [
+                        145,
+                        168
+                    ],
+                    "media_url": "http://pbs.twimg.com/media/DJloDy_X0AA07an.jpg",
+                    "media_url_https": "https://pbs.twimg.com/media/DJloDy_X0AA07an.jpg",
+                    "url": "https://t.co/lJpgzpjQSt",
+                    "display_url": "pic.twitter.com/lJpgzpjQSt",
+                    "expanded_url": "https://twitter.com/RealTimeWWII/status/907871342653042688/photo/1",
+                    "type": "photo",
+                    "sizes": {
+                        "medium": {
+                            "w": 784,
+                            "h": 560,
+                            "resize": "fit"
+                        },
+                        "thumb": {
+                            "w": 150,
+                            "h": 150,
+                            "resize": "crop"
+                        },
+                        "small": {
+                            "w": 680,
+                            "h": 486,
+                            "resize": "fit"
+                        },
+                        "large": {
+                            "w": 784,
+                            "h": 560,
+                            "resize": "fit"
+                        }
+                    }
+                }
+            ]
+        },
+        "source": "<a href=\"http://twitter.com\" rel=\"nofollow\">Twitter Web Client</a>",
+        "in_reply_to_status_id": null,
+        "in_reply_to_status_id_str": null,
+        "in_reply_to_user_id": null,
+        "in_reply_to_user_id_str": null,
+        "in_reply_to_screen_name": null,
+        "user": {
+            "id": 364488011,
+            "id_str": "364488011",
+            "name": "WW2 Tweets from 1939",
+            "screen_name": "RealTimeWWII",
+            "location": "Britain",
+            "description": "I livetweet the 2nd World War\n, as it happened on this day in 1939 & for 6 years to come (2nd time around). Created by Alwyn Collinson, realtimewwii@gmail.com",
+            "url": null,
+            "entities": {
+                "description": {
+                    "urls": []
+                }
+            },
+            "protected": false,
+            "followers_count": 492341,
+            "friends_count": 455,
+            "listed_count": 5494,
+            "created_at": "Mon Aug 29 21:13:38 +0000 2011",
+            "favourites_count": 26,
+            "utc_offset": 3600,
+            "time_zone": "London",
+            "geo_enabled": true,
+            "verified": false,
+            "statuses_count": 10786,
+            "lang": "en",
+            "contributors_enabled": false,
+            "is_translator": false,
+            "is_translation_enabled": false,
+            "profile_background_color": "C0DEED",
+            "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+            "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+            "profile_background_tile": false,
+            "profile_image_url": "http://pbs.twimg.com/profile_images/903352195520847872/jh5wz6_5_normal.jpg",
+            "profile_image_url_https": "https://pbs.twimg.com/profile_images/903352195520847872/jh5wz6_5_normal.jpg",
+            "profile_banner_url": "https://pbs.twimg.com/profile_banners/364488011/1504255818",
+            "profile_link_color": "1DA1F2",
+            "profile_sidebar_border_color": "C0DEED",
+            "profile_sidebar_fill_color": "DDEEF6",
+            "profile_text_color": "333333",
+            "profile_use_background_image": true,
+            "has_extended_profile": true,
+            "default_profile": true,
+            "default_profile_image": false,
+            "following": true,
+            "follow_request_sent": false,
+            "notifications": false,
+            "translator_type": "none"
+        },
+        "geo": null,
+        "coordinates": null,
+        "place": {
+            "id": "796f0a99c6dc0c2f",
+            "url": "https://api.twitter.com/1.1/geo/id/796f0a99c6dc0c2f.json",
+            "place_type": "admin",
+            "name": "Silesia",
+            "full_name": "Silesia, Poland",
+            "country_code": "PL",
+            "country": "Poland",
+            "contained_within": [],
+            "bounding_box": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            18.0354954,
+                            49.393941
+                        ],
+                        [
+                            19.9740054,
+                            49.393941
+                        ],
+                        [
+                            19.9740054,
+                            51.098531
+                        ],
+                        [
+                            18.0354954,
+                            51.098531
+                        ]
+                    ]
+                ]
+            },
+            "attributes": {}
+        },
+        "contributors": null,
+        "is_quote_status": false,
+        "retweet_count": 270,
+        "favorite_count": 473,
+        "favorited": false,
+        "retweeted": false,
+        "possibly_sensitive": false,
+        "lang": "en"
+    },
+    {
+        "created_at": "Tue Sep 12 20:34:59 +0000 2017",
+        "id": 907704112313184300,
+        "id_str": "907704112313184256",
+        "full_text": "German Army Group South has encircled &amp; destroyed remnants of 5 Polish divisions &amp; a cavalry brigade at Radom (6), taking 60,000 prisoners. https://t.co/h53ShBcBL1",
+        "truncated": false,
+        "display_text_range": [
+            0,
+            147
+        ],
+        "entities": {
+            "hashtags": [],
+            "symbols": [],
+            "user_mentions": [],
+            "urls": [],
+            "media": [
+                {
+                    "id": 907703718518378500,
+                    "id_str": "907703718518378496",
+                    "indices": [
+                        148,
+                        171
+                    ],
+                    "media_url": "http://pbs.twimg.com/media/DJjPuQeW0AAknI_.jpg",
+                    "media_url_https": "https://pbs.twimg.com/media/DJjPuQeW0AAknI_.jpg",
+                    "url": "https://t.co/h53ShBcBL1",
+                    "display_url": "pic.twitter.com/h53ShBcBL1",
+                    "expanded_url": "https://twitter.com/RealTimeWWII/status/907704112313184256/photo/1",
+                    "type": "photo",
+                    "sizes": {
+                        "large": {
+                            "w": 1016,
+                            "h": 1023,
+                            "resize": "fit"
+                        },
+                        "medium": {
+                            "w": 1016,
+                            "h": 1023,
+                            "resize": "fit"
+                        },
+                        "thumb": {
+                            "w": 150,
+                            "h": 150,
+                            "resize": "crop"
+                        },
+                        "small": {
+                            "w": 675,
+                            "h": 680,
+                            "resize": "fit"
+                        }
+                    }
+                }
+            ]
+        },
+        "extended_entities": {
+            "media": [
+                {
+                    "id": 907703718518378500,
+                    "id_str": "907703718518378496",
+                    "indices": [
+                        148,
+                        171
+                    ],
+                    "media_url": "http://pbs.twimg.com/media/DJjPuQeW0AAknI_.jpg",
+                    "media_url_https": "https://pbs.twimg.com/media/DJjPuQeW0AAknI_.jpg",
+                    "url": "https://t.co/h53ShBcBL1",
+                    "display_url": "pic.twitter.com/h53ShBcBL1",
+                    "expanded_url": "https://twitter.com/RealTimeWWII/status/907704112313184256/photo/1",
+                    "type": "photo",
+                    "sizes": {
+                        "large": {
+                            "w": 1016,
+                            "h": 1023,
+                            "resize": "fit"
+                        },
+                        "medium": {
+                            "w": 1016,
+                            "h": 1023,
+                            "resize": "fit"
+                        },
+                        "thumb": {
+                            "w": 150,
+                            "h": 150,
+                            "resize": "crop"
+                        },
+                        "small": {
+                            "w": 675,
+                            "h": 680,
+                            "resize": "fit"
+                        }
+                    }
+                }
+            ]
+        },
+        "source": "<a href=\"http://twitter.com\" rel=\"nofollow\">Twitter Web Client</a>",
+        "in_reply_to_status_id": null,
+        "in_reply_to_status_id_str": null,
+        "in_reply_to_user_id": null,
+        "in_reply_to_user_id_str": null,
+        "in_reply_to_screen_name": null,
+        "user": {
+            "id": 364488011,
+            "id_str": "364488011",
+            "name": "WW2 Tweets from 1939",
+            "screen_name": "RealTimeWWII",
+            "location": "Britain",
+            "description": "I livetweet the 2nd World War\n, as it happened on this day in 1939 & for 6 years to come (2nd time around). Created by Alwyn Collinson, realtimewwii@gmail.com",
+            "url": null,
+            "entities": {
+                "description": {
+                    "urls": []
+                }
+            },
+            "protected": false,
+            "followers_count": 492341,
+            "friends_count": 455,
+            "listed_count": 5494,
+            "created_at": "Mon Aug 29 21:13:38 +0000 2011",
+            "favourites_count": 26,
+            "utc_offset": 3600,
+            "time_zone": "London",
+            "geo_enabled": true,
+            "verified": false,
+            "statuses_count": 10786,
+            "lang": "en",
+            "contributors_enabled": false,
+            "is_translator": false,
+            "is_translation_enabled": false,
+            "profile_background_color": "C0DEED",
+            "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+            "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+            "profile_background_tile": false,
+            "profile_image_url": "http://pbs.twimg.com/profile_images/903352195520847872/jh5wz6_5_normal.jpg",
+            "profile_image_url_https": "https://pbs.twimg.com/profile_images/903352195520847872/jh5wz6_5_normal.jpg",
+            "profile_banner_url": "https://pbs.twimg.com/profile_banners/364488011/1504255818",
+            "profile_link_color": "1DA1F2",
+            "profile_sidebar_border_color": "C0DEED",
+            "profile_sidebar_fill_color": "DDEEF6",
+            "profile_text_color": "333333",
+            "profile_use_background_image": true,
+            "has_extended_profile": true,
+            "default_profile": true,
+            "default_profile_image": false,
+            "following": true,
+            "follow_request_sent": false,
+            "notifications": false,
+            "translator_type": "none"
+        },
+        "geo": null,
+        "coordinates": null,
+        "place": {
+            "id": "796f0a99c6dc0c2f",
+            "url": "https://api.twitter.com/1.1/geo/id/796f0a99c6dc0c2f.json",
+            "place_type": "admin",
+            "name": "Silesia",
+            "full_name": "Silesia, Poland",
+            "country_code": "PL",
+            "country": "Poland",
+            "contained_within": [],
+            "bounding_box": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            18.0354954,
+                            49.393941
+                        ],
+                        [
+                            19.9740054,
+                            49.393941
+                        ],
+                        [
+                            19.9740054,
+                            51.098531
+                        ],
+                        [
+                            18.0354954,
+                            51.098531
+                        ]
+                    ]
+                ]
+            },
+            "attributes": {}
+        },
+        "contributors": null,
+        "is_quote_status": false,
+        "retweet_count": 115,
+        "favorite_count": 236,
+        "favorited": false,
+        "retweeted": false,
+        "possibly_sensitive": false,
+        "lang": "en"
+    },
+    {
+        "created_at": "Tue Sep 12 20:29:57 +0000 2017",
+        "id": 907702846430335000,
+        "id_str": "907702846430334977",
+        "full_text": "Hitler is broadcasting from Germany that the Wehrmacht has slowed its advance to consolidate its gains and kill Polish partisans at its rear",
+        "truncated": false,
+        "display_text_range": [
+            0,
+            140
+        ],
+        "entities": {
+            "hashtags": [],
+            "symbols": [],
+            "user_mentions": [],
+            "urls": []
+        },
+        "source": "<a href=\"http://twitter.com\" rel=\"nofollow\">Twitter Web Client</a>",
+        "in_reply_to_status_id": null,
+        "in_reply_to_status_id_str": null,
+        "in_reply_to_user_id": null,
+        "in_reply_to_user_id_str": null,
+        "in_reply_to_screen_name": null,
+        "user": {
+            "id": 364488011,
+            "id_str": "364488011",
+            "name": "WW2 Tweets from 1939",
+            "screen_name": "RealTimeWWII",
+            "location": "Britain",
+            "description": "I livetweet the 2nd World War\n, as it happened on this day in 1939 & for 6 years to come (2nd time around). Created by Alwyn Collinson, realtimewwii@gmail.com",
+            "url": null,
+            "entities": {
+                "description": {
+                    "urls": []
+                }
+            },
+            "protected": false,
+            "followers_count": 492341,
+            "friends_count": 455,
+            "listed_count": 5494,
+            "created_at": "Mon Aug 29 21:13:38 +0000 2011",
+            "favourites_count": 26,
+            "utc_offset": 3600,
+            "time_zone": "London",
+            "geo_enabled": true,
+            "verified": false,
+            "statuses_count": 10786,
+            "lang": "en",
+            "contributors_enabled": false,
+            "is_translator": false,
+            "is_translation_enabled": false,
+            "profile_background_color": "C0DEED",
+            "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+            "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+            "profile_background_tile": false,
+            "profile_image_url": "http://pbs.twimg.com/profile_images/903352195520847872/jh5wz6_5_normal.jpg",
+            "profile_image_url_https": "https://pbs.twimg.com/profile_images/903352195520847872/jh5wz6_5_normal.jpg",
+            "profile_banner_url": "https://pbs.twimg.com/profile_banners/364488011/1504255818",
+            "profile_link_color": "1DA1F2",
+            "profile_sidebar_border_color": "C0DEED",
+            "profile_sidebar_fill_color": "DDEEF6",
+            "profile_text_color": "333333",
+            "profile_use_background_image": true,
+            "has_extended_profile": true,
+            "default_profile": true,
+            "default_profile_image": false,
+            "following": true,
+            "follow_request_sent": false,
+            "notifications": false,
+            "translator_type": "none"
+        },
+        "geo": null,
+        "coordinates": null,
+        "place": {
+            "id": "796f0a99c6dc0c2f",
+            "url": "https://api.twitter.com/1.1/geo/id/796f0a99c6dc0c2f.json",
+            "place_type": "admin",
+            "name": "Silesia",
+            "full_name": "Silesia, Poland",
+            "country_code": "PL",
+            "country": "Poland",
+            "contained_within": [],
+            "bounding_box": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            18.0354954,
+                            49.393941
+                        ],
+                        [
+                            19.9740054,
+                            49.393941
+                        ],
+                        [
+                            19.9740054,
+                            51.098531
+                        ],
+                        [
+                            18.0354954,
+                            51.098531
+                        ]
+                    ]
+                ]
+            },
+            "attributes": {}
+        },
+        "contributors": null,
+        "is_quote_status": false,
+        "retweet_count": 73,
+        "favorite_count": 246,
+        "favorited": false,
+        "retweeted": false,
+        "lang": "en"
+    },
+    {
+        "created_at": "Tue Sep 12 20:16:40 +0000 2017",
+        "id": 907699502425010200,
+        "id_str": "907699502425010181",
+        "full_text": "War correspondent Charles à Court Repington started to call Great War \"World War No. 1\" in 1920, but TIME first to call new conflict WWII.",
+        "truncated": false,
+        "display_text_range": [
+            0,
+            138
+        ],
+        "entities": {
+            "hashtags": [],
+            "symbols": [],
+            "user_mentions": [],
+            "urls": []
+        },
+        "source": "<a href=\"http://twitter.com\" rel=\"nofollow\">Twitter Web Client</a>",
+        "in_reply_to_status_id": 907693776960925700,
+        "in_reply_to_status_id_str": "907693776960925697",
+        "in_reply_to_user_id": 364488011,
+        "in_reply_to_user_id_str": "364488011",
+        "in_reply_to_screen_name": "RealTimeWWII",
+        "user": {
+            "id": 364488011,
+            "id_str": "364488011",
+            "name": "WW2 Tweets from 1939",
+            "screen_name": "RealTimeWWII",
+            "location": "Britain",
+            "description": "I livetweet the 2nd World War\n, as it happened on this day in 1939 & for 6 years to come (2nd time around). Created by Alwyn Collinson, realtimewwii@gmail.com",
+            "url": null,
+            "entities": {
+                "description": {
+                    "urls": []
+                }
+            },
+            "protected": false,
+            "followers_count": 492341,
+            "friends_count": 455,
+            "listed_count": 5494,
+            "created_at": "Mon Aug 29 21:13:38 +0000 2011",
+            "favourites_count": 26,
+            "utc_offset": 3600,
+            "time_zone": "London",
+            "geo_enabled": true,
+            "verified": false,
+            "statuses_count": 10786,
+            "lang": "en",
+            "contributors_enabled": false,
+            "is_translator": false,
+            "is_translation_enabled": false,
+            "profile_background_color": "C0DEED",
+            "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+            "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+            "profile_background_tile": false,
+            "profile_image_url": "http://pbs.twimg.com/profile_images/903352195520847872/jh5wz6_5_normal.jpg",
+            "profile_image_url_https": "https://pbs.twimg.com/profile_images/903352195520847872/jh5wz6_5_normal.jpg",
+            "profile_banner_url": "https://pbs.twimg.com/profile_banners/364488011/1504255818",
+            "profile_link_color": "1DA1F2",
+            "profile_sidebar_border_color": "C0DEED",
+            "profile_sidebar_fill_color": "DDEEF6",
+            "profile_text_color": "333333",
+            "profile_use_background_image": true,
+            "has_extended_profile": true,
+            "default_profile": true,
+            "default_profile_image": false,
+            "following": true,
+            "follow_request_sent": false,
+            "notifications": false,
+            "translator_type": "none"
+        },
+        "geo": null,
+        "coordinates": null,
+        "place": {
+            "id": "27485069891a7938",
+            "url": "https://api.twitter.com/1.1/geo/id/27485069891a7938.json",
+            "place_type": "admin",
+            "name": "New York",
+            "full_name": "New York, NY",
+            "country_code": "US",
+            "country": "United States",
+            "contained_within": [],
+            "bounding_box": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            -74.255641,
+                            40.495865
+                        ],
+                        [
+                            -73.699793,
+                            40.495865
+                        ],
+                        [
+                            -73.699793,
+                            40.91533
+                        ],
+                        [
+                            -74.255641,
+                            40.91533
+                        ]
+                    ]
+                ]
+            },
+            "attributes": {}
+        },
+        "contributors": null,
+        "is_quote_status": false,
+        "retweet_count": 115,
+        "favorite_count": 282,
+        "favorited": false,
+        "retweeted": false,
+        "lang": "en"
+    },
+    {
+        "created_at": "Tue Sep 12 19:53:55 +0000 2017",
+        "id": 907693776960925700,
+        "id_str": "907693776960925697",
+        "full_text": "TIME Magazine is 1st to use a new term for the conflict in Europe: World War II, successor to Great War of 14-18: https://t.co/bzdhxcziPv https://t.co/2ZmS6n7nLh",
+        "truncated": false,
+        "display_text_range": [
+            0,
+            137
+        ],
+        "entities": {
+            "hashtags": [],
+            "symbols": [],
+            "user_mentions": [],
+            "urls": [
+                {
+                    "url": "https://t.co/bzdhxcziPv",
+                    "expanded_url": "http://content.time.com/time/subscriber/article/0,33009,711760,00.html",
+                    "display_url": "content.time.com/time/subscribe…",
+                    "indices": [
+                        114,
+                        137
+                    ]
+                }
+            ],
+            "media": [
+                {
+                    "id": 907693340946260000,
+                    "id_str": "907693340946259968",
+                    "indices": [
+                        138,
+                        161
+                    ],
+                    "media_url": "http://pbs.twimg.com/media/DJjGSNAW4AA9Yun.jpg",
+                    "media_url_https": "https://pbs.twimg.com/media/DJjGSNAW4AA9Yun.jpg",
+                    "url": "https://t.co/2ZmS6n7nLh",
+                    "display_url": "pic.twitter.com/2ZmS6n7nLh",
+                    "expanded_url": "https://twitter.com/RealTimeWWII/status/907693776960925697/photo/1",
+                    "type": "photo",
+                    "sizes": {
+                        "medium": {
+                            "w": 400,
+                            "h": 527,
+                            "resize": "fit"
+                        },
+                        "thumb": {
+                            "w": 150,
+                            "h": 150,
+                            "resize": "crop"
+                        },
+                        "large": {
+                            "w": 400,
+                            "h": 527,
+                            "resize": "fit"
+                        },
+                        "small": {
+                            "w": 400,
+                            "h": 527,
+                            "resize": "fit"
+                        }
+                    }
+                }
+            ]
+        },
+        "extended_entities": {
+            "media": [
+                {
+                    "id": 907693340946260000,
+                    "id_str": "907693340946259968",
+                    "indices": [
+                        138,
+                        161
+                    ],
+                    "media_url": "http://pbs.twimg.com/media/DJjGSNAW4AA9Yun.jpg",
+                    "media_url_https": "https://pbs.twimg.com/media/DJjGSNAW4AA9Yun.jpg",
+                    "url": "https://t.co/2ZmS6n7nLh",
+                    "display_url": "pic.twitter.com/2ZmS6n7nLh",
+                    "expanded_url": "https://twitter.com/RealTimeWWII/status/907693776960925697/photo/1",
+                    "type": "photo",
+                    "sizes": {
+                        "medium": {
+                            "w": 400,
+                            "h": 527,
+                            "resize": "fit"
+                        },
+                        "thumb": {
+                            "w": 150,
+                            "h": 150,
+                            "resize": "crop"
+                        },
+                        "large": {
+                            "w": 400,
+                            "h": 527,
+                            "resize": "fit"
+                        },
+                        "small": {
+                            "w": 400,
+                            "h": 527,
+                            "resize": "fit"
+                        }
+                    }
+                },
+                {
+                    "id": 907693351478186000,
+                    "id_str": "907693351478185985",
+                    "indices": [
+                        138,
+                        161
+                    ],
+                    "media_url": "http://pbs.twimg.com/media/DJjGS0PXUAE2UAu.jpg",
+                    "media_url_https": "https://pbs.twimg.com/media/DJjGS0PXUAE2UAu.jpg",
+                    "url": "https://t.co/2ZmS6n7nLh",
+                    "display_url": "pic.twitter.com/2ZmS6n7nLh",
+                    "expanded_url": "https://twitter.com/RealTimeWWII/status/907693776960925697/photo/1",
+                    "type": "photo",
+                    "sizes": {
+                        "large": {
+                            "w": 1800,
+                            "h": 1200,
+                            "resize": "fit"
+                        },
+                        "medium": {
+                            "w": 1200,
+                            "h": 800,
+                            "resize": "fit"
+                        },
+                        "thumb": {
+                            "w": 150,
+                            "h": 150,
+                            "resize": "crop"
+                        },
+                        "small": {
+                            "w": 680,
+                            "h": 453,
+                            "resize": "fit"
+                        }
+                    }
+                }
+            ]
+        },
+        "source": "<a href=\"http://twitter.com\" rel=\"nofollow\">Twitter Web Client</a>",
+        "in_reply_to_status_id": null,
+        "in_reply_to_status_id_str": null,
+        "in_reply_to_user_id": null,
+        "in_reply_to_user_id_str": null,
+        "in_reply_to_screen_name": null,
+        "user": {
+            "id": 364488011,
+            "id_str": "364488011",
+            "name": "WW2 Tweets from 1939",
+            "screen_name": "RealTimeWWII",
+            "location": "Britain",
+            "description": "I livetweet the 2nd World War\n, as it happened on this day in 1939 & for 6 years to come (2nd time around). Created by Alwyn Collinson, realtimewwii@gmail.com",
+            "url": null,
+            "entities": {
+                "description": {
+                    "urls": []
+                }
+            },
+            "protected": false,
+            "followers_count": 492341,
+            "friends_count": 455,
+            "listed_count": 5494,
+            "created_at": "Mon Aug 29 21:13:38 +0000 2011",
+            "favourites_count": 26,
+            "utc_offset": 3600,
+            "time_zone": "London",
+            "geo_enabled": true,
+            "verified": false,
+            "statuses_count": 10786,
+            "lang": "en",
+            "contributors_enabled": false,
+            "is_translator": false,
+            "is_translation_enabled": false,
+            "profile_background_color": "C0DEED",
+            "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+            "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+            "profile_background_tile": false,
+            "profile_image_url": "http://pbs.twimg.com/profile_images/903352195520847872/jh5wz6_5_normal.jpg",
+            "profile_image_url_https": "https://pbs.twimg.com/profile_images/903352195520847872/jh5wz6_5_normal.jpg",
+            "profile_banner_url": "https://pbs.twimg.com/profile_banners/364488011/1504255818",
+            "profile_link_color": "1DA1F2",
+            "profile_sidebar_border_color": "C0DEED",
+            "profile_sidebar_fill_color": "DDEEF6",
+            "profile_text_color": "333333",
+            "profile_use_background_image": true,
+            "has_extended_profile": true,
+            "default_profile": true,
+            "default_profile_image": false,
+            "following": true,
+            "follow_request_sent": false,
+            "notifications": false,
+            "translator_type": "none"
+        },
+        "geo": null,
+        "coordinates": null,
+        "place": {
+            "id": "27485069891a7938",
+            "url": "https://api.twitter.com/1.1/geo/id/27485069891a7938.json",
+            "place_type": "admin",
+            "name": "New York",
+            "full_name": "New York, NY",
+            "country_code": "US",
+            "country": "United States",
+            "contained_within": [],
+            "bounding_box": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            -74.255641,
+                            40.495865
+                        ],
+                        [
+                            -73.699793,
+                            40.495865
+                        ],
+                        [
+                            -73.699793,
+                            40.91533
+                        ],
+                        [
+                            -74.255641,
+                            40.91533
+                        ]
+                    ]
+                ]
+            },
+            "attributes": {}
+        },
+        "contributors": null,
+        "is_quote_status": false,
+        "retweet_count": 552,
+        "favorite_count": 814,
+        "favorited": false,
+        "retweeted": false,
+        "possibly_sensitive": false,
+        "lang": "en"
+    },
+    {
+        "created_at": "Tue Sep 12 17:15:59 +0000 2017",
+        "id": 907654033409798100,
+        "id_str": "907654033409798146",
+        "full_text": "Polish supreme command is demanding French &amp; British help; Gen. Gamelin (wrongly) claims that ½ French troops are in combat with Germans. https://t.co/CnbEaY6x3L",
+        "truncated": false,
+        "display_text_range": [
+            0,
+            141
+        ],
+        "entities": {
+            "hashtags": [],
+            "symbols": [],
+            "user_mentions": [],
+            "urls": [],
+            "media": [
+                {
+                    "id": 907653993698152400,
+                    "id_str": "907653993698152449",
+                    "indices": [
+                        142,
+                        165
+                    ],
+                    "media_url": "http://pbs.twimg.com/media/DJiif5FX0AExfS5.jpg",
+                    "media_url_https": "https://pbs.twimg.com/media/DJiif5FX0AExfS5.jpg",
+                    "url": "https://t.co/CnbEaY6x3L",
+                    "display_url": "pic.twitter.com/CnbEaY6x3L",
+                    "expanded_url": "https://twitter.com/RealTimeWWII/status/907654033409798146/photo/1",
+                    "type": "photo",
+                    "sizes": {
+                        "small": {
+                            "w": 501,
+                            "h": 458,
+                            "resize": "fit"
+                        },
+                        "thumb": {
+                            "w": 150,
+                            "h": 150,
+                            "resize": "crop"
+                        },
+                        "large": {
+                            "w": 501,
+                            "h": 458,
+                            "resize": "fit"
+                        },
+                        "medium": {
+                            "w": 501,
+                            "h": 458,
+                            "resize": "fit"
+                        }
+                    }
+                }
+            ]
+        },
+        "extended_entities": {
+            "media": [
+                {
+                    "id": 907653993698152400,
+                    "id_str": "907653993698152449",
+                    "indices": [
+                        142,
+                        165
+                    ],
+                    "media_url": "http://pbs.twimg.com/media/DJiif5FX0AExfS5.jpg",
+                    "media_url_https": "https://pbs.twimg.com/media/DJiif5FX0AExfS5.jpg",
+                    "url": "https://t.co/CnbEaY6x3L",
+                    "display_url": "pic.twitter.com/CnbEaY6x3L",
+                    "expanded_url": "https://twitter.com/RealTimeWWII/status/907654033409798146/photo/1",
+                    "type": "photo",
+                    "sizes": {
+                        "small": {
+                            "w": 501,
+                            "h": 458,
+                            "resize": "fit"
+                        },
+                        "thumb": {
+                            "w": 150,
+                            "h": 150,
+                            "resize": "crop"
+                        },
+                        "large": {
+                            "w": 501,
+                            "h": 458,
+                            "resize": "fit"
+                        },
+                        "medium": {
+                            "w": 501,
+                            "h": 458,
+                            "resize": "fit"
+                        }
+                    }
+                }
+            ]
+        },
+        "source": "<a href=\"http://twitter.com\" rel=\"nofollow\">Twitter Web Client</a>",
+        "in_reply_to_status_id": null,
+        "in_reply_to_status_id_str": null,
+        "in_reply_to_user_id": null,
+        "in_reply_to_user_id_str": null,
+        "in_reply_to_screen_name": null,
+        "user": {
+            "id": 364488011,
+            "id_str": "364488011",
+            "name": "WW2 Tweets from 1939",
+            "screen_name": "RealTimeWWII",
+            "location": "Britain",
+            "description": "I livetweet the 2nd World War\n, as it happened on this day in 1939 & for 6 years to come (2nd time around). Created by Alwyn Collinson, realtimewwii@gmail.com",
+            "url": null,
+            "entities": {
+                "description": {
+                    "urls": []
+                }
+            },
+            "protected": false,
+            "followers_count": 492341,
+            "friends_count": 455,
+            "listed_count": 5494,
+            "created_at": "Mon Aug 29 21:13:38 +0000 2011",
+            "favourites_count": 26,
+            "utc_offset": 3600,
+            "time_zone": "London",
+            "geo_enabled": true,
+            "verified": false,
+            "statuses_count": 10786,
+            "lang": "en",
+            "contributors_enabled": false,
+            "is_translator": false,
+            "is_translation_enabled": false,
+            "profile_background_color": "C0DEED",
+            "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+            "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+            "profile_background_tile": false,
+            "profile_image_url": "http://pbs.twimg.com/profile_images/903352195520847872/jh5wz6_5_normal.jpg",
+            "profile_image_url_https": "https://pbs.twimg.com/profile_images/903352195520847872/jh5wz6_5_normal.jpg",
+            "profile_banner_url": "https://pbs.twimg.com/profile_banners/364488011/1504255818",
+            "profile_link_color": "1DA1F2",
+            "profile_sidebar_border_color": "C0DEED",
+            "profile_sidebar_fill_color": "DDEEF6",
+            "profile_text_color": "333333",
+            "profile_use_background_image": true,
+            "has_extended_profile": true,
+            "default_profile": true,
+            "default_profile_image": false,
+            "following": true,
+            "follow_request_sent": false,
+            "notifications": false,
+            "translator_type": "none"
+        },
+        "geo": null,
+        "coordinates": null,
+        "place": {
+            "id": "d4b2c539a243e904",
+            "url": "https://api.twitter.com/1.1/geo/id/d4b2c539a243e904.json",
+            "place_type": "city",
+            "name": "Sachsenhausen",
+            "full_name": "Sachsenhausen, Deutschland",
+            "country_code": "DE",
+            "country": "Germany",
+            "contained_within": [],
+            "bounding_box": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            11.35318,
+                            51.031805
+                        ],
+                        [
+                            11.395158,
+                            51.031805
+                        ],
+                        [
+                            11.395158,
+                            51.052257
+                        ],
+                        [
+                            11.35318,
+                            51.052257
+                        ]
+                    ]
+                ]
+            },
+            "attributes": {}
+        },
+        "contributors": null,
+        "is_quote_status": false,
+        "retweet_count": 109,
+        "favorite_count": 293,
+        "favorited": false,
+        "retweeted": false,
+        "possibly_sensitive": false,
+        "lang": "en"
+    },
+    {
+        "created_at": "Tue Sep 12 11:42:55 +0000 2017",
+        "id": 907570213511671800,
+        "id_str": "907570213511671809",
+        "full_text": "French commander, Gen. Gamelin, has ordered troops advancing towards Saarbrucken not to approach within 1km of German fortifications.",
+        "truncated": false,
+        "display_text_range": [
+            0,
+            133
+        ],
+        "entities": {
+            "hashtags": [],
+            "symbols": [],
+            "user_mentions": [],
+            "urls": []
+        },
+        "source": "<a href=\"http://twitter.com\" rel=\"nofollow\">Twitter Web Client</a>",
+        "in_reply_to_status_id": null,
+        "in_reply_to_status_id_str": null,
+        "in_reply_to_user_id": null,
+        "in_reply_to_user_id_str": null,
+        "in_reply_to_screen_name": null,
+        "user": {
+            "id": 364488011,
+            "id_str": "364488011",
+            "name": "WW2 Tweets from 1939",
+            "screen_name": "RealTimeWWII",
+            "location": "Britain",
+            "description": "I livetweet the 2nd World War\n, as it happened on this day in 1939 & for 6 years to come (2nd time around). Created by Alwyn Collinson, realtimewwii@gmail.com",
+            "url": null,
+            "entities": {
+                "description": {
+                    "urls": []
+                }
+            },
+            "protected": false,
+            "followers_count": 492341,
+            "friends_count": 455,
+            "listed_count": 5494,
+            "created_at": "Mon Aug 29 21:13:38 +0000 2011",
+            "favourites_count": 26,
+            "utc_offset": 3600,
+            "time_zone": "London",
+            "geo_enabled": true,
+            "verified": false,
+            "statuses_count": 10786,
+            "lang": "en",
+            "contributors_enabled": false,
+            "is_translator": false,
+            "is_translation_enabled": false,
+            "profile_background_color": "C0DEED",
+            "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+            "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+            "profile_background_tile": false,
+            "profile_image_url": "http://pbs.twimg.com/profile_images/903352195520847872/jh5wz6_5_normal.jpg",
+            "profile_image_url_https": "https://pbs.twimg.com/profile_images/903352195520847872/jh5wz6_5_normal.jpg",
+            "profile_banner_url": "https://pbs.twimg.com/profile_banners/364488011/1504255818",
+            "profile_link_color": "1DA1F2",
+            "profile_sidebar_border_color": "C0DEED",
+            "profile_sidebar_fill_color": "DDEEF6",
+            "profile_text_color": "333333",
+            "profile_use_background_image": true,
+            "has_extended_profile": true,
+            "default_profile": true,
+            "default_profile_image": false,
+            "following": true,
+            "follow_request_sent": false,
+            "notifications": false,
+            "translator_type": "none"
+        },
+        "geo": null,
+        "coordinates": null,
+        "place": {
+            "id": "d4b2c539a243e904",
+            "url": "https://api.twitter.com/1.1/geo/id/d4b2c539a243e904.json",
+            "place_type": "city",
+            "name": "Sachsenhausen",
+            "full_name": "Sachsenhausen, Deutschland",
+            "country_code": "DE",
+            "country": "Germany",
+            "contained_within": [],
+            "bounding_box": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            11.35318,
+                            51.031805
+                        ],
+                        [
+                            11.395158,
+                            51.031805
+                        ],
+                        [
+                            11.395158,
+                            51.052257
+                        ],
+                        [
+                            11.35318,
+                            51.052257
+                        ]
+                    ]
+                ]
+            },
+            "attributes": {}
+        },
+        "contributors": null,
+        "is_quote_status": false,
+        "retweet_count": 75,
+        "favorite_count": 254,
+        "favorited": false,
+        "retweeted": false,
+        "lang": "en"
+    },
+    {
+        "created_at": "Mon Sep 11 22:35:01 +0000 2017",
+        "id": 907371934224183300,
+        "id_str": "907371934224183296",
+        "full_text": "HMS Triton's captain misidentified fellow British sub Oxley as German U-boat; 52 sailors dead, with just 2 rescued. Navy suppresses accident",
+        "truncated": false,
+        "display_text_range": [
+            0,
+            140
+        ],
+        "entities": {
+            "hashtags": [],
+            "symbols": [],
+            "user_mentions": [],
+            "urls": []
+        },
+        "source": "<a href=\"http://twitter.com/download/iphone\" rel=\"nofollow\">Twitter for iPhone</a>",
+        "in_reply_to_status_id": 907367449976242200,
+        "in_reply_to_status_id_str": "907367449976242181",
+        "in_reply_to_user_id": 364488011,
+        "in_reply_to_user_id_str": "364488011",
+        "in_reply_to_screen_name": "RealTimeWWII",
+        "user": {
+            "id": 364488011,
+            "id_str": "364488011",
+            "name": "WW2 Tweets from 1939",
+            "screen_name": "RealTimeWWII",
+            "location": "Britain",
+            "description": "I livetweet the 2nd World War\n, as it happened on this day in 1939 & for 6 years to come (2nd time around). Created by Alwyn Collinson, realtimewwii@gmail.com",
+            "url": null,
+            "entities": {
+                "description": {
+                    "urls": []
+                }
+            },
+            "protected": false,
+            "followers_count": 492341,
+            "friends_count": 455,
+            "listed_count": 5494,
+            "created_at": "Mon Aug 29 21:13:38 +0000 2011",
+            "favourites_count": 26,
+            "utc_offset": 3600,
+            "time_zone": "London",
+            "geo_enabled": true,
+            "verified": false,
+            "statuses_count": 10786,
+            "lang": "en",
+            "contributors_enabled": false,
+            "is_translator": false,
+            "is_translation_enabled": false,
+            "profile_background_color": "C0DEED",
+            "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+            "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+            "profile_background_tile": false,
+            "profile_image_url": "http://pbs.twimg.com/profile_images/903352195520847872/jh5wz6_5_normal.jpg",
+            "profile_image_url_https": "https://pbs.twimg.com/profile_images/903352195520847872/jh5wz6_5_normal.jpg",
+            "profile_banner_url": "https://pbs.twimg.com/profile_banners/364488011/1504255818",
+            "profile_link_color": "1DA1F2",
+            "profile_sidebar_border_color": "C0DEED",
+            "profile_sidebar_fill_color": "DDEEF6",
+            "profile_text_color": "333333",
+            "profile_use_background_image": true,
+            "has_extended_profile": true,
+            "default_profile": true,
+            "default_profile_image": false,
+            "following": true,
+            "follow_request_sent": false,
+            "notifications": false,
+            "translator_type": "none"
+        },
+        "geo": null,
+        "coordinates": null,
+        "place": null,
+        "contributors": null,
+        "is_quote_status": false,
+        "retweet_count": 83,
+        "favorite_count": 237,
+        "favorited": false,
+        "retweeted": false,
+        "lang": "en"
+    },
+    {
+        "created_at": "Mon Sep 11 22:17:12 +0000 2017",
+        "id": 907367449976242200,
+        "id_str": "907367449976242181",
+        "full_text": "1st British submarine casualty of war, as HMS Oxley is sunk off coast of Norway. She was torpedoed by fellow Royal Navy submarine HMS Triton https://t.co/ET4DiJgLSx",
+        "truncated": false,
+        "display_text_range": [
+            0,
+            140
+        ],
+        "entities": {
+            "hashtags": [],
+            "symbols": [],
+            "user_mentions": [],
+            "urls": [],
+            "media": [
+                {
+                    "id": 907367442799882200,
+                    "id_str": "907367442799882240",
+                    "indices": [
+                        141,
+                        164
+                    ],
+                    "media_url": "http://pbs.twimg.com/media/DJed4bzXcAAb3oB.jpg",
+                    "media_url_https": "https://pbs.twimg.com/media/DJed4bzXcAAb3oB.jpg",
+                    "url": "https://t.co/ET4DiJgLSx",
+                    "display_url": "pic.twitter.com/ET4DiJgLSx",
+                    "expanded_url": "https://twitter.com/RealTimeWWII/status/907367449976242181/photo/1",
+                    "type": "photo",
+                    "sizes": {
+                        "thumb": {
+                            "w": 150,
+                            "h": 150,
+                            "resize": "crop"
+                        },
+                        "large": {
+                            "w": 435,
+                            "h": 277,
+                            "resize": "fit"
+                        },
+                        "small": {
+                            "w": 435,
+                            "h": 277,
+                            "resize": "fit"
+                        },
+                        "medium": {
+                            "w": 435,
+                            "h": 277,
+                            "resize": "fit"
+                        }
+                    }
+                }
+            ]
+        },
+        "extended_entities": {
+            "media": [
+                {
+                    "id": 907367442799882200,
+                    "id_str": "907367442799882240",
+                    "indices": [
+                        141,
+                        164
+                    ],
+                    "media_url": "http://pbs.twimg.com/media/DJed4bzXcAAb3oB.jpg",
+                    "media_url_https": "https://pbs.twimg.com/media/DJed4bzXcAAb3oB.jpg",
+                    "url": "https://t.co/ET4DiJgLSx",
+                    "display_url": "pic.twitter.com/ET4DiJgLSx",
+                    "expanded_url": "https://twitter.com/RealTimeWWII/status/907367449976242181/photo/1",
+                    "type": "photo",
+                    "sizes": {
+                        "thumb": {
+                            "w": 150,
+                            "h": 150,
+                            "resize": "crop"
+                        },
+                        "large": {
+                            "w": 435,
+                            "h": 277,
+                            "resize": "fit"
+                        },
+                        "small": {
+                            "w": 435,
+                            "h": 277,
+                            "resize": "fit"
+                        },
+                        "medium": {
+                            "w": 435,
+                            "h": 277,
+                            "resize": "fit"
+                        }
+                    }
+                }
+            ]
+        },
+        "source": "<a href=\"http://twitter.com/download/iphone\" rel=\"nofollow\">Twitter for iPhone</a>",
+        "in_reply_to_status_id": null,
+        "in_reply_to_status_id_str": null,
+        "in_reply_to_user_id": null,
+        "in_reply_to_user_id_str": null,
+        "in_reply_to_screen_name": null,
+        "user": {
+            "id": 364488011,
+            "id_str": "364488011",
+            "name": "WW2 Tweets from 1939",
+            "screen_name": "RealTimeWWII",
+            "location": "Britain",
+            "description": "I livetweet the 2nd World War\n, as it happened on this day in 1939 & for 6 years to come (2nd time around). Created by Alwyn Collinson, realtimewwii@gmail.com",
+            "url": null,
+            "entities": {
+                "description": {
+                    "urls": []
+                }
+            },
+            "protected": false,
+            "followers_count": 492341,
+            "friends_count": 455,
+            "listed_count": 5494,
+            "created_at": "Mon Aug 29 21:13:38 +0000 2011",
+            "favourites_count": 26,
+            "utc_offset": 3600,
+            "time_zone": "London",
+            "geo_enabled": true,
+            "verified": false,
+            "statuses_count": 10786,
+            "lang": "en",
+            "contributors_enabled": false,
+            "is_translator": false,
+            "is_translation_enabled": false,
+            "profile_background_color": "C0DEED",
+            "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+            "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+            "profile_background_tile": false,
+            "profile_image_url": "http://pbs.twimg.com/profile_images/903352195520847872/jh5wz6_5_normal.jpg",
+            "profile_image_url_https": "https://pbs.twimg.com/profile_images/903352195520847872/jh5wz6_5_normal.jpg",
+            "profile_banner_url": "https://pbs.twimg.com/profile_banners/364488011/1504255818",
+            "profile_link_color": "1DA1F2",
+            "profile_sidebar_border_color": "C0DEED",
+            "profile_sidebar_fill_color": "DDEEF6",
+            "profile_text_color": "333333",
+            "profile_use_background_image": true,
+            "has_extended_profile": true,
+            "default_profile": true,
+            "default_profile_image": false,
+            "following": true,
+            "follow_request_sent": false,
+            "notifications": false,
+            "translator_type": "none"
+        },
+        "geo": null,
+        "coordinates": null,
+        "place": null,
+        "contributors": null,
+        "is_quote_status": false,
+        "retweet_count": 162,
+        "favorite_count": 373,
+        "favorited": false,
+        "retweeted": false,
+        "possibly_sensitive": false,
+        "lang": "en"
+    },
+    {
+        "created_at": "Mon Sep 11 15:47:19 +0000 2017",
+        "id": 907269332127944700,
+        "id_str": "907269332127944704",
+        "full_text": "Polish counter-attack over Bzura river is grinding to a halt. After being driven back 20km German 8th Army pulls in frontline reinforcements https://t.co/zwbDxAB5XC",
+        "truncated": false,
+        "display_text_range": [
+            0,
+            140
+        ],
+        "entities": {
+            "hashtags": [],
+            "symbols": [],
+            "user_mentions": [],
+            "urls": [],
+            "media": [
+                {
+                    "id": 907269132537790500,
+                    "id_str": "907269132537790464",
+                    "indices": [
+                        141,
+                        164
+                    ],
+                    "media_url": "http://pbs.twimg.com/media/DJdEeBiXgAAGisp.jpg",
+                    "media_url_https": "https://pbs.twimg.com/media/DJdEeBiXgAAGisp.jpg",
+                    "url": "https://t.co/zwbDxAB5XC",
+                    "display_url": "pic.twitter.com/zwbDxAB5XC",
+                    "expanded_url": "https://twitter.com/RealTimeWWII/status/907269332127944704/photo/1",
+                    "type": "photo",
+                    "sizes": {
+                        "large": {
+                            "w": 2048,
+                            "h": 1403,
+                            "resize": "fit"
+                        },
+                        "medium": {
+                            "w": 1200,
+                            "h": 822,
+                            "resize": "fit"
+                        },
+                        "thumb": {
+                            "w": 150,
+                            "h": 150,
+                            "resize": "crop"
+                        },
+                        "small": {
+                            "w": 680,
+                            "h": 466,
+                            "resize": "fit"
+                        }
+                    }
+                }
+            ]
+        },
+        "extended_entities": {
+            "media": [
+                {
+                    "id": 907269132537790500,
+                    "id_str": "907269132537790464",
+                    "indices": [
+                        141,
+                        164
+                    ],
+                    "media_url": "http://pbs.twimg.com/media/DJdEeBiXgAAGisp.jpg",
+                    "media_url_https": "https://pbs.twimg.com/media/DJdEeBiXgAAGisp.jpg",
+                    "url": "https://t.co/zwbDxAB5XC",
+                    "display_url": "pic.twitter.com/zwbDxAB5XC",
+                    "expanded_url": "https://twitter.com/RealTimeWWII/status/907269332127944704/photo/1",
+                    "type": "photo",
+                    "sizes": {
+                        "large": {
+                            "w": 2048,
+                            "h": 1403,
+                            "resize": "fit"
+                        },
+                        "medium": {
+                            "w": 1200,
+                            "h": 822,
+                            "resize": "fit"
+                        },
+                        "thumb": {
+                            "w": 150,
+                            "h": 150,
+                            "resize": "crop"
+                        },
+                        "small": {
+                            "w": 680,
+                            "h": 466,
+                            "resize": "fit"
+                        }
+                    }
+                }
+            ]
+        },
+        "source": "<a href=\"http://twitter.com\" rel=\"nofollow\">Twitter Web Client</a>",
+        "in_reply_to_status_id": null,
+        "in_reply_to_status_id_str": null,
+        "in_reply_to_user_id": null,
+        "in_reply_to_user_id_str": null,
+        "in_reply_to_screen_name": null,
+        "user": {
+            "id": 364488011,
+            "id_str": "364488011",
+            "name": "WW2 Tweets from 1939",
+            "screen_name": "RealTimeWWII",
+            "location": "Britain",
+            "description": "I livetweet the 2nd World War\n, as it happened on this day in 1939 & for 6 years to come (2nd time around). Created by Alwyn Collinson, realtimewwii@gmail.com",
+            "url": null,
+            "entities": {
+                "description": {
+                    "urls": []
+                }
+            },
+            "protected": false,
+            "followers_count": 492341,
+            "friends_count": 455,
+            "listed_count": 5494,
+            "created_at": "Mon Aug 29 21:13:38 +0000 2011",
+            "favourites_count": 26,
+            "utc_offset": 3600,
+            "time_zone": "London",
+            "geo_enabled": true,
+            "verified": false,
+            "statuses_count": 10786,
+            "lang": "en",
+            "contributors_enabled": false,
+            "is_translator": false,
+            "is_translation_enabled": false,
+            "profile_background_color": "C0DEED",
+            "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+            "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+            "profile_background_tile": false,
+            "profile_image_url": "http://pbs.twimg.com/profile_images/903352195520847872/jh5wz6_5_normal.jpg",
+            "profile_image_url_https": "https://pbs.twimg.com/profile_images/903352195520847872/jh5wz6_5_normal.jpg",
+            "profile_banner_url": "https://pbs.twimg.com/profile_banners/364488011/1504255818",
+            "profile_link_color": "1DA1F2",
+            "profile_sidebar_border_color": "C0DEED",
+            "profile_sidebar_fill_color": "DDEEF6",
+            "profile_text_color": "333333",
+            "profile_use_background_image": true,
+            "has_extended_profile": true,
+            "default_profile": true,
+            "default_profile_image": false,
+            "following": true,
+            "follow_request_sent": false,
+            "notifications": false,
+            "translator_type": "none"
+        },
+        "geo": null,
+        "coordinates": null,
+        "place": {
+            "id": "d4b2c539a243e904",
+            "url": "https://api.twitter.com/1.1/geo/id/d4b2c539a243e904.json",
+            "place_type": "city",
+            "name": "Sachsenhausen",
+            "full_name": "Sachsenhausen, Deutschland",
+            "country_code": "DE",
+            "country": "Germany",
+            "contained_within": [],
+            "bounding_box": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            11.35318,
+                            51.031805
+                        ],
+                        [
+                            11.395158,
+                            51.031805
+                        ],
+                        [
+                            11.395158,
+                            51.052257
+                        ],
+                        [
+                            11.35318,
+                            51.052257
+                        ]
+                    ]
+                ]
+            },
+            "attributes": {}
+        },
+        "contributors": null,
+        "is_quote_status": false,
+        "retweet_count": 118,
+        "favorite_count": 322,
+        "favorited": false,
+        "retweeted": false,
+        "possibly_sensitive": false,
+        "lang": "en"
+    }
+]
