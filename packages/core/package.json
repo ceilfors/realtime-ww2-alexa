@@ -6,6 +6,7 @@
   "license": "Apache-2.0",
   "private": true,
   "dependencies": {
+    "ajv": "^5.2.2",
     "moment": "^2.18.1",
     "serverless-crypt": "0.0.3",
     "twitter": "^1.7.1"
