@@ -2,6 +2,10 @@
   "name": "@realtime-ww2-alexa/core",
   "version": "0.1.0",
   "description": "The core alexa skill",
+  "scripts": {
+    "pretest": "standard",
+    "test": "mocha --compilers js:babel-core/register test/**/*.spec.js"
+  },
   "author": "ceilfors",
   "license": "Apache-2.0",
   "private": true,
