@@ -1,23 +1,19 @@
 'use strict'
 
-const Twitter = require('twitter')
+import TwitterRealtimeWw2 from './src/twitterRealtimeWw2'
 
 const Alexa = require('alexa-sdk')
 const moment = require('moment')
 const slscrypt = require('./node_modules/serverless-crypt/dists/slscrypt')
 
-const createTwitterClient = () => {
+const createApp = () => {
   return slscrypt.get('twitter_consumer_key').then(consumerKey => {
     return slscrypt.get('twitter_consumer_secret').then(consumerSecret => {
       return slscrypt.get('twitter_access_token_key').then(accessTokenKey => {
         return slscrypt.get('twitter_access_token_secret').then(accessTokenSecret => {
-          return new Twitter({
-            consumer_key: consumerKey,
-            consumer_secret: consumerSecret,
-            access_token_key: accessTokenKey,
-            access_token_secret: accessTokenSecret,
-            rest_base: process.env.TWITTER_REST_BASE_URL
-          })
+          return new TwitterRealtimeWw2({
+            consumerKey, consumerSecret, accessTokenKey, accessTokenSecret
+          }, process.env.TWITTER_REST_BASE_URL, 'RealTimeWWII')
         })
       })
     })
@@ -33,15 +29,13 @@ const handlers = {
     this.emit('GetLatestIntent')
   },
   'GetLatestIntent': function () {
-    const params = {screen_name: 'RealTimeWWII', count: 1, tweet_mode: 'extended'}
-    return createTwitterClient()
-      .then(client => client.get('statuses/user_timeline', params))
-      .then(tweets => {
-        const firstTweet = tweets[0]
-        const datetime = moment(firstTweet.created_at)
+    return createApp()
+      .then(app => app.getLatestNews())
+      .then(latestNews => {
+        const datetime = moment(latestNews.datetime)
         const speechOutput = `<s><say-as interpret-as="date">${datetime.format('YYYYMMDD')}</say-as></s>` +
             `<s>${datetime.format('LT')}</s>` +
-            `<s>${firstTweet.full_text}</s>`
+            `<s>${latestNews.content}</s>`
         this.emit(':tell', speechOutput)
       })
       .catch(err => {

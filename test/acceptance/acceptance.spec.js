@@ -8,7 +8,7 @@ describe('acceptance', () => {
   it('retrieves the latest news from twitter', () => {
     return realtimeWw2.getLatestNews().then(latestNews => {
       expect(latestNews.content).to.equal('Soviet Union has so far remained neutral in war in Poland on its western border, following Nazi-Soviet nonaggression pact signed 3 weeks ago')
-      expect(latestNews.date).to.equal('20170914')
+      expect(latestNews.date).to.equal('19390914')
       expect(latestNews.time).to.equal('5:09 PM')
     })
   })
