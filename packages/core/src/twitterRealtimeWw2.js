@@ -18,11 +18,16 @@ export default class TwitterRealtimeWw2 {
     return this.client.get('statuses/user_timeline', params)
       .then(tweets => {
         const firstTweet = tweets[0]
-        const datetime = moment(firstTweet.created_at, 'dd MMM DD HH:mm:ss ZZ YYYY', 'en')
         return {
-          datetime: datetime.utc().format(),
+          datetime: this._parseTweetDatetime(firstTweet),
           content: firstTweet.full_text.replace(new RegExp('\\s*https://t.co.*$'), '')
         }
       })
+  }
+
+  _parseTweetDatetime (tweet) {
+    const datetime = moment(tweet.created_at, 'dd MMM DD HH:mm:ss ZZ YYYY', 'en')
+    datetime.set('year', datetime.get('year') - 78)
+    return datetime.utc().format()
   }
 }
