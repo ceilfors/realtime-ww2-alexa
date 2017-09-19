@@ -9,6 +9,18 @@ provider:
   name: aws
   runtime: nodejs6.10
   region: eu-west-1
+  iamRoleStatements:
+    - Effect: "Allow"
+      Action:
+        - "s3:ListBucket"
+        - "s3:PutObject"
+        - "s3:GetObject"
+      Resource:
+        Fn::Join:
+          - ""
+          - - "arn:aws:s3:::"
+            - Ref: S3TweetCache
+            - /*
 
 package:
   include:
@@ -21,6 +33,7 @@ custom:
   dev:
     twitterRestBaseUrl: { "Fn::Join" : ["", [ "https://", { "Ref" : "ApiGatewayRestApi" }, ".execute-api.${self:provider.region}.amazonaws.com/${self:custom.stage}" ] ]  }
   cryptKeyId: c7ce8560-aaf1-4780-be8c-b048a0a749f2
+  tweetCacheBucketName: ${self:service}-${self:custom.stage}-tweet
 
 functions:
   alexa-skill:
@@ -29,7 +42,19 @@ functions:
       - alexaSkill
     environment:
       TWITTER_REST_BASE_URL: ${self:custom.${self:custom.stage}.twitterRestBaseUrl}
+  cache-tweets:
+    handler: packages/core/src/cacheTweets.handler
+    environment:
+      TWEET_CACHE_BUCKET_NAME: ${self:custom.tweetCacheBucketName}
+      TWITTER_REST_BASE_URL: ${self:custom.${self:custom.stage}.twitterRestBaseUrl}
   fake-twitter:
     handler: packages/fake-twitter/handler.handler
     events:
       - http: GET statuses/user_timeline.json
+  
+resources:
+  Resources:
+    S3TweetCache:
+      Type: AWS::S3::Bucket
+      Properties:
+        BucketName: ${self:custom.tweetCacheBucketName}
