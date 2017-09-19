@@ -1,0 +1,8 @@
+{
+  "name": "@realtime-ww2-alexa/integration-test",
+  "version": "0.1.0",
+  "description": "Integration test",
+  "author": "ceilfors",
+  "license": "Apache-2.0",
+  "private": true
+}
