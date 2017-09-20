@@ -33,5 +33,5 @@ describe('cacheTweets', () => {
         expect(tweets.length).to.equal(20)
       })
     })
-  })
+  }).timeout(5000)
 })

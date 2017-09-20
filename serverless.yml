@@ -42,7 +42,7 @@ functions:
     events:
       - alexaSkill
     environment:
-      TWITTER_REST_BASE_URL: ${self:custom.${self:custom.stage}.twitterRestBaseUrl}
+      TWEET_CACHE_BUCKET_NAME: ${self:custom.tweetCacheBucketName}
   cache-tweets:
     handler: packages/core/src/cache-tweets.handler
     environment:

@@ -1,6 +1,5 @@
 /* eslint-env mocha */
 import TwitterRealtimeWw2 from '../src/twitter-realtime-ww2'
-import nock from 'nock'
 import chai from 'chai'
 import chaiAsPromised from 'chai-as-promised'
 import moment from 'moment'
@@ -11,19 +10,8 @@ describe('twitter realtime ww2', () => {
     let subject
 
     beforeEach(() => {
-      subject = new TwitterRealtimeWw2({}, 'https://api.twitter.com/1.1', 'RealTimeWWII')
-      nock('https://api.twitter.com/1.1')
-        .get('/statuses/user_timeline.json')
-        .query({
-          tweet_mode: 'extended',
-          screen_name: 'RealTimeWWII',
-          count: 1
-        })
-        .reply(200, require('./user_timeline_extended.json'))
-    })
-
-    afterEach(() => {
-      nock.cleanAll()
+      let twitterService = {getLatestTweets: () => Promise.resolve(require('./user_timeline_extended.json'))}
+      subject = new TwitterRealtimeWw2(twitterService)
     })
 
     it('should return datetime in UTC ISO_8601 format', () => {

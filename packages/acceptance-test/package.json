@@ -4,5 +4,8 @@
   "description": "Acceptance test",
   "author": "ceilfors",
   "license": "Apache-2.0",
-  "private": true
+  "private": true,
+  "dependencies": {
+    "@realtime-ww2-alexa/core": "*"
+  }
 }

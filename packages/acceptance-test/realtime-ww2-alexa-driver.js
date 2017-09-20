@@ -1,4 +1,20 @@
+import S3TweetRepository from '@realtime-ww2-alexa/core/src/lib/s3-tweet-repository'
+const tweetRepository = new S3TweetRepository('realtime-ww2-dev-tweet')
 const AWS = require('aws-sdk')
+
+const invokeCacheTweets = () => {
+  const lambda = new AWS.Lambda()
+  const params = {
+    FunctionName: 'realtime-ww2-dev-cache-tweets'
+  }
+  return lambda.invoke(params).promise().then(response => {
+    if (response.FunctionError) {
+      throw new Error(response.Payload)
+    } else {
+      return response
+    }
+  })
+}
 
 const createAlexaPayload = (alexaApplicationId) => {
   return JSON.stringify({
@@ -48,6 +64,10 @@ const createAlexaPayload = (alexaApplicationId) => {
 export default class RealtimeWw2AlexaDriver {
   constructor (alexaApplicationId) {
     this.alexaApplicationId = alexaApplicationId
+  }
+
+  setup () {
+    return tweetRepository.deleteLatestTweets().then(_ => invokeCacheTweets())
   }
 
   getLatestNews () {

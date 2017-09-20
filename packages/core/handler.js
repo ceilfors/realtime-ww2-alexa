@@ -1,23 +1,17 @@
 'use strict'
 
 import TwitterRealtimeWw2 from './src/twitter-realtime-ww2'
+import CachedTwitterService from './src/lib/cached-twitter-service'
+import S3TweetRepository from './src/lib/s3-tweet-repository'
 
 const Alexa = require('alexa-sdk')
 const moment = require('moment')
-const slscrypt = require('./node_modules/serverless-crypt/dists/slscrypt')
 
 const createApp = () => {
-  return slscrypt.get('twitter_consumer_key').then(consumerKey => {
-    return slscrypt.get('twitter_consumer_secret').then(consumerSecret => {
-      return slscrypt.get('twitter_access_token_key').then(accessTokenKey => {
-        return slscrypt.get('twitter_access_token_secret').then(accessTokenSecret => {
-          return new TwitterRealtimeWw2({
-            consumerKey, consumerSecret, accessTokenKey, accessTokenSecret
-          }, process.env.TWITTER_REST_BASE_URL, 'RealTimeWWII')
-        })
-      })
-    })
-  })
+  return Promise.resolve(new TwitterRealtimeWw2(
+    new CachedTwitterService(
+      new S3TweetRepository(process.env.TWEET_CACHE_BUCKET_NAME))
+  ))
 }
 
 const HELP_MESSAGE = 'You can say tell me the latest news, or, you can say exit... What can I help you with?'
