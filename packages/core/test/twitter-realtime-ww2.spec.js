@@ -1,5 +1,5 @@
 /* eslint-env mocha */
-import TwitterRealtimeWw2 from '../src/twitterRealtimeWw2'
+import TwitterRealtimeWw2 from '../src/twitter-realtime-ww2'
 import nock from 'nock'
 import chai from 'chai'
 import chaiAsPromised from 'chai-as-promised'

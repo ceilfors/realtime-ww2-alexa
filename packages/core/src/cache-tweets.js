@@ -1,5 +1,5 @@
 import Twitter from 'twitter'
-import S3TweetRepository from './lib/s3TweetRepository'
+import S3TweetRepository from './lib/s3-tweet-repository'
 
 const slscrypt = require('../node_modules/serverless-crypt/dists/slscrypt')
 const tweetRepository = new S3TweetRepository(process.env.TWEET_CACHE_BUCKET_NAME)

@@ -1,7 +1,7 @@
 /* eslint-env mocha */
 import AWS from 'aws-sdk'
 import {expect} from 'chai'
-import S3TweetRepository from '@realtime-ww2-alexa/core/src/lib/s3TweetRepository'
+import S3TweetRepository from '@realtime-ww2-alexa/core/src/lib/s3-tweet-repository'
 const tweetRepository = new S3TweetRepository('realtime-ww2-dev-tweet')
 
 const invokeCacheTweets = () => {

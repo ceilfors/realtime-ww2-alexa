@@ -1,6 +1,6 @@
 'use strict'
 
-import TwitterRealtimeWw2 from './src/twitterRealtimeWw2'
+import TwitterRealtimeWw2 from './src/twitter-realtime-ww2'
 
 const Alexa = require('alexa-sdk')
 const moment = require('moment')

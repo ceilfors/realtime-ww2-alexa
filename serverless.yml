@@ -44,7 +44,7 @@ functions:
     environment:
       TWITTER_REST_BASE_URL: ${self:custom.${self:custom.stage}.twitterRestBaseUrl}
   cache-tweets:
-    handler: packages/core/src/cacheTweets.handler
+    handler: packages/core/src/cache-tweets.handler
     environment:
       TWEET_CACHE_BUCKET_NAME: ${self:custom.tweetCacheBucketName}
       TWITTER_REST_BASE_URL: ${self:custom.${self:custom.stage}.twitterRestBaseUrl}
