@@ -3,16 +3,30 @@ import AWS from 'aws-sdk'
 export default class S3TweetRepository {
   constructor (bucketName) {
     this.bucketName = bucketName
+    this.objectKey = 'latest_tweets.json'
+    this.s3 = new AWS.S3()
   }
 
   saveLatestTweets (tweets) {
-    const s3 = new AWS.S3()
-    const params = {
+    const params = Object.assign(this._baseParams(), {
       Body: JSON.stringify(tweets),
-      Bucket: this.bucketName,
-      Key: 'latest_tweets.json',
       ContentType: 'application/json'
+    })
+    return this.s3.putObject(params).promise()
+  }
+
+  getLatestTweets () {
+    return this.s3.getObject(this._baseParams()).promise().then(data => JSON.parse(data.Body))
+  }
+
+  deleteLatestTweets () {
+    return this.s3.deleteObject(this._baseParams()).promise()
+  }
+
+  _baseParams () {
+    return {
+      Bucket: this.bucketName,
+      Key: this.objectKey
     }
-    return s3.putObject(params).promise()
   }
 }
