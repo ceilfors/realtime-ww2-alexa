@@ -4,7 +4,7 @@
   "description": "The core alexa skill",
   "scripts": {
     "pretest": "standard",
-    "test": "mocha --compilers js:babel-core/register test/**/*.spec.js"
+    "test": "mocha --compilers js:babel-core/register --require babel-polyfill test/**/*.spec.js"
   },
   "author": "ceilfors",
   "license": "Apache-2.0",
