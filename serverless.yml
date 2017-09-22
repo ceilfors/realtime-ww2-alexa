@@ -38,7 +38,7 @@ custom:
 
 functions:
   alexa-skill:
-    handler: packages/core/handler.handler
+    handler: packages/core/src/alexa-skill.handler
     events:
       - alexaSkill
     environment:
