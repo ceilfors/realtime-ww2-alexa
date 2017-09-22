@@ -5,8 +5,8 @@
   "scripts": {
     "pretest": "standard",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "test:integration": "AWS_REGION=eu-west-1 mocha --compilers js:babel-core/register --require babel-polyfill packages/integration-test/**/*.spec.js",
-    "test:acceptance": "AWS_REGION=eu-west-1 mocha --compilers js:babel-core/register --require babel-polyfill packages/acceptance-test/**/*.spec.js",
+    "test:integration": "AWS_REGION=eu-west-1 mocha --compilers js:babel-core/register --require babel-polyfill packages/aws-integration-test/integration/**/*.spec.js",
+    "test:acceptance": "AWS_REGION=eu-west-1 mocha --compilers js:babel-core/register --require babel-polyfill packages/aws-integration-test/acceptance/**/*.spec.js",
     "test:all": "lerna run test && npm run test:integration && npm run test:acceptance"
   },
   "repository": {
