@@ -1,8 +1,8 @@
 import S3TweetRepository from '@realtime-ww2-alexa/core/src/lib/s3-tweet-repository'
 import Lambda from '../lib/lambda'
+import AWS from 'aws-sdk'
 const tweetRepository = new S3TweetRepository('realtime-ww2-dev-tweet')
 const cacheTweetsLambda = new Lambda('realtime-ww2-dev-cache-tweets')
-const AWS = require('aws-sdk')
 
 const createAlexaPayload = (alexaApplicationId) => {
   return JSON.stringify({

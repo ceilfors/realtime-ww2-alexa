@@ -3,9 +3,8 @@
 import TwitterRealtimeWw2 from './lib/twitter-realtime-ww2'
 import CachedTwitterService from './lib/cached-twitter-service'
 import S3TweetRepository from './lib/s3-tweet-repository'
-
-const Alexa = require('alexa-sdk')
-const moment = require('moment')
+import Alexa from 'alexa-sdk'
+import moment from 'moment'
 
 const createApp = () => {
   return Promise.resolve(new TwitterRealtimeWw2(

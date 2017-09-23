@@ -1,4 +1,4 @@
-const moment = require('moment')
+import moment from 'moment'
 
 export default class TwitterRealtimeWw2 {
   constructor (twitterService) {
