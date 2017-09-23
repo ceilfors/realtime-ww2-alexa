@@ -54,8 +54,9 @@ export default class RealtimeWw2AlexaDriver {
     this.alexaApplicationId = alexaApplicationId
   }
 
-  setup () {
-    return tweetRepository.deleteLatestTweets().then(_ => cacheTweetsLambda.invoke())
+  async setup () {
+    await tweetRepository.deleteLatestTweets()
+    await cacheTweetsLambda.invoke()
   }
 
   async getLatestNews () {
