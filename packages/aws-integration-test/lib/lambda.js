@@ -5,10 +5,13 @@ export default class Lambda {
     this.functionName = functionName
   }
 
-  invoke () {
+  invoke (payload) {
     const lambda = new AWS.Lambda()
     const params = {
       FunctionName: this.functionName
+    }
+    if (payload) {
+      params.Payload = JSON.stringify(payload)
     }
     return lambda.invoke(params).promise().then(response => {
       if (response.FunctionError) {
