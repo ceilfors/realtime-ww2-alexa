@@ -3,8 +3,15 @@ const path = require('path')
 const slsw = require('serverless-webpack')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 
+const addBabelPolyfill = (slsEntries) => {
+  return Object.keys(slsEntries)
+    .reduce((acc, key) => Object.assign(acc, {
+      [key]: ['babel-polyfill', slsEntries[key]]
+    }), {})
+}
+
 module.exports = {
-  entry: slsw.lib.entries,
+  entry: addBabelPolyfill(slsw.lib.entries),
   target: 'node',
   module: {
     loaders: [{

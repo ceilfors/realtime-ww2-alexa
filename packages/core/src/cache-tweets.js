@@ -21,21 +21,13 @@ const handler = (event, context, callback) => {
     .catch(err => callback(err))
 }
 
-const createTwitterClient = (twitterRestBaseUrl) => {
-  return slscrypt.get('twitter_consumer_key').then(consumerKey => {
-    return slscrypt.get('twitter_consumer_secret').then(consumerSecret => {
-      return slscrypt.get('twitter_access_token_key').then(accessTokenKey => {
-        return slscrypt.get('twitter_access_token_secret').then(accessTokenSecret => {
-          return new Twitter({
-            consumer_key: consumerKey,
-            consumer_secret: consumerSecret,
-            access_token_key: accessTokenKey,
-            access_token_secret: accessTokenSecret,
-            rest_base: twitterRestBaseUrl
-          })
-        })
-      })
-    })
+const createTwitterClient = async (twitterRestBaseUrl) => {
+  return new Twitter({
+    consumer_key: await slscrypt.get('twitter_consumer_key'),
+    consumer_secret: await slscrypt.get('twitter_consumer_secret'),
+    access_token_key: await slscrypt.get('twitter_access_token_key'),
+    access_token_secret: await slscrypt.get('twitter_access_token_secret'),
+    rest_base: twitterRestBaseUrl
   })
 }
 

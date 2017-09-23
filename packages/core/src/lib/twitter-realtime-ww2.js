@@ -5,15 +5,13 @@ export default class TwitterRealtimeWw2 {
     this.twitterService = twitterService
   }
 
-  getLatestNews () {
-    return this.twitterService.getLatestTweets()
-      .then(tweets => {
-        const firstTweet = tweets[0]
-        return {
-          datetime: this._parseTweetDatetime(firstTweet),
-          content: firstTweet.full_text.replace(new RegExp('\\s*https://t.co.*$'), '')
-        }
-      })
+  async getLatestNews () {
+    const latestTweets = await this.twitterService.getLatestTweets()
+    const firstTweet = latestTweets[0]
+    return {
+      datetime: this._parseTweetDatetime(firstTweet),
+      content: firstTweet.full_text.replace(new RegExp('\\s*https://t.co.*$'), '')
+    }
   }
 
   _parseTweetDatetime (tweet) {
