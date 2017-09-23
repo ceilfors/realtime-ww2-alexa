@@ -31,8 +31,10 @@ custom:
   stage: ${opt:stage, self:provider.stage}
   prod:
     twitterRestBaseUrl: https://api.twitter.com/1.1
+    cacheTweetsSchedule: rate(1 hour)
   dev:
     twitterRestBaseUrl: { "Fn::Join" : ["", [ "https://", { "Ref" : "ApiGatewayRestApi" }, ".execute-api.${self:provider.region}.amazonaws.com/${self:custom.stage}" ] ]  }
+    cacheTweetsSchedule: cron(0 0 * * ? 1970)
   cryptKeyId: c7ce8560-aaf1-4780-be8c-b048a0a749f2
   tweetCacheBucketName: ${self:service}-${self:custom.stage}-tweet
 
@@ -45,6 +47,8 @@ functions:
       TWEET_CACHE_BUCKET_NAME: ${self:custom.tweetCacheBucketName}
   cache-tweets:
     handler: packages/core/src/cache-tweets.handler
+    events:
+      - schedule: ${self:custom.${self:custom.stage}.cacheTweetsSchedule}
     environment:
       TWEET_CACHE_BUCKET_NAME: ${self:custom.tweetCacheBucketName}
       TWITTER_REST_BASE_URL: ${self:custom.${self:custom.stage}.twitterRestBaseUrl}
