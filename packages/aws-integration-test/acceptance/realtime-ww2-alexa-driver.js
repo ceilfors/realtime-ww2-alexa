@@ -49,6 +49,16 @@ const createAlexaPayload = (alexaApplicationId) => {
   }
 }
 
+const extractResponseFromSsml = (ssml) => {
+  const regex = '<speak>\\s*<s>(.*)</s><s>(.*)</s><s>(.*)</s>\\s*</speak>'
+  const result = new RegExp(regex).exec(ssml)
+  return {
+    date: />(.*)</.exec(result[1])[1],
+    time: result[2],
+    content: result[3]
+  }
+}
+
 export default class RealtimeWw2AlexaDriver {
   constructor (alexaApplicationId) {
     this.alexaApplicationId = alexaApplicationId
@@ -61,14 +71,6 @@ export default class RealtimeWw2AlexaDriver {
 
   async getLatestNews () {
     const response = await alexaSkillLambda.invoke(createAlexaPayload(this.alexaApplicationId))
-
-    const regex = '<speak>\\s*<s>(.*)</s><s>(.*)</s><s>(.*)</s>\\s*</speak>'
-    const ssml = JSON.parse(response.Payload).response.outputSpeech.ssml
-    const result = new RegExp(regex).exec(ssml)
-    return {
-      date: />(.*)</.exec(result[1])[1],
-      time: result[2],
-      content: result[3]
-    }
+    return extractResponseFromSsml(JSON.parse(response.Payload).response.outputSpeech.ssml)
   }
 }
