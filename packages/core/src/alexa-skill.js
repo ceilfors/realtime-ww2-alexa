@@ -1,5 +1,3 @@
-'use strict'
-
 import TwitterRealtimeWw2 from './lib/twitter-realtime-ww2'
 import CachedTwitterService from './lib/cached-twitter-service'
 import S3TweetRepository from './lib/s3-tweet-repository'
