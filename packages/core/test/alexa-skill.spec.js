@@ -7,7 +7,7 @@ import sinonChai from 'sinon-chai'
 chai.use(sinonChai)
 const expect = chai.expect
 
-describe.only('alexa skill', function () {
+describe('alexa skill', function () {
   let alexaSdk, duration
 
   beforeEach('Prepare Alexa SDK', function () {
@@ -81,6 +81,22 @@ describe.only('alexa skill', function () {
       expect(alexaSdk.emit).to.have.been.calledWithExactly(':tell',
         `<p><s><say-as interpret-as="date">19390914</say-as></s><s>12:00 AM</s><s>content 1</s></p>` +
         `<p><s><say-as interpret-as="date">19390915</say-as></s><s>12:00 AM</s><s>content 2</s></p>`)
+    })
+
+    it('should not repeat the date if there are two events happening on the same date', async function () {
+      app.getRecentEvents.returns([
+        { datetime: moment('1939-09-14T00:00:00'), content: 'content 1' },
+        { datetime: moment('1939-09-14T01:00:00'), content: 'content 2' },
+        { datetime: moment('1939-09-14T02:00:00'), content: 'content 3' },
+        { datetime: moment('1939-09-15T00:00:00'), content: 'content 4' }
+      ])
+      await subject.apply(alexaSdk)
+
+      expect(alexaSdk.emit).to.have.been.calledWithExactly(':tell',
+        `<p><s><say-as interpret-as="date">19390914</say-as></s><s>12:00 AM</s><s>content 1</s></p>` +
+        `<p><s>1:00 AM</s><s>content 2</s></p>` +
+        `<p><s>2:00 AM</s><s>content 3</s></p>` +
+        `<p><s><say-as interpret-as="date">19390915</say-as></s><s>12:00 AM</s><s>content 4</s></p>`)
     })
   })
 })

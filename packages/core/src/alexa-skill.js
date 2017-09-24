@@ -13,6 +13,15 @@ const createApp = async () => {
   )
 }
 
+const convertToSsml = (event, includeDate = true) => {
+  const datetime = moment(event.datetime)
+  const dateSsml = includeDate ? `<s><say-as interpret-as="date">${datetime.format('YYYYMMDD')}</say-as></s>` : ''
+  return '<p>' +
+    dateSsml +
+    `<s>${datetime.format('LT')}</s>` +
+    `<s>${event.content}</s></p>`
+}
+
 const DURATION_LIMIT_MESSAGE = 'Sorry, you can only get the recent events from the last 1 to 24 hours'
 const HELP_MESSAGE = 'You can say tell me the latest news, or, you can say exit... What can I help you with?'
 const HELP_REPROMPT = 'What can I help you with?'
@@ -26,11 +35,7 @@ const handlers = {
     return exports.createApp()
       .then(app => app.getLatestNews())
       .then(latestNews => {
-        const datetime = moment(latestNews.datetime)
-        const speechOutput = `<p><s><say-as interpret-as="date">${datetime.format('YYYYMMDD')}</say-as></s>` +
-            `<s>${datetime.format('LT')}</s>` +
-            `<s>${latestNews.content}</s></p>`
-        this.emit(':tell', speechOutput)
+        this.emit(':tell', convertToSsml(latestNews))
       })
       .catch(err => {
         console.error(err)
@@ -48,17 +53,20 @@ const handlers = {
 
       const clock = process.env.CLOCK === 'NOW' ? moment() : moment(process.env.CLOCK)
       const recentEvents = await app.getRecentEvents(duration, clock.utc().format())
-      let speechOutput
-      if (recentEvents.length === 0) {
-        speechOutput = `Sorry, there is nothing happening in the last ${duration} hour${duration > 1 ? 's' : ''}`
-      } else {
-        speechOutput = recentEvents.map(event => {
-          const datetime = moment(event.datetime)
-          return `<p><s><say-as interpret-as="date">${datetime.format('YYYYMMDD')}</say-as></s>` +
-            `<s>${datetime.format('LT')}</s>` +
-            `<s>${event.content}</s></p>`
+      let speechOutput = recentEvents.length === 0
+        ? `Sorry, there is nothing happening in the last ${duration} hour${duration > 1 ? 's' : ''}`
+        : recentEvents.map((event, i, arr) => {
+          let includeDate
+          if (i > 0) {
+            const previousMoment = moment(arr[i - 1].datetime)
+            const currentMoment = moment(event.datetime)
+            includeDate = !(previousMoment.isSame(currentMoment, 'year') && previousMoment.isSame(currentMoment, 'month') && previousMoment.isSame(currentMoment, 'day'))
+          } else {
+            includeDate = true
+          }
+          return convertToSsml(event, includeDate)
         }).join('')
-      }
+
       this.emit(':tell', speechOutput)
     } catch (err) {
       console.error(err)
