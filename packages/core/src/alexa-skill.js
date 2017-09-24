@@ -13,6 +13,7 @@ const createApp = async () => {
   )
 }
 
+const DURATION_LIMIT_MESSAGE = 'Sorry, you can only get the recent events from the last 1 to 24 hours'
 const HELP_MESSAGE = 'You can say tell me the latest news, or, you can say exit... What can I help you with?'
 const HELP_REPROMPT = 'What can I help you with?'
 const STOP_MESSAGE = 'Goodbye!'
@@ -22,7 +23,7 @@ const handlers = {
     this.emit('GetLatestIntent')
   },
   'GetLatestIntent': function () {
-    return createApp()
+    return exports.createApp()
       .then(app => app.getLatestNews())
       .then(latestNews => {
         const datetime = moment(latestNews.datetime)
@@ -38,16 +39,27 @@ const handlers = {
   },
   'GetRecentEventsIntent': async function () {
     try {
-      const app = await createApp()
+      const app = await exports.createApp()
       const duration = this.event.request.intent.slots.Duration.value
+      if (duration < 1 || duration > 24) {
+        this.emit(':tell', DURATION_LIMIT_MESSAGE)
+        return
+      }
+
       const clock = process.env.CLOCK === 'NOW' ? moment() : moment(process.env.CLOCK)
       const recentEvents = await app.getRecentEvents(duration, clock.utc().format())
-      this.emit(':tell', recentEvents.map(event => {
-        const datetime = moment(event.datetime)
-        return `<p><s><say-as interpret-as="date">${datetime.format('YYYYMMDD')}</say-as></s>` +
-          `<s>${datetime.format('LT')}</s>` +
-          `<s>${event.content}</s></p>`
-      }).join(''))
+      let speechOutput
+      if (recentEvents.length === 0) {
+        speechOutput = `Sorry, there is nothing happening in the last ${duration} hour${duration > 1 ? 's' : ''}`
+      } else {
+        speechOutput = recentEvents.map(event => {
+          const datetime = moment(event.datetime)
+          return `<p><s><say-as interpret-as="date">${datetime.format('YYYYMMDD')}</say-as></s>` +
+            `<s>${datetime.format('LT')}</s>` +
+            `<s>${event.content}</s></p>`
+        }).join('')
+      }
+      this.emit(':tell', speechOutput)
     } catch (err) {
       console.error(err)
       this.emit(':tell', 'Please try again later')
@@ -71,3 +83,6 @@ exports.handler = function (event, context, callback) {
   alexa.registerHandlers(handlers)
   alexa.execute()
 }
+
+exports.createApp = createApp
+exports.handlers = handlers
