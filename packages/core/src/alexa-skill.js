@@ -17,7 +17,7 @@ const convertToSsml = (event, includeDate = true) => {
   return '<p>' +
     dateSsml +
     `<s>${datetime.format('LT')}</s>` +
-    `<s>${event.content}</s></p>`
+    `${event.content}</p>`
 }
 
 const DURATION_LIMIT_MESSAGE = 'Sorry, you can only get the recent events from the last 1 to 24 hours'

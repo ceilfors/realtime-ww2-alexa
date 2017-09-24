@@ -32,7 +32,7 @@ describe('alexa skill', function () {
       await subject.apply(alexaSdk)
 
       expect(alexaSdk.emit).to.have.been.calledWithExactly(':tell',
-        '<p><s><say-as interpret-as="date">19390914</say-as></s><s>12:00 AM</s><s>content</s></p>')
+        '<p><s><say-as interpret-as="date">19390914</say-as></s><s>12:00 AM</s>content</p>')
     })
   })
 
@@ -86,7 +86,7 @@ describe('alexa skill', function () {
       await subject.apply(alexaSdk)
 
       expect(alexaSdk.emit).to.have.been.calledWithExactly(':tell',
-        `<p><s><say-as interpret-as="date">19390914</say-as></s><s>12:00 AM</s><s>content</s></p>`)
+        `<p><s><say-as interpret-as="date">19390914</say-as></s><s>12:00 AM</s>content</p>`)
     })
 
     it('should be able to tell two events with different date', async function () {
@@ -97,8 +97,8 @@ describe('alexa skill', function () {
       await subject.apply(alexaSdk)
 
       expect(alexaSdk.emit).to.have.been.calledWithExactly(':tell',
-        `<p><s><say-as interpret-as="date">19390914</say-as></s><s>12:00 AM</s><s>content 1</s></p>` +
-        `<p><s><say-as interpret-as="date">19390915</say-as></s><s>12:00 AM</s><s>content 2</s></p>`)
+        `<p><s><say-as interpret-as="date">19390914</say-as></s><s>12:00 AM</s>content 1</p>` +
+        `<p><s><say-as interpret-as="date">19390915</say-as></s><s>12:00 AM</s>content 2</p>`)
     })
 
     it('should not repeat the date if there are two events happening on the same date', async function () {
@@ -111,10 +111,10 @@ describe('alexa skill', function () {
       await subject.apply(alexaSdk)
 
       expect(alexaSdk.emit).to.have.been.calledWithExactly(':tell',
-        `<p><s><say-as interpret-as="date">19390914</say-as></s><s>12:00 AM</s><s>content 1</s></p>` +
-        `<p><s>1:00 AM</s><s>content 2</s></p>` +
-        `<p><s>2:00 AM</s><s>content 3</s></p>` +
-        `<p><s><say-as interpret-as="date">19390915</say-as></s><s>12:00 AM</s><s>content 4</s></p>`)
+        `<p><s><say-as interpret-as="date">19390914</say-as></s><s>12:00 AM</s>content 1</p>` +
+        `<p><s>1:00 AM</s>content 2</p>` +
+        `<p><s>2:00 AM</s>content 3</p>` +
+        `<p><s><say-as interpret-as="date">19390915</say-as></s><s>12:00 AM</s>content 4</p>`)
     })
   })
 })

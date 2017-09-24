@@ -7,7 +7,7 @@ const cacheTweetsLambda = new Lambda('realtime-ww2-dev-cache-tweets')
 const alexaSkillLambda = new Lambda(alexaSkillLambdaName)
 
 const convertEventSsmlToObj = (ssml) => {
-  const regex = '<p>(<s>(.*)</s>)?<s>(.*)</s><s>(.*)</s></p>'
+  const regex = '<p>(<s>(.*)</s>)?<s>(.*)</s>(.*)</p>'
   const result = new RegExp(regex).exec(ssml)
   if (result) {
     const dateIncluded = result[1] !== undefined
