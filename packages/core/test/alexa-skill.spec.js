@@ -18,17 +18,17 @@ describe('alexa skill', function () {
     }
   })
 
-  context('when GetLatestIntent is requested', function () {
+  context('when GetLatestEventIntent is requested', function () {
     let subject, app
 
     beforeEach(function () {
-      subject = alexaSkill.handlers.GetLatestIntent
-      app = { getLatestNews: sinon.stub() }
+      subject = alexaSkill.handlers.GetLatestEventIntent
+      app = { getLatestEvent: sinon.stub() }
       alexaSkill.createApp = () => Promise.resolve(app)
     })
 
-    it('should tell the latest news', async function () {
-      app.getLatestNews.returns({ datetime: moment('1939-09-14'), content: 'content' })
+    it('should tell the latest event', async function () {
+      app.getLatestEvent.returns({ datetime: moment('1939-09-14'), content: 'content' })
       await subject.apply(alexaSdk)
 
       expect(alexaSdk.emit).to.have.been.calledWithExactly(':tell',

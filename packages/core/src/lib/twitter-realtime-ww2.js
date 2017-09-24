@@ -20,7 +20,7 @@ export default class TwitterRealtimeWw2 {
     this.twitterService = twitterService
   }
 
-  async getLatestNews () {
+  async getLatestEvent () {
     const latestTweets = await this.twitterService.getLatestTweets()
     const firstTweet = latestTweets[0]
     return convertTweetToEvent(firstTweet)

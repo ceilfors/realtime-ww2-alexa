@@ -6,7 +6,7 @@ import moment from 'moment'
 const expect = chai.use(chaiAsPromised).expect
 
 describe('twitter realtime ww2', function () {
-  context('when successfully get latest news', function () {
+  context('when successfully get latest event', function () {
     let subject
 
     beforeEach(function () {
@@ -15,20 +15,20 @@ describe('twitter realtime ww2', function () {
     })
 
     it('should return datetime in UTC ISO_8601 format', async function () {
-      const news = await subject.getLatestNews()
-      expect(moment(news.datetime, moment.ISO_8601, true).isValid()).to.equal(true)
-      expect(moment.parseZone(news.datetime).utcOffset()).to.equal(0)
+      const event = await subject.getLatestEvent()
+      expect(moment(event.datetime, moment.ISO_8601, true).isValid()).to.equal(true)
+      expect(moment.parseZone(event.datetime).utcOffset()).to.equal(0)
     })
 
     it('should convert year to ww2 period', async function () {
-      const news = await subject.getLatestNews()
-      const datetime = moment(news.datetime, moment.ISO_8601)
+      const event = await subject.getLatestEvent()
+      const datetime = moment(event.datetime, moment.ISO_8601)
       expect(datetime.get('year')).to.equal(1939)
     })
 
-    it('should parse news content', async function () {
-      const news = await subject.getLatestNews()
-      expect(news.content).to.equal('Soviet Union has so far remained neutral in war in Poland on its western border, following Nazi-Soviet nonaggression pact signed 3 weeks ago')
+    it('should parse event content', async function () {
+      const event = await subject.getLatestEvent()
+      expect(event.content).to.equal('Soviet Union has so far remained neutral in war in Poland on its western border, following Nazi-Soviet nonaggression pact signed 3 weeks ago')
     })
   })
 

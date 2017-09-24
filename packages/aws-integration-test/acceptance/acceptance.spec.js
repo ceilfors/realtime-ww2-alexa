@@ -15,9 +15,9 @@ describe('acceptance', function () {
     await realtimeWw2.restoreClock()
   })
 
-  it('retrieves the latest news from twitter', async function () {
-    const latestNews = await realtimeWw2.getLatestNews()
-    expect(latestNews).to.deep.equal({
+  it('retrieves the latest event from twitter', async function () {
+    const latestEvent = await realtimeWw2.getLatestEvent()
+    expect(latestEvent).to.deep.equal({
       content: 'Soviet Union has so far remained neutral in war in Poland on its western border, following Nazi-Soviet nonaggression pact signed 3 weeks ago',
       date: '19390914',
       time: '5:09 PM'

@@ -43,8 +43,8 @@ export default class RealtimeWw2AlexaDriver {
     await cacheTweetsLambda.invoke()
   }
 
-  async getLatestNews () {
-    const response = await this.alexa.request('GetLatestIntent')
+  async getLatestEvent () {
+    const response = await this.alexa.request('GetLatestEventIntent')
     return convertEventSsmlToObj(response)
   }
 

@@ -21,19 +21,19 @@ const convertToSsml = (event, includeDate = true) => {
 }
 
 const DURATION_LIMIT_MESSAGE = 'Sorry, you can only get the recent events from the last 1 to 24 hours'
-const HELP_MESSAGE = 'You can say tell me the latest news, or, you can say exit... What can I help you with?'
+const HELP_MESSAGE = 'You can say tell me the latest event, or, you can say exit... What can I help you with?'
 const HELP_REPROMPT = 'What can I help you with?'
 const STOP_MESSAGE = 'Goodbye!'
 
 const handlers = {
   'LaunchRequest': function () {
-    this.emit('GetLatestIntent')
+    this.emit('GetLatestEventIntent')
   },
-  'GetLatestIntent': function () {
+  'GetLatestEventIntent': function () {
     return exports.createApp()
-      .then(app => app.getLatestNews())
-      .then(latestNews => {
-        this.emit(':tell', convertToSsml(latestNews))
+      .then(app => app.getLatestEvent())
+      .then(latestEvent => {
+        this.emit(':tell', convertToSsml(latestEvent))
       })
       .catch(err => {
         console.error(err)
