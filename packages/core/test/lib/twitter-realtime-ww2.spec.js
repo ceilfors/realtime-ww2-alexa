@@ -31,4 +31,26 @@ describe('twitter realtime ww2', function () {
       expect(news.content).to.equal('Soviet Union has so far remained neutral in war in Poland on its western border, following Nazi-Soviet nonaggression pact signed 3 weeks ago')
     })
   })
+
+  context('when sucessfully get recent events', function () {
+    let subject
+
+    beforeEach(function () {
+      let twitterService = {getLatestTweets: () => Promise.resolve(require('./user_timeline_extended.json'))}
+      subject = new TwitterRealtimeWw2(twitterService)
+    })
+
+    it('should return events within the specified duration, sorted chronologically', async function () {
+      const events = await subject.getRecentEvents(4, '2017-09-14T17:52:00Z')
+      expect(events.length).to.equal(3)
+      expect(events[0].datetime).to.equal('1939-09-14T13:53:37Z')
+      expect(events[1].datetime).to.equal('1939-09-14T17:05:41Z')
+      expect(events[2].datetime).to.equal('1939-09-14T17:09:04Z')
+    })
+
+    it('should return empty array if there is no event found', async function () {
+      const events = await subject.getRecentEvents(3, '2017-09-18T00:00:00Z')
+      expect(events.length).to.equal(0)
+    })
+  })
 })
