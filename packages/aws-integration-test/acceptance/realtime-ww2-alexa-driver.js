@@ -1,58 +1,10 @@
 import S3TweetRepository from '@realtime-ww2-alexa/core/src/lib/s3-tweet-repository'
 import Lambda from '../lib/lambda'
+import Alexa from '../lib/alexa'
+const alexaSkillLambdaName = 'realtime-ww2-dev-alexa-skill'
 const tweetRepository = new S3TweetRepository('realtime-ww2-dev-tweet')
 const cacheTweetsLambda = new Lambda('realtime-ww2-dev-cache-tweets')
-const alexaSkillLambda = new Lambda('realtime-ww2-dev-alexa-skill')
-
-const formatSlots = (slots) => {
-  return Object.keys(slots)
-    .reduce((acc, c) => Object.assign(acc, {[c]: {name: c, value: slots[c]}}), {})
-}
-
-const createAlexaPayload = (alexaApplicationId, intentName, slots = {}) => {
-  return {
-    'session': {
-      'new': true,
-      'sessionId': 'amzn1.echo-api.session.[unique-value-here]',
-      'attributes': {},
-      'user': {
-        'userId': 'amzn1.ask.account.[unique-value-here]'
-      },
-      'application': {
-        'applicationId': alexaApplicationId
-      }
-    },
-    'version': '1.0',
-    'request': {
-      'locale': 'en-GB',
-      'timestamp': '2017-09-14T22:03:45Z',
-      'type': 'IntentRequest',
-      'intent': {
-        'name': intentName,
-        'slots': formatSlots(slots)
-      },
-      'requestId': 'amzn1.echo-api.request.[unique-value-here]'
-    },
-    'context': {
-      'AudioPlayer': {
-        'playerActivity': 'IDLE'
-      },
-      'System': {
-        'device': {
-          'supportedInterfaces': {
-            'AudioPlayer': {}
-          }
-        },
-        'application': {
-          'applicationId': alexaApplicationId
-        },
-        'user': {
-          'userId': 'amzn1.ask.account.[unique-value-here]'
-        }
-      }
-    }
-  }
-}
+const alexaSkillLambda = new Lambda(alexaSkillLambdaName)
 
 const convertEventSsmlToObj = (ssml) => {
   const regex = '<p><s>(.*)</s><s>(.*)</s><s>(.*)</s></p>'
@@ -68,14 +20,9 @@ const convertEventSsmlToObj = (ssml) => {
   }
 }
 
-const getSpeech = (alexaResponse) => {
-  const ssml = JSON.parse(alexaResponse.Payload).response.outputSpeech.ssml
-  return ssml.replace(/^<speak>\s*/, '').replace(/\s*<\/speak>$/, '')
-}
-
 export default class RealtimeWw2AlexaDriver {
   constructor (alexaApplicationId) {
-    this.alexaApplicationId = alexaApplicationId
+    this.alexa = new Alexa(alexaApplicationId, alexaSkillLambdaName)
   }
 
   async setup () {
@@ -84,9 +31,8 @@ export default class RealtimeWw2AlexaDriver {
   }
 
   async getLatestNews () {
-    const payload = createAlexaPayload(this.alexaApplicationId, 'GetLatestIntent')
-    const response = await alexaSkillLambda.invoke(payload)
-    return convertEventSsmlToObj(getSpeech(response))
+    const response = await this.alexa.request('GetLatestIntent')
+    return convertEventSsmlToObj(response)
   }
 
   async setClock (clock) {
@@ -98,10 +44,8 @@ export default class RealtimeWw2AlexaDriver {
   }
 
   async getRecentEvents (from) {
-    const payload = createAlexaPayload(this.alexaApplicationId, 'GetRecentEventsIntent', {Duration: 24})
-    const response = await alexaSkillLambda.invoke(payload)
-    const speech = getSpeech(response)
-    const eventsSsml = speech.replace(/p><p/g, 'p>;;;<p').split(';;;')
+    const response = await this.alexa.request('GetRecentEventsIntent', {Duration: 24})
+    const eventsSsml = response.replace(/p><p/g, 'p>;;;<p').split(';;;')
     return eventsSsml.map(eventSsml => convertEventSsmlToObj(eventSsml))
   }
 }
