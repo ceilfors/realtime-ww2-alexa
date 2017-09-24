@@ -31,6 +31,7 @@
     "serverless-crypt": "0.0.3",
     "serverless-webpack": "^2.2.0",
     "sinon": "^3.2.1",
+    "sinon-chai": "^2.13.0",
     "standard": "^10.0.3",
     "webpack": "^3.3.0"
   },
