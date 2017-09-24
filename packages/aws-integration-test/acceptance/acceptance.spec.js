@@ -12,8 +12,47 @@ describe('acceptance', function () {
 
   it('retrieves the latest news from twitter', async function () {
     const latestNews = await realtimeWw2.getLatestNews()
-    expect(latestNews.content).to.equal('Soviet Union has so far remained neutral in war in Poland on its western border, following Nazi-Soviet nonaggression pact signed 3 weeks ago')
-    expect(latestNews.date).to.equal('19390914')
-    expect(latestNews.time).to.equal('5:09 PM')
+    expect(latestNews).to.deep.equal({
+      content: 'Soviet Union has so far remained neutral in war in Poland on its western border, following Nazi-Soviet nonaggression pact signed 3 weeks ago',
+      date: '19390914',
+      time: '5:09 PM'
+    })
+  })
+
+  xit('retrieves the events from the last 24 hours', async function () {
+    await realtimeWw2.setClock('2017-09-14T17:15:00Z')
+    const recentEvents = await realtimeWw2.getRecentEvents(24)
+    expect(recentEvents).to.deep.equal([
+      {
+        content: "\"It is felt that Mussolini was up to no good with his scheme for holding a peace conference and spoiling what has become everybody's war.\"",
+        date: '19390913',
+        time: '5:17 PM'
+      },
+      {
+        content: 'French Prime Minister Édouard Daladier has formed a war cabinet. He is personally responsible for foreign affairs, war, &amp; national defence.',
+        date: '19390914',
+        time: '1:18 PM'
+      },
+      {
+        content: 'German troops have broken Polish defences on the Narew river. They are advancing across the plains north of Warsaw, encircling the capital.',
+        date: '19390914',
+        time: '1:49 PM'
+      },
+      {
+        content: 'Retreating Polish troops have blown up bridges to slow Germans, but Wehrmacht combat engineers throw up pontoons to keep blitzkreig rolling:',
+        date: '19390914',
+        time: '1:53 PM'
+      },
+      {
+        content: 'The Soviet newspaper Pravda has launched an anti-Polish campaign, with articles alleging Polish mistreatment of ethnic minorities.',
+        date: '19390914',
+        time: '5:05 PM'
+      },
+      {
+        content: 'Soviet Union has so far remained neutral in war in Poland on its western border, following Nazi-Soviet nonaggression pact signed 3 weeks ago',
+        date: '19390914',
+        time: '5:09 PM'
+      }
+    ])
   })
 })
