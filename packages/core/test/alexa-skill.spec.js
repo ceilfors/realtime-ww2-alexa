@@ -18,6 +18,24 @@ describe('alexa skill', function () {
     }
   })
 
+  context('when GetLatestIntent is requested', function () {
+    let subject, app
+
+    beforeEach(function () {
+      subject = alexaSkill.handlers.GetLatestIntent
+      app = { getLatestNews: sinon.stub() }
+      alexaSkill.createApp = () => Promise.resolve(app)
+    })
+
+    it('should tell the latest news', async function () {
+      app.getLatestNews.returns({ datetime: moment('1939-09-14'), content: 'content' })
+      await subject.apply(alexaSdk)
+
+      expect(alexaSdk.emit).to.have.been.calledWithExactly(':tell',
+        '<p><s><say-as interpret-as="date">19390914</say-as></s><s>12:00 AM</s><s>content</s></p>')
+    })
+  })
+
   context('when GetRecentEventsIntent is requested', function () {
     let subject, app
 
