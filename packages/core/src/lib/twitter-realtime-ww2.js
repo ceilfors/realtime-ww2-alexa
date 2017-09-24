@@ -1,5 +1,20 @@
 import moment from 'moment'
 
+const getCreatedDateTimeFromTweet = (tweet) => moment(tweet.created_at, 'dd MMM DD HH:mm:ss ZZ YYYY', 'en')
+
+const getEventDateTime = (tweet) => {
+  const dateTime = getCreatedDateTimeFromTweet(tweet)
+  dateTime.set('year', dateTime.get('year') - 78)
+  return dateTime.utc().format()
+}
+
+const convertTweetToEvent = (tweet) => {
+  return {
+    datetime: getEventDateTime(tweet),
+    content: tweet.full_text.replace(new RegExp('\\s*https://t.co.*$'), '')
+  }
+}
+
 export default class TwitterRealtimeWw2 {
   constructor (twitterService) {
     this.twitterService = twitterService
@@ -8,10 +23,7 @@ export default class TwitterRealtimeWw2 {
   async getLatestNews () {
     const latestTweets = await this.twitterService.getLatestTweets()
     const firstTweet = latestTweets[0]
-    return {
-      datetime: this._parseTweetDatetime(firstTweet),
-      content: firstTweet.full_text.replace(new RegExp('\\s*https://t.co.*$'), '')
-    }
+    return convertTweetToEvent(firstTweet)
   }
 
   async getRecentEvents (durationHour, clock) {
@@ -20,19 +32,10 @@ export default class TwitterRealtimeWw2 {
       .filter(tweet => {
         const now = moment(clock)
         const minimumDateTime = now.clone().subtract(durationHour, 'hours')
-        const tweetDateTime = moment(tweet.created_at, 'dd MMM DD HH:mm:ss ZZ YYYY', 'en')
+        const tweetDateTime = getCreatedDateTimeFromTweet(tweet)
         return tweetDateTime.diff(minimumDateTime) >= 0 && tweetDateTime.diff(now) <= 0
       })
-      .map(tweet => ({
-        datetime: this._parseTweetDatetime(tweet),
-        content: tweet.full_text.replace(new RegExp('\\s*https://t.co.*$'), '')
-      }))
+      .map(convertTweetToEvent)
       .sort((t1, t2) => moment(t1.datetime).diff(moment(t2.datetime)))
-  }
-
-  _parseTweetDatetime (tweet) {
-    const datetime = moment(tweet.created_at, 'dd MMM DD HH:mm:ss ZZ YYYY', 'en')
-    datetime.set('year', datetime.get('year') - 78)
-    return datetime.utc().format()
   }
 }
