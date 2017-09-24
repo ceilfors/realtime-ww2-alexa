@@ -21,4 +21,24 @@ export default class Lambda {
       }
     })
   }
+
+  async updateEnvironment (name, value) {
+    const env = await this._getEnvironments()
+    env.Variables[name] = value
+    const lambda = new AWS.Lambda()
+    const params = {
+      FunctionName: this.functionName,
+      Environment: env
+    }
+    await lambda.updateFunctionConfiguration(params).promise()
+  }
+
+  _getEnvironments () {
+    const lambda = new AWS.Lambda()
+    const params = {
+      FunctionName: this.functionName
+    }
+    return lambda.getFunctionConfiguration(params).promise()
+      .then(response => response.Environment)
+  }
 }

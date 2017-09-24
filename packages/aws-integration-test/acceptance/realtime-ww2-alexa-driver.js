@@ -4,7 +4,12 @@ const tweetRepository = new S3TweetRepository('realtime-ww2-dev-tweet')
 const cacheTweetsLambda = new Lambda('realtime-ww2-dev-cache-tweets')
 const alexaSkillLambda = new Lambda('realtime-ww2-dev-alexa-skill')
 
-const createAlexaPayload = (alexaApplicationId) => {
+const formatSlots = (slots) => {
+  return Object.keys(slots)
+    .reduce((acc, c) => Object.assign(acc, {[c]: {name: c, value: slots[c]}}), {})
+}
+
+const createAlexaPayload = (alexaApplicationId, intentName, slots = {}) => {
   return {
     'session': {
       'new': true,
@@ -23,8 +28,8 @@ const createAlexaPayload = (alexaApplicationId) => {
       'timestamp': '2017-09-14T22:03:45Z',
       'type': 'IntentRequest',
       'intent': {
-        'name': 'GetLatestIntent',
-        'slots': {}
+        'name': intentName,
+        'slots': formatSlots(slots)
       },
       'requestId': 'amzn1.echo-api.request.[unique-value-here]'
     },
@@ -49,14 +54,23 @@ const createAlexaPayload = (alexaApplicationId) => {
   }
 }
 
-const extractResponseFromSsml = (ssml) => {
-  const regex = '<speak>\\s*<s>(.*)</s><s>(.*)</s><s>(.*)</s>\\s*</speak>'
+const convertEventSsmlToObj = (ssml) => {
+  const regex = '<p><s>(.*)</s><s>(.*)</s><s>(.*)</s></p>'
   const result = new RegExp(regex).exec(ssml)
-  return {
-    date: />(.*)</.exec(result[1])[1],
-    time: result[2],
-    content: result[3]
+  if (result) {
+    return {
+      date: />(.*)</.exec(result[1])[1],
+      time: result[2],
+      content: result[3]
+    }
+  } else {
+    throw new Error('Could not convert ssml to event object as it does not match the regex: ' + ssml)
   }
+}
+
+const getSpeech = (alexaResponse) => {
+  const ssml = JSON.parse(alexaResponse.Payload).response.outputSpeech.ssml
+  return ssml.replace(/^<speak>\s*/, '').replace(/\s*<\/speak>$/, '')
 }
 
 export default class RealtimeWw2AlexaDriver {
@@ -70,7 +84,24 @@ export default class RealtimeWw2AlexaDriver {
   }
 
   async getLatestNews () {
-    const response = await alexaSkillLambda.invoke(createAlexaPayload(this.alexaApplicationId))
-    return extractResponseFromSsml(JSON.parse(response.Payload).response.outputSpeech.ssml)
+    const payload = createAlexaPayload(this.alexaApplicationId, 'GetLatestIntent')
+    const response = await alexaSkillLambda.invoke(payload)
+    return convertEventSsmlToObj(getSpeech(response))
+  }
+
+  async setClock (clock) {
+    return alexaSkillLambda.updateEnvironment('CLOCK', clock)
+  }
+
+  async restoreClock () {
+    return alexaSkillLambda.updateEnvironment('CLOCK', 'NOW')
+  }
+
+  async getRecentEvents (from) {
+    const payload = createAlexaPayload(this.alexaApplicationId, 'GetRecentEventsIntent', {Duration: 24})
+    const response = await alexaSkillLambda.invoke(payload)
+    const speech = getSpeech(response)
+    const eventsSsml = speech.replace(/p><p/g, 'p>;;;<p').split(';;;')
+    return eventsSsml.map(eventSsml => convertEventSsmlToObj(eventSsml))
   }
 }

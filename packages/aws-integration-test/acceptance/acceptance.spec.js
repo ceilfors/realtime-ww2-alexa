@@ -6,8 +6,13 @@ describe('acceptance', function () {
   this.timeout(5000)
   let realtimeWw2 = new RealtimeWw2AlexaDriver('amzn1.ask.skill.8955b37b-4975-4462-a4d9-4aba0ad647f0')
 
-  before(function () {
-    return realtimeWw2.setup()
+  before(async function () {
+    await realtimeWw2.setup()
+    await realtimeWw2.setClock('2017-09-14T17:15:00Z')
+  })
+
+  after(async function () {
+    await realtimeWw2.restoreClock()
   })
 
   it('retrieves the latest news from twitter', async function () {
@@ -19,8 +24,7 @@ describe('acceptance', function () {
     })
   })
 
-  xit('retrieves the events from the last 24 hours', async function () {
-    await realtimeWw2.setClock('2017-09-14T17:15:00Z')
+  it('retrieves the events from the last 24 hours', async function () {
     const recentEvents = await realtimeWw2.getRecentEvents(24)
     expect(recentEvents).to.deep.equal([
       {

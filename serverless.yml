@@ -45,6 +45,7 @@ functions:
       - alexaSkill
     environment:
       TWEET_CACHE_BUCKET_NAME: ${self:custom.tweetCacheBucketName}
+      CLOCK: NOW
   cache-tweets:
     handler: packages/core/src/cache-tweets.handler
     events:
