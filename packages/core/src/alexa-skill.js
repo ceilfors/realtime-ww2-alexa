@@ -21,13 +21,13 @@ const convertToSsml = (event, includeDate = true) => {
 }
 
 const DURATION_LIMIT_MESSAGE = 'Sorry, you can only get the recent events from the last 1 to 24 hours'
-const HELP_MESSAGE = 'You can say tell me the latest event, or, you can say exit... What can I help you with?'
+const HELP_MESSAGE = 'You can say tell me the latest event, or, what is happening since the last 24 hours... What can I help you with?'
 const HELP_REPROMPT = 'What can I help you with?'
 const STOP_MESSAGE = 'Goodbye!'
 
 const handlers = {
   'LaunchRequest': function () {
-    this.emit('GetLatestEventIntent')
+    this.emit('AMAZON.HelpIntent')
   },
   'GetLatestEventIntent': function () {
     return exports.createApp()
