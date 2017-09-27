@@ -20,6 +20,12 @@ const convertToSsml = (event, includeDate = true) => {
     `${event.content}</p>`
 }
 
+const sameDate = (dateTime1, dateTime2) => {
+  const m1 = moment(dateTime1)
+  const m2 = moment(dateTime2)
+  return m1.isSame(m2, 'year') && m1.isSame(m2, 'month') && m1.isSame(m2, 'day')
+}
+
 const DURATION_LIMIT_MESSAGE = 'Sorry, you can only get the recent events from the last 1 to 24 hours'
 const HELP_MESSAGE = 'You can say tell me the latest event, or, what is happening since the last 24 hours... What can I help you with?'
 const HELP_REPROMPT = 'What can I help you with?'
@@ -54,14 +60,9 @@ const handlers = {
       let speechOutput = recentEvents.length === 0
         ? `Sorry, there is nothing happening in the last ${duration} hour${duration > 1 ? 's' : ''}`
         : recentEvents.map((event, i, arr) => {
-          let includeDate
-          if (i > 0) {
-            const previousMoment = moment(arr[i - 1].datetime)
-            const currentMoment = moment(event.datetime)
-            includeDate = !(previousMoment.isSame(currentMoment, 'year') && previousMoment.isSame(currentMoment, 'month') && previousMoment.isSame(currentMoment, 'day'))
-          } else {
-            includeDate = true
-          }
+          let includeDate = i > 0
+            ? !sameDate(arr[i - 1].datetime, event.datetime)
+            : true
           return convertToSsml(event, includeDate)
         }).join('')
 
