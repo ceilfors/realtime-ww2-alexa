@@ -59,12 +59,13 @@ const handlers = {
       const recentEvents = await app.getRecentEvents(duration, clock.utc().format())
       let speechOutput = recentEvents.length === 0
         ? `Sorry, there is nothing happening in the last ${duration} hour${duration > 1 ? 's' : ''}`
-        : recentEvents.map((event, i, arr) => {
-          let includeDate = i > 0
+        : [`<p>Here are the events happening in the last ${duration} hour${duration > 1 ? 's' : ''}</p>`]
+          .concat(recentEvents.map((event, i, arr) => {
+            let includeDate = i > 0
             ? !sameDate(arr[i - 1].datetime, event.datetime)
             : true
-          return convertToSsml(event, includeDate)
-        }).join('')
+            return convertToSsml(event, includeDate)
+          })).join('')
 
       this.emit(':tell', speechOutput)
     } catch (err) {

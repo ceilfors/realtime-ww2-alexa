@@ -86,6 +86,7 @@ describe('alexa skill', function () {
       await subject.apply(alexaSdk)
 
       expect(alexaSdk.emit).to.have.been.calledWithExactly(':tell',
+        `<p>Here are the events happening in the last 10 hours</p>` +
         `<p><s><say-as interpret-as="date">19390914</say-as></s><s>12:00 AM</s>content</p>`)
     })
 
@@ -97,6 +98,7 @@ describe('alexa skill', function () {
       await subject.apply(alexaSdk)
 
       expect(alexaSdk.emit).to.have.been.calledWithExactly(':tell',
+        `<p>Here are the events happening in the last 10 hours</p>` +
         `<p><s><say-as interpret-as="date">19390914</say-as></s><s>12:00 AM</s>content 1</p>` +
         `<p><s><say-as interpret-as="date">19390915</say-as></s><s>12:00 AM</s>content 2</p>`)
     })
@@ -111,6 +113,7 @@ describe('alexa skill', function () {
       await subject.apply(alexaSdk)
 
       expect(alexaSdk.emit).to.have.been.calledWithExactly(':tell',
+        `<p>Here are the events happening in the last 10 hours</p>` +
         `<p><s><say-as interpret-as="date">19390914</say-as></s><s>12:00 AM</s>content 1</p>` +
         `<p><s>1:00 AM</s>content 2</p>` +
         `<p><s>2:00 AM</s>content 3</p>` +
