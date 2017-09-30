@@ -27,13 +27,13 @@ const sameDate = (dateTime1, dateTime2) => {
 }
 
 const DURATION_LIMIT_MESSAGE = 'Sorry, you can only get the recent events from the last 1 to 24 hours'
-const HELP_MESSAGE = 'You can say tell me the latest event, or, what is happening since the last 24 hours... What can I help you with?'
+const HELP_MESSAGE = 'You can say, what is happening since the last 24 hours, or, tell me the latest event.'
 const HELP_REPROMPT = 'What can I help you with?'
 const STOP_MESSAGE = 'Goodbye!'
 
 const handlers = {
   'LaunchRequest': function () {
-    this.emit('AMAZON.HelpIntent')
+    this.emit('GetRecentEventsIntent', 24)
   },
   'GetLatestEventIntent': function () {
     return exports.createApp()
@@ -46,15 +46,15 @@ const handlers = {
         this.emit(':tell', 'Please try again later')
       })
   },
-  'GetRecentEventsIntent': async function () {
+  'GetRecentEventsIntent': async function (d) {
     try {
-      const app = await exports.createApp()
-      const duration = this.event.request.intent.slots.Duration.value
+      const duration = d || this.event.request.intent.slots.Duration.value
       if (duration < 1 || duration > 24) {
         this.emit(':tell', DURATION_LIMIT_MESSAGE)
         return
       }
 
+      const app = await exports.createApp()
       const clock = process.env.CLOCK === 'NOW' ? moment() : moment(process.env.CLOCK)
       const recentEvents = await app.getRecentEvents(duration, clock.utc().format())
       let speechOutput = recentEvents.length === 0
