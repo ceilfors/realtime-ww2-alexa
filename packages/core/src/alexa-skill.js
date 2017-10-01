@@ -35,16 +35,15 @@ const handlers = {
   'LaunchRequest': function () {
     this.emit('GetRecentEventsIntent', 24)
   },
-  'GetLatestEventIntent': function () {
-    return exports.createApp()
-      .then(app => app.getLatestEvent())
-      .then(latestEvent => {
-        this.emit(':tell', convertToSsml(latestEvent))
-      })
-      .catch(err => {
-        console.error(err)
-        this.emit(':tell', 'Please try again later')
-      })
+  'GetLatestEventIntent': async function () {
+    try {
+      const app = await exports.createApp()
+      let latestEvent = await app.getLatestEvent()
+      this.emit(':tell', convertToSsml(latestEvent))
+    } catch (err) {
+      console.error(err)
+      this.emit(':tell', 'Please try again later')
+    }
   },
   'GetRecentEventsIntent': async function (d) {
     try {
