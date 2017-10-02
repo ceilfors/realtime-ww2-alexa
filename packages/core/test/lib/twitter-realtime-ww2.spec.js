@@ -1,9 +1,7 @@
 /* eslint-env mocha */
 import TwitterRealtimeWw2 from '../../src/lib/twitter-realtime-ww2'
-import chai from 'chai'
-import chaiAsPromised from 'chai-as-promised'
+import {expect} from 'chai'
 import moment from 'moment'
-const expect = chai.use(chaiAsPromised).expect
 
 describe('twitter realtime ww2', function () {
   context('when successfully get latest event', function () {
