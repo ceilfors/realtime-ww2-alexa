@@ -18,6 +18,16 @@ describe('alexa skill', function () {
     }
   })
 
+  xit('should respond to SessionEndedRequest intent', function () {
+    expect(alexaSkill.handlers).to.contain.all.keys('SessionEndedRequest')
+  })
+
+  xit('should log session details when SessionEndedRequest is requested')
+
+  xit('should respond to Unhandled intent', function () {
+    expect(alexaSkill.handlers).to.contain.all.keys('Unhandled')
+  })
+
   context('when GetLatestEventIntent is requested', function () {
     let subject, app
 
