@@ -1,5 +1,6 @@
 /* eslint-env mocha */
 import moment from 'moment'
+import intercept from 'intercept-stdout'
 import alexaSkill from '../src/alexa-skill'
 import chai from 'chai'
 import sinon from 'sinon'
@@ -18,11 +19,32 @@ describe('alexa skill', function () {
     }
   })
 
-  xit('should respond to SessionEndedRequest intent', function () {
-    expect(alexaSkill.handlers).to.contain.all.keys('SessionEndedRequest')
-  })
+  context('when SessionEndedRequest is requested', function () {
+    let capturedLog, unhookIntercept
+    beforeEach(function () {
+      capturedLog = ''
+      unhookIntercept = intercept(function (txt) {
+        capturedLog += txt
+      })
+    })
 
-  xit('should log session details when SessionEndedRequest is requested')
+    afterEach(function () {
+      unhookIntercept()
+    })
+
+    it('should be able to respond the intent', function () {
+      expect(alexaSkill.handlers).to.contain.all.keys('SessionEndedRequest')
+    })
+
+    it('should log session details when SessionEndedRequest is requested', function () {
+      alexaSdk.event.request.reason = 'USER_INITIATED'
+      alexaSkill.handlers.SessionEndedRequest.apply(alexaSdk)
+
+      let sessionDetails = JSON.parse(capturedLog)
+      expect(sessionDetails).to.contain.all.keys('reason')
+      expect(sessionDetails.reason).to.equal('USER_INITIATED')
+    })
+  })
 
   xit('should respond to Unhandled intent', function () {
     expect(alexaSkill.handlers).to.contain.all.keys('Unhandled')

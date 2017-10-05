@@ -3,6 +3,8 @@ import CachedTwitterService from './lib/cached-twitter-service'
 import S3TweetRepository from './lib/s3-tweet-repository'
 import Alexa from 'alexa-sdk'
 import moment from 'moment'
+import bunyan from 'bunyan'
+const log = bunyan.createLogger({name: 'alexa-skill'})
 
 const createApp = async () => {
   return new TwitterRealtimeWw2(
@@ -81,6 +83,9 @@ const handlers = {
   },
   'AMAZON.StopIntent': function () {
     this.emit(':tell', STOP_MESSAGE)
+  },
+  'SessionEndedRequest': function () {
+    log.info(this.event.request, 'session ended')
   }
 }
 

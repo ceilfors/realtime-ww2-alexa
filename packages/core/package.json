@@ -4,7 +4,7 @@
   "description": "The core alexa skill",
   "scripts": {
     "pretest": "standard",
-    "test": "mocha --compilers js:babel-core/register --require babel-polyfill test/{**,}/*.spec.js",
+    "test": "mocha --compilers js:babel-core/register --require babel-polyfill test/{**,}/*.spec.js --color | bunyan -l warn",
     "testDebug": "mocha --compilers js:babel-core/register --require babel-polyfill test/{**,}/*.spec.js --inspect-brk"
   },
   "author": "ceilfors",
@@ -12,6 +12,7 @@
   "private": true,
   "dependencies": {
     "ajv": "^5.2.2",
+    "bunyan": "^1.8.12",
     "moment": "^2.18.1",
     "serverless-crypt": "0.0.3",
     "twitter": "^1.7.1"

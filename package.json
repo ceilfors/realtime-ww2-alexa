@@ -23,6 +23,7 @@
     "babel-preset-env": "^1.6.0",
     "chai": "^4.1.2",
     "copy-webpack-plugin": "^4.0.1",
+    "intercept-stdout": "^0.1.2",
     "lerna": "^2.2.0",
     "mocha": "^3.5.3",
     "nock": "^9.0.14",
@@ -45,5 +46,6 @@
     "url": "https://github.com/ceilfors/realtime-ww2-alexa/issues"
   },
   "homepage": "https://github.com/ceilfors/realtime-ww2-alexa#readme",
-  "private": true
+  "private": true,
+  "dependencies": {}
 }
