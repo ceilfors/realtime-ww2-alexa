@@ -5,7 +5,7 @@ import Lambda from '../lib/lambda'
 const cacheTweetsLambda = new Lambda('realtime-ww2-dev-cache-tweets')
 const tweetRepository = new S3TweetRepository('realtime-ww2-dev-tweet')
 
-describe('cacheTweets', function () {
+describe('cache-tweet', function () {
   this.timeout(5000)
 
   before(() => {
