@@ -5,7 +5,9 @@ import alexaSkill from '../src/alexa-skill'
 import chai from 'chai'
 import sinon from 'sinon'
 import sinonChai from 'sinon-chai'
+import dirtyChai from 'dirty-chai'
 chai.use(sinonChai)
+chai.use(dirtyChai)
 const expect = chai.expect
 
 describe('alexa skill', function () {
@@ -40,6 +42,7 @@ describe('alexa skill', function () {
       alexaSdk.event.request.reason = 'USER_INITIATED'
       alexaSkill.handlers.SessionEndedRequest.apply(alexaSdk)
 
+      expect(capturedLog).to.not.be.empty()
       let sessionDetails = JSON.parse(capturedLog)
       expect(sessionDetails).to.contain.all.keys('reason')
       expect(sessionDetails.reason).to.equal('USER_INITIATED')

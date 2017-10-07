@@ -23,6 +23,7 @@
     "babel-preset-env": "^1.6.0",
     "chai": "^4.1.2",
     "copy-webpack-plugin": "^4.0.1",
+    "dirty-chai": "^2.0.1",
     "intercept-stdout": "^0.1.2",
     "lerna": "^2.2.0",
     "mocha": "^3.5.3",
