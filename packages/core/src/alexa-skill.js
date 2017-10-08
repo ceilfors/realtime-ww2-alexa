@@ -35,7 +35,7 @@ const wrapErrorHandler = handlers => {
         try {
           return await target.apply(thisArg, argumentsList)
         } catch (err) {
-          console.error(err)
+          log.error(err)
           thisArg.callback(err)
         }
       }
