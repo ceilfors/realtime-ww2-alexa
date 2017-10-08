@@ -87,11 +87,11 @@ const handlers = {
   'SessionEndedRequest': function () {
     log.info(this.event.request, 'session ended')
   }
-}
+})
 
 exports.handler = function (event, context, callback) {
   const alexa = Alexa.handler(event, context, callback)
-  alexa.appId = 'amzn1.ask.skill.8955b37b-4975-4462-a4d9-4aba0ad647f0'
+  alexa.appId = process.env.ALEXA_SKILL_ID
   alexa.registerHandlers(handlers)
   alexa.execute()
 }

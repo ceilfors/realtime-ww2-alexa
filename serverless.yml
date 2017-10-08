@@ -33,9 +33,11 @@ custom:
   prod:
     twitterRestBaseUrl: https://api.twitter.com/1.1
     cacheTweetsSchedule: rate(1 hour)
+    alexaSkillId: amzn1.ask.skill.8955b37b-4975-4462-a4d9-4aba0ad647f0
   dev:
     twitterRestBaseUrl: { "Fn::Join" : ["", [ "https://", { "Ref" : "ApiGatewayRestApi" }, ".execute-api.${self:provider.region}.amazonaws.com/${self:custom.stage}" ] ]  }
     cacheTweetsSchedule: cron(0 0 * * ? 1970)
+    alexaSkillId: amzn1.ask.skill.e24708e2-28ff-4d4a-a2c5-40cf44c25ed2
   cryptKeyId: c7ce8560-aaf1-4780-be8c-b048a0a749f2
   tweetCacheBucketName: ${self:service}-${self:custom.stage}-tweet
 
@@ -46,6 +48,7 @@ functions:
       - alexaSkill
     environment:
       TWEET_CACHE_BUCKET_NAME: ${self:custom.tweetCacheBucketName}
+      ALEXA_SKILL_ID: ${self:custom.${self:custom.stage}.alexaSkillId}
       CLOCK: NOW
   cache-tweets:
     handler: packages/core/src/cache-tweets.handler
