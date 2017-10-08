@@ -50,10 +50,6 @@ describe('alexa skill', function () {
     })
   })
 
-  xit('should respond to Unhandled intent', function () {
-    expect(alexaSkill.handlers).to.contain.all.keys('Unhandled')
-  })
-
   context('when GetLatestEventIntent is requested', function () {
     let subject, app
 
