@@ -28,37 +28,47 @@ const sameDate = (dateTime1, dateTime2) => {
   return m1.isSame(m2, 'year') && m1.isSame(m2, 'month') && m1.isSame(m2, 'day')
 }
 
+const wrapErrorHandler = handlers => {
+  return Object.keys(handlers).reduce((acc, key) => {
+    acc[key] = new Proxy(handlers[key], {
+      apply: async (target, thisArg, argumentsList) => {
+        try {
+          return await target.apply(thisArg, argumentsList)
+        } catch (err) {
+          console.error(err)
+          thisArg.callback(err)
+        }
+      }
+    })
+    return acc
+  }, {})
+}
+
 const DURATION_LIMIT_MESSAGE = 'Sorry, you can only get the recent events from the last 1 to 24 hours'
 const HELP_MESSAGE = 'You can say, what is happening since the last 24 hours, or, tell me the latest event.'
 const HELP_REPROMPT = 'What can I help you with?'
 const STOP_MESSAGE = 'Goodbye!'
 
-const handlers = {
+const handlers = wrapErrorHandler({
   'LaunchRequest': function () {
     this.emit('GetRecentEventsIntent', 24)
   },
   'GetLatestEventIntent': async function () {
-    try {
-      const app = await exports.createApp()
-      let latestEvent = await app.getLatestEvent()
-      this.emit(':tell', convertToSsml(latestEvent))
-    } catch (err) {
-      console.error(err)
-      this.emit(':tell', 'Please try again later')
-    }
+    const app = await exports.createApp()
+    let latestEvent = await app.getLatestEvent()
+    this.emit(':tell', convertToSsml(latestEvent))
   },
   'GetRecentEventsIntent': async function (d) {
-    try {
-      const duration = d || this.event.request.intent.slots.Duration.value
-      if (duration < 1 || duration > 24) {
-        this.emit(':tell', DURATION_LIMIT_MESSAGE)
-        return
-      }
+    const duration = d || this.event.request.intent.slots.Duration.value
+    if (duration < 1 || duration > 24) {
+      this.emit(':tell', DURATION_LIMIT_MESSAGE)
+      return
+    }
 
-      const app = await exports.createApp()
-      const clock = process.env.CLOCK === 'NOW' ? moment() : moment(process.env.CLOCK)
-      const recentEvents = await app.getRecentEvents(duration, clock.utc().format())
-      let speechOutput = recentEvents.length === 0
+    const app = await exports.createApp()
+    const clock = process.env.CLOCK === 'NOW' ? moment() : moment(process.env.CLOCK)
+    const recentEvents = await app.getRecentEvents(duration, clock.utc().format())
+    let speechOutput = recentEvents.length === 0
         ? `Sorry, there is nothing happening in the last ${duration} hour${duration > 1 ? 's' : ''}`
         : [`<p>Here are the events happening in the last ${duration} hour${duration > 1 ? 's' : ''}</p>`]
           .concat(recentEvents.map((event, i, arr) => {
@@ -68,11 +78,7 @@ const handlers = {
             return convertToSsml(event, includeDate)
           })).join('')
 
-      this.emit(':tell', speechOutput)
-    } catch (err) {
-      console.error(err)
-      this.emit(':tell', 'Please try again later')
-    }
+    this.emit(':tell', speechOutput)
   },
   'AMAZON.HelpIntent': function () {
     this.response.speak(HELP_MESSAGE).listen(HELP_REPROMPT)

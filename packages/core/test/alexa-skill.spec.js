@@ -17,6 +17,7 @@ describe('alexa skill', function () {
     duration = {value: 10}
     alexaSdk = {
       emit: sinon.stub(),
+      callback: sinon.stub(),
       event: { request: { intent: { slots: { Duration: duration } } } }
     }
   })
@@ -34,7 +35,7 @@ describe('alexa skill', function () {
       unhookIntercept()
     })
 
-    it('should be able to respond the intent', function () {
+    it('should be able to respond the request', function () {
       expect(alexaSkill.handlers).to.contain.all.keys('SessionEndedRequest')
     })
 
@@ -69,6 +70,14 @@ describe('alexa skill', function () {
       expect(alexaSdk.emit).to.have.been.calledWithExactly(':tell',
         '<p><s><say-as interpret-as="date">19390914</say-as></s><s>12:00 AM</s>content</p>')
     })
+
+    it('should return error to AWS if there is an error', async function () {
+      const err = new Error('Error!')
+      app.getLatestEvent.throws(err)
+      await subject.apply(alexaSdk)
+
+      expect(alexaSdk.callback).to.have.been.calledWithExactly(err)
+    })
   })
 
   context('when GetRecentEventsIntent is requested', function () {
@@ -80,6 +89,14 @@ describe('alexa skill', function () {
       alexaSkill.createApp = () => app
 
       app.getRecentEvents.returns([])
+    })
+
+    it('should return error to AWS if there is an error', async function () {
+      const err = new Error('Error!')
+      app.getRecentEvents.throws(err)
+      await subject.apply(alexaSdk)
+
+      expect(alexaSdk.callback).to.have.been.calledWithExactly(err)
     })
 
     it('should inform the user that there is no events in singular form', async function () {
