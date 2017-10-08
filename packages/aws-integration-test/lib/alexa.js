@@ -54,12 +54,12 @@ const getContent = (alexaResponse) => alexaResponse.replace(/^<speak>\s*/, '').r
 
 export default class Alexa {
   constructor (alexaApplicationId, functionName) {
-    this.alexaApplicationId = alexaApplicationId
     this.alexaSkillLambda = new Lambda(functionName)
   }
 
   async request (intent, slots) {
-    const payload = createAlexaPayload(this.alexaApplicationId, intent, slots)
+    const envs = await this.alexaSkillLambda.getEnvVars()
+    const payload = createAlexaPayload(envs.ALEXA_SKILL_ID, intent, slots)
     const response = await this.alexaSkillLambda.invoke(payload)
     return getContent(JSON.parse(response.Payload).response.outputSpeech.ssml)
   }

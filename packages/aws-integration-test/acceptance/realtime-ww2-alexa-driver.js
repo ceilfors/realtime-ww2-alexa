@@ -49,11 +49,11 @@ export default class RealtimeWw2AlexaDriver {
   }
 
   async setClock (clock) {
-    return alexaSkillLambda.updateEnvironment('CLOCK', clock)
+    return alexaSkillLambda.updateEnvVar('CLOCK', clock)
   }
 
   async restoreClock () {
-    return alexaSkillLambda.updateEnvironment('CLOCK', 'NOW')
+    return alexaSkillLambda.updateEnvVar('CLOCK', 'NOW')
   }
 
   async getRecentEvents (from) {
