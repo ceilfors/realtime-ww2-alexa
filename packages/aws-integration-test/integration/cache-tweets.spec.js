@@ -6,7 +6,7 @@ const cacheTweetsLambda = new Lambda('realtime-ww2-dev-cache-tweets')
 const tweetRepository = new S3TweetRepository('realtime-ww2-dev-tweet')
 
 describe('cache-tweet', function () {
-  this.timeout(5000)
+  this.timeout(10000)
 
   before(() => {
     return tweetRepository.deleteLatestTweets()
