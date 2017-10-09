@@ -33,7 +33,9 @@ const wrapErrorHandler = handlers => {
     acc[key] = new Proxy(handlers[key], {
       apply: async (target, thisArg, argumentsList) => {
         try {
-          return await target.apply(thisArg, argumentsList)
+          log.info({request: thisArg.event.request, session: thisArg.event.session}, 'Handling incoming request ...')
+          await target.apply(thisArg, argumentsList)
+          log.info('Finished handling request.')
         } catch (err) {
           log.error(err)
           thisArg.callback(err)
@@ -61,6 +63,7 @@ const handlers = wrapErrorHandler({
   'GetRecentEventsIntent': async function (d) {
     const duration = d || this.event.request.intent.slots.Duration.value
     if (duration < 1 || duration > 24) {
+      log.error({duration}, 'Unsupported duration')
       this.emit(':tell', DURATION_LIMIT_MESSAGE)
       return
     }

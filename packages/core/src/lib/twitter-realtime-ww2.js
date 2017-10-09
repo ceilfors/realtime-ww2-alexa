@@ -1,4 +1,6 @@
 import moment from 'moment'
+import bunyan from 'bunyan'
+const log = bunyan.createLogger({name: 'twitter-realtime-ww2'})
 
 const getCreatedDateTimeFromTweet = (tweet) => moment(tweet.created_at, 'dd MMM DD HH:mm:ss ZZ YYYY', 'en')
 
@@ -21,12 +23,14 @@ export default class TwitterRealtimeWw2 {
   }
 
   async getLatestEvent () {
+    log.info('Getting the latest event ...')
     const latestTweets = await this.twitterService.getLatestTweets()
     const firstTweet = latestTweets[0]
     return convertTweetToEvent(firstTweet)
   }
 
   async getRecentEvents (durationHour, clock) {
+    log.info({durationHour, clock}, `Getting recent events ...`)
     const latestTweets = await this.twitterService.getLatestTweets()
     return latestTweets
       .filter(tweet => {
