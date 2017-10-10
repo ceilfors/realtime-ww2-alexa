@@ -25,9 +25,9 @@ describe('alexa skill', function () {
   context('when SessionEndedRequest is requested', function () {
     let capturedLog, unhookIntercept
     beforeEach(function () {
-      capturedLog = ''
+      capturedLog = []
       unhookIntercept = intercept(function (txt) {
-        capturedLog += txt
+        capturedLog.push(txt)
       })
     })
 
@@ -44,7 +44,7 @@ describe('alexa skill', function () {
       alexaSkill.handlers.SessionEndedRequest.apply(alexaSdk)
 
       expect(capturedLog).to.not.be.empty()
-      let sessionDetails = JSON.parse(capturedLog)
+      let sessionDetails = JSON.parse(capturedLog[capturedLog.length - 1])
       expect(sessionDetails).to.contain.all.keys('reason')
       expect(sessionDetails.reason).to.equal('USER_INITIATED')
     })
