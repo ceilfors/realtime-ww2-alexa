@@ -1,31 +1,18 @@
 import TwitterRealtimeWw2 from './lib/twitter-realtime-ww2'
 import CachedTwitterService from './lib/cached-twitter-service'
 import S3TweetRepository from './lib/s3-tweet-repository'
+import EventSsmlConverter from './lib/event-ssml-converter'
 import Alexa from 'alexa-sdk'
 import moment from 'moment'
 import bunyan from 'bunyan'
 const log = bunyan.createLogger({name: 'alexa-skill'})
+const ssmlConverter = new EventSsmlConverter()
 
 const createApp = async () => {
   return new TwitterRealtimeWw2(
     new CachedTwitterService(
       new S3TweetRepository(process.env.TWEET_CACHE_BUCKET_NAME))
   )
-}
-
-const convertToSsml = (event, includeDate = true) => {
-  const datetime = moment(event.datetime)
-  const dateSsml = includeDate ? `<s><say-as interpret-as="date">${datetime.format('YYYYMMDD')}</say-as></s>` : ''
-  return '<p>' +
-    dateSsml +
-    `<s>${datetime.format('LT')}</s>` +
-    `${event.content}</p>`
-}
-
-const sameDate = (dateTime1, dateTime2) => {
-  const m1 = moment(dateTime1)
-  const m2 = moment(dateTime2)
-  return m1.isSame(m2, 'year') && m1.isSame(m2, 'month') && m1.isSame(m2, 'day')
 }
 
 const wrapErrorHandler = handlers => {
@@ -58,7 +45,7 @@ const handlers = wrapErrorHandler({
   'GetLatestEventIntent': async function () {
     const app = await exports.createApp()
     let latestEvent = await app.getLatestEvent()
-    this.emit(':tell', convertToSsml(latestEvent))
+    this.emit(':tell', ssmlConverter.convert([latestEvent]))
   },
   'GetRecentEventsIntent': async function (d) {
     const duration = d || this.event.request.intent.slots.Duration.value
@@ -74,12 +61,7 @@ const handlers = wrapErrorHandler({
     let speechOutput = recentEvents.length === 0
         ? `Sorry, there is nothing happening in the last ${duration} hour${duration > 1 ? 's' : ''}`
         : [`<p>Here are the events happening in the last ${duration} hour${duration > 1 ? 's' : ''}</p>`]
-          .concat(recentEvents.map((event, i, arr) => {
-            let includeDate = i > 0
-            ? !sameDate(arr[i - 1].datetime, event.datetime)
-            : true
-            return convertToSsml(event, includeDate)
-          })).join('')
+          .concat(ssmlConverter.convert(recentEvents)).join('')
 
     this.emit(':tell', speechOutput)
   },
