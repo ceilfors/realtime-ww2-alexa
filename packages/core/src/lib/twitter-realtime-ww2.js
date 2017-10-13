@@ -30,9 +30,9 @@ export default class TwitterRealtimeWw2 {
   }
 
   async getRecentEvents (durationHour, clock) {
-    log.info({durationHour, clock}, `Getting recent events ...`)
+    log.info({durationHour, clock}, 'Getting recent events ...')
     const latestTweets = await this.twitterService.getLatestTweets()
-    return latestTweets
+    const recentEvents = latestTweets
       .filter(tweet => {
         const now = moment(clock)
         const minimumDateTime = now.clone().subtract(durationHour, 'hours')
@@ -41,5 +41,11 @@ export default class TwitterRealtimeWw2 {
       })
       .map(convertTweetToEvent)
       .sort((t1, t2) => moment(t1.datetime).diff(moment(t2.datetime)))
+    log.info({recentEvents}, 'Finished getting the recent events')
+    return recentEvents
   }
+}
+
+export class MinDurationError extends Error {
+
 }
