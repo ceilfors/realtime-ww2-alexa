@@ -30,6 +30,13 @@ export default class TwitterRealtimeWw2 {
   }
 
   async getRecentEvents (durationHour, clock) {
+    if (durationHour < 1) {
+      throw new MinDurationError()
+    }
+    if (durationHour > 24) {
+      throw new MaxDurationError()
+    }
+
     log.info({durationHour, clock}, 'Getting recent events ...')
     const latestTweets = await this.twitterService.getLatestTweets()
     const recentEvents = latestTweets
@@ -47,5 +54,15 @@ export default class TwitterRealtimeWw2 {
 }
 
 export class MinDurationError extends Error {
+  constructor (message) {
+    super(message)
+    this.name = MinDurationError.name
+  }
+}
 
+export class MaxDurationError extends Error {
+  constructor (message) {
+    super(message)
+    this.name = MaxDurationError.name
+  }
 }
