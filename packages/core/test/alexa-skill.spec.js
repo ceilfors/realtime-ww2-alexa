@@ -6,6 +6,7 @@ import chai from 'chai'
 import sinon from 'sinon'
 import sinonChai from 'sinon-chai'
 import dirtyChai from 'dirty-chai'
+import {MinDurationError, MaxDurationError} from '../src/lib/twitter-realtime-ww2'
 chai.use(sinonChai)
 chai.use(dirtyChai)
 const expect = chai.expect
@@ -112,15 +113,15 @@ describe('alexa skill', function () {
     })
 
     it('should inform the user the duration that can be used when the input is below the minimum allowed', async function () {
-      duration.value = 0
+      app.getRecentEvents.throws(new MinDurationError())
       await subject.apply(alexaSdk)
 
       expect(alexaSdk.emit).to.have.been.calledWithExactly(':tell',
         'Sorry, you can only get the recent events from the last 1 to 24 hours')
     })
 
-    it('should inform the user the duration that can be used when the input is below the maximum allowed', async function () {
-      duration.value = 25
+    it('should inform the user the duration that can be used when the input is above the maximum allowed', async function () {
+      app.getRecentEvents.throws(new MaxDurationError())
       await subject.apply(alexaSdk)
 
       expect(alexaSdk.emit).to.have.been.calledWithExactly(':tell',

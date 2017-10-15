@@ -1,4 +1,4 @@
-import TwitterRealtimeWw2 from './lib/twitter-realtime-ww2'
+import TwitterRealtimeWw2, {MinDurationError, MaxDurationError} from './lib/twitter-realtime-ww2'
 import CachedTwitterService from './lib/cached-twitter-service'
 import S3TweetRepository from './lib/s3-tweet-repository'
 import EventSsmlConverter from './lib/event-ssml-converter'
@@ -25,7 +25,11 @@ const wrapErrorHandler = handlers => {
           log.info('Finished handling request.')
         } catch (err) {
           log.error(err)
-          thisArg.callback(err)
+          if (err.name === MinDurationError.name || err.name === MaxDurationError.name) {
+            thisArg.emit(':tell', DURATION_LIMIT_MESSAGE)
+          } else {
+            thisArg.callback(err)
+          }
         }
       }
     })
@@ -49,12 +53,6 @@ const handlers = wrapErrorHandler({
   },
   'GetRecentEventsIntent': async function (d) {
     const duration = d || this.event.request.intent.slots.Duration.value
-    if (duration < 1 || duration > 24) {
-      log.error({duration}, 'Unsupported duration')
-      this.emit(':tell', DURATION_LIMIT_MESSAGE)
-      return
-    }
-
     const app = await exports.createApp()
     const clock = process.env.CLOCK === 'NOW' ? moment() : moment(process.env.CLOCK)
     const recentEvents = await app.getRecentEvents(duration, clock.utc().format())
