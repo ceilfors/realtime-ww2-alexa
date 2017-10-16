@@ -15,6 +15,8 @@ const createApp = async () => {
   )
 }
 
+const currentClock = () => (process.env.CLOCK === 'NOW' ? moment() : moment(process.env.CLOCK)).utc().format()
+
 const wrapErrorHandler = handlers => {
   return Object.keys(handlers).reduce((acc, key) => {
     acc[key] = new Proxy(handlers[key], {
@@ -54,8 +56,7 @@ const handlers = wrapErrorHandler({
   'GetRecentEventsIntent': async function (d) {
     const duration = d || this.event.request.intent.slots.Duration.value
     const app = await exports.createApp()
-    const clock = process.env.CLOCK === 'NOW' ? moment() : moment(process.env.CLOCK)
-    const recentEvents = await app.getRecentEvents(duration, clock.utc().format())
+    const recentEvents = await app.getRecentEvents(duration, currentClock())
     let speechOutput = recentEvents.length === 0
         ? `Sorry, there is nothing happening in the last ${duration} hour${duration > 1 ? 's' : ''}`
         : [`<p>Here are the events happening in the last ${duration} hour${duration > 1 ? 's' : ''}</p>`]
