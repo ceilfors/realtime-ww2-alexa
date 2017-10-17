@@ -44,25 +44,31 @@ const HELP_MESSAGE = 'You can say, what is happening since the last 24 hours, or
 const HELP_REPROMPT = 'What can I help you with?'
 const STOP_MESSAGE = 'Goodbye!'
 
+const getLatestEventMessage = async () => {
+  const app = await exports.createApp()
+  let latestEvent = await app.getLatestEvent()
+  return ssmlConverter.convert([latestEvent])
+}
+
+const getRecentEventsMessage = async (duration) => {
+  const app = await exports.createApp()
+  const recentEvents = await app.getRecentEvents(duration, currentClock())
+  return recentEvents.length === 0
+      ? `Sorry, there is nothing happening in the last ${duration} hour${duration > 1 ? 's' : ''}`
+      : [`<p>Here are the events happening in the last ${duration} hour${duration > 1 ? 's' : ''}</p>`]
+        .concat(ssmlConverter.convert(recentEvents)).join('')
+}
+
 const handlers = wrapErrorHandler({
-  'LaunchRequest': function () {
-    this.emit('GetRecentEventsIntent', 24)
+  'LaunchRequest': async function () {
+    this.emit(':tell', await getRecentEventsMessage(24))
   },
   'GetLatestEventIntent': async function () {
-    const app = await exports.createApp()
-    let latestEvent = await app.getLatestEvent()
-    this.emit(':tell', ssmlConverter.convert([latestEvent]))
+    this.emit(':tell', await getLatestEventMessage())
   },
   'GetRecentEventsIntent': async function (d) {
-    const duration = d || this.event.request.intent.slots.Duration.value
-    const app = await exports.createApp()
-    const recentEvents = await app.getRecentEvents(duration, currentClock())
-    let speechOutput = recentEvents.length === 0
-        ? `Sorry, there is nothing happening in the last ${duration} hour${duration > 1 ? 's' : ''}`
-        : [`<p>Here are the events happening in the last ${duration} hour${duration > 1 ? 's' : ''}</p>`]
-          .concat(ssmlConverter.convert(recentEvents)).join('')
-
-    this.emit(':tell', speechOutput)
+    const duration = this.event.request.intent.slots.Duration.value
+    this.emit(':tell', await getRecentEventsMessage(duration))
   },
   'AMAZON.HelpIntent': function () {
     this.response.speak(HELP_MESSAGE).listen(HELP_REPROMPT)
