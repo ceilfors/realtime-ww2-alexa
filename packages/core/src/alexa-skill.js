@@ -66,7 +66,7 @@ const handlers = wrapErrorHandler({
   'GetLatestEventIntent': async function () {
     this.emit(':tell', await getLatestEventMessage())
   },
-  'GetRecentEventsIntent': async function (d) {
+  'GetRecentEventsIntent': async function () {
     const duration = this.event.request.intent.slots.Duration.value
     this.emit(':tell', await getRecentEventsMessage(duration))
   },
