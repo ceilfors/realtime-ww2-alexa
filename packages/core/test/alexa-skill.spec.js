@@ -169,4 +169,41 @@ describe('alexa skill', function () {
         `<p><s><say-as interpret-as="date">19390915</say-as></s><s>12:00 AM</s>content 4</p>`)
     })
   })
+
+  context('when GetRecentEventsIntent is requested', function () {
+    let subject, app
+    let clock
+
+    beforeEach(function () {
+      subject = alexaSkill.handlers.LaunchRequest
+      app = { getRecentEvents: sinon.stub() }
+      alexaSkill.createApp = () => app
+
+      app.getRecentEvents.returns([])
+    })
+
+    beforeEach(function () {
+      clock = moment().utc().format()
+      process.env.CLOCK = clock
+    })
+
+    afterEach(function () {
+      delete process.env.CLOCK
+    })
+
+    it('should get the recent events in the last 24 hours', async function () {
+      app.getRecentEvents.returns([])
+      await subject.apply(alexaSdk)
+
+      expect(app.getRecentEvents).to.have.been.calledWithExactly(24, clock)
+    })
+
+    it('should return error to AWS if there is an error', async function () {
+      const err = new Error('Error!')
+      app.getRecentEvents.throws(err)
+      await subject.apply(alexaSdk)
+
+      expect(alexaSdk.callback).to.have.been.calledWithExactly(err)
+    })
+  })
 })
