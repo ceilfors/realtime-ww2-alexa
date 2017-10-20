@@ -6,9 +6,9 @@ export default class CachedTwitterService {
     this.tweetRepository = tweetRepository
   }
 
-  getLatestTweets () {
+  async getLatestTweets () {
     log.info('Retrieving the latest tweets from tweetRepository ...')
-    const latestTweets = this.tweetRepository.getLatestTweets()
+    const latestTweets = await this.tweetRepository.getLatestTweets()
     log.info({totalTweets: latestTweets.length}, 'Latest tweets successfully retrieved.')
     return latestTweets
   }
