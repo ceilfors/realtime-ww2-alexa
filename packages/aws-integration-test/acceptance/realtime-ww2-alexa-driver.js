@@ -57,7 +57,7 @@ export default class RealtimeWw2AlexaDriver {
   }
 
   async getRecentEvents (from) {
-    const response = await this.alexa.request('GetRecentEventsIntent', {Duration: 24})
+    const response = await this.alexa.request('GetRecentEventsIntent', {Duration: from})
     const eventsSsml = response.replace(/p><p/g, 'p>;;;<p')
       .split(';;;')
       .filter(r => !r.startsWith('<p>Here are the events happening in the last'))
