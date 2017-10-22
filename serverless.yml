@@ -4,6 +4,7 @@ service:
 plugins:
   - serverless-webpack
   - serverless-crypt
+  - serverless-plugin-aws-alerts
 
 provider:
   name: aws
@@ -40,6 +41,29 @@ custom:
     alexaSkillId: amzn1.ask.skill.e24708e2-28ff-4d4a-a2c5-40cf44c25ed2
   cryptKeyId: c7ce8560-aaf1-4780-be8c-b048a0a749f2
   tweetCacheBucketName: ${self:service}-${self:custom.stage}-tweet
+  alerts:
+    dashboards: true
+    topics:
+      alarm:
+        topic: ${self:service}-${self:custom.stage}-alerts-alarm
+        notifications:
+          - protocol: email
+            endpoint: wisen@ceilfors.com
+      ok:
+        topic: ${self:service}-${self:custom.stage}-alerts-ok
+        notifications:
+          - protocol: email
+            endpoint: wisen@ceilfors.com
+    definitions:
+      bunyanErrors:
+        namespace: ${self:service}-${self:custom.stage}
+        metric: bunyanErrors
+        threshold: 0
+        statistic: Sum
+        period: 60
+        evaluationPeriods: 1
+        comparisonOperator: GreaterThanThreshold
+        pattern: '{$.level > 40}'
 
 functions:
   alexa-skill:
@@ -50,6 +74,8 @@ functions:
       TWEET_CACHE_BUCKET_NAME: ${self:custom.tweetCacheBucketName}
       ALEXA_SKILL_ID: ${self:custom.${self:custom.stage}.alexaSkillId}
       CLOCK: NOW
+    alarms:
+      - bunyanErrors
   cache-tweets:
     handler: packages/core/src/cache-tweets.handler
     events:

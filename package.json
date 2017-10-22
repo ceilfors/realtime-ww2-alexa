@@ -30,6 +30,7 @@
     "nock": "^9.0.14",
     "serverless": "^1.22.0",
     "serverless-crypt": "0.0.3",
+    "serverless-plugin-aws-alerts": "^1.2.4",
     "serverless-webpack": "^2.2.0",
     "sinon": "^3.2.1",
     "sinon-chai": "^2.13.0",
