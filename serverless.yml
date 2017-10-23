@@ -1,6 +1,8 @@
 service:
   name: realtime-ww2
 
+frameworkVersion: ">=1.22.0"
+
 plugins:
   - serverless-webpack
   - serverless-crypt
@@ -41,6 +43,7 @@ custom:
     alexaSkillId: amzn1.ask.skill.e24708e2-28ff-4d4a-a2c5-40cf44c25ed2
   cryptKeyId: c7ce8560-aaf1-4780-be8c-b048a0a749f2
   tweetCacheBucketName: ${self:service}-${self:custom.stage}-tweet
+  alertEmailEndpoint: ${ssm:/${self:service}/email-endpoint}
   alerts:
     dashboards: true
     topics:
@@ -48,12 +51,12 @@ custom:
         topic: ${self:service}-${self:custom.stage}-alerts-alarm
         notifications:
           - protocol: email
-            endpoint: wisen@ceilfors.com
+            endpoint: ${self:custom.alertEmailEndpoint}
       ok:
         topic: ${self:service}-${self:custom.stage}-alerts-ok
         notifications:
           - protocol: email
-            endpoint: wisen@ceilfors.com
+            endpoint: ${self:custom.alertEmailEndpoint}
     definitions:
       bunyanErrors:
         namespace: ${self:service}-${self:custom.stage}
