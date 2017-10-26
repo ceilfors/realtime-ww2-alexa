@@ -1,6 +1,6 @@
 import Twitter from 'twitter'
 import S3TweetRepository from './lib/s3-tweet-repository'
-import slscrypt from '../node_modules/serverless-crypt/dists/slscrypt'
+import slscrypt from '../../../node_modules/serverless-crypt/dists/slscrypt'
 import bunyan from 'bunyan'
 const log = bunyan.createLogger({name: 'cached-twitter-service'})
 

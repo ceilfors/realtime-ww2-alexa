@@ -14,7 +14,6 @@
     "ajv": "^5.2.2",
     "bunyan": "^1.8.12",
     "moment": "^2.18.1",
-    "serverless-crypt": "0.0.3",
     "twitter": "^1.7.1"
   }
 }
