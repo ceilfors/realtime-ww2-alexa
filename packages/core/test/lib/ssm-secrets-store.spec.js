@@ -40,14 +40,12 @@ const ssmGetParametersStub = () => {
   const getParameters = sinon.stub()
   getParameters.yieldParams = (params, invalidParams = []) => {
     getParameters.yields(null, {
-      data: {
-        Parameters: Object.keys(params).map(k => ({
-          Name: k,
-          Type: 'SecureString',
-          Value: params[k]
-        })),
-        InvalidParameters: invalidParams
-      }
+      Parameters: Object.keys(params).map(k => ({
+        Name: k,
+        Type: 'SecureString',
+        Value: params[k]
+      })),
+      InvalidParameters: invalidParams
     })
   }
   return getParameters
