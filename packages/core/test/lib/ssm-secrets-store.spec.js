@@ -23,15 +23,14 @@ describe.only('ssm secrets store', function () {
   })
 
   context('when successfully retrieved SSM parameters', function () {
-    it('should return a map of parameter', async function () {
+    it('should return an object for a single parameter', async function () {
       const parameterName = '/base/path/p1'
-      const parameterValue = '/base/path/v1'
       ssm.getParameters.yields(null, {
         data: {
           Parameters: [
             { Name: parameterName,
               Type: 'SecureString',
-              Value: parameterValue }
+              Value: 'v1' }
           ],
           InvalidParameters: []
         }
@@ -39,7 +38,30 @@ describe.only('ssm secrets store', function () {
       const subject = new SsmSecretsStore('/base/path')
       const secrets = await subject.getSecrets(['p1'])
       expect(secrets).to.not.be.undefined()
-      expect(secrets).to.have.property(parameterName, parameterValue)
+      expect(secrets).to.have.property(parameterName, 'v1')
+    })
+
+    it('should return an object for multiple parameters', async function () {
+      ssm.getParameters.yields(null, {
+        data: {
+          Parameters: [
+            { Name: '/base/path/p1',
+              Type: 'SecureString',
+              Value: 'v1' },
+            { Name: '/base/path/p2',
+              Type: 'SecureString',
+              Value: 'v2' },
+            { Name: '/base/path/p3',
+              Type: 'SecureString',
+              Value: 'v3' }
+          ],
+          InvalidParameters: []
+        }
+      })
+      const subject = new SsmSecretsStore('/base/path')
+      const secrets = await subject.getSecrets(['p1', 'p3'])
+      expect(secrets).to.have.property('/base/path/p1', 'v1')
+      expect(secrets).to.have.property('/base/path/p3', 'v3')
     })
 
     it('should call AWS.SSM with the correct parameters', async function () {
@@ -54,7 +76,29 @@ describe.only('ssm secrets store', function () {
       )
     })
 
-    xit('should return a map for multiple parameters')
+    it('should not have double forward slash when constructing path', async function () {
+      const subject = new SsmSecretsStore('/base/path/')
+      await subject.getSecrets(['p1'])
+      expect(ssm.getParameters).to.be.called.calledWithExactly(
+        {
+          Names: ['/base/path/p1'],
+          WithDecryption: true
+        },
+        sinon.match.func
+      )
+    })
+
+    it('should not add slash if base path is not specified', async function () {
+      const subject = new SsmSecretsStore('')
+      await subject.getSecrets(['p1'])
+      expect(ssm.getParameters).to.be.called.calledWithExactly(
+        {
+          Names: ['p1'],
+          WithDecryption: true
+        },
+        sinon.match.func
+      )
+    })
   })
 
   context('when parameter name is not available', function () {

@@ -1,7 +1,10 @@
 import AWS from 'aws-sdk'
 
 export default class SsmSecretsStore {
-  constructor (basePath) {
+  constructor (basePath = '') {
+    if (basePath && !basePath.endsWith('/')) {
+      basePath += '/'
+    }
     this.basePath = basePath
   }
 
@@ -9,7 +12,7 @@ export default class SsmSecretsStore {
     const ssm = new AWS.SSM()
 
     const ssmRequestParams = {
-      Names: secretNames.map(n => `${this.basePath}/${n}`),
+      Names: secretNames.map(n => `${this.basePath}${n}`),
       WithDecryption: true
     }
     const response = await ssm.getParameters(ssmRequestParams).promise()
