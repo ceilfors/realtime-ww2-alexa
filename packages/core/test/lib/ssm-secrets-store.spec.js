@@ -51,7 +51,7 @@ const ssmGetParametersStub = () => {
   return getParameters
 }
 
-describe.only('SsmSecretsStore#getSecrets', function () {
+describe('SsmSecretsStore#getSecrets', function () {
   let ssm, subject
 
   beforeEach(function () {
