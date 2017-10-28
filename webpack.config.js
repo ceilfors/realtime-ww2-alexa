@@ -6,13 +6,14 @@ const CopyWebpackPlugin = require('copy-webpack-plugin')
 const addBabelPolyfill = (slsEntries) => {
   return Object.keys(slsEntries)
     .reduce((acc, key) => Object.assign(acc, {
-      [key]: ['babel-polyfill', slsEntries[key]]
+      [key]: ['babel-polyfill', 'source-map-support/register', slsEntries[key]]
     }), {})
 }
 
 module.exports = {
   entry: addBabelPolyfill(slsw.lib.entries),
   target: 'node',
+  devtool: 'source-map',
   module: {
     loaders: [{
       test: /\.js$/,
