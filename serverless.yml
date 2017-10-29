@@ -5,7 +5,6 @@ frameworkVersion: ">=1.22.0"
 
 plugins:
   - serverless-webpack
-  - serverless-crypt
   - serverless-plugin-aws-alerts
 
 provider:
@@ -26,10 +25,15 @@ provider:
           - - "arn:aws:s3:::"
             - Ref: S3TweetCache
             - /*
-
-package:
-  include:
-    - .serverless-secret.json
+    - Effect: "Allow"
+      Action: 
+        - "ssm:GetParameters"
+      Resource:
+        - Fn::Join:
+          - ""
+          - - "arn:aws:ssm:*:*:parameter/"
+            - ${self:service}
+            - /*
 
 custom:
   stage: ${opt:stage, self:provider.stage}
@@ -58,6 +62,8 @@ custom:
           - protocol: email
             endpoint: ${self:custom.alertEmailEndpoint}
     definitions:
+      functionErrors:
+        treatMissingData: ignore
       bunyanErrors:
         namespace: ${self:service}-${self:custom.stage}
         metric: bunyanErrors
@@ -67,6 +73,7 @@ custom:
         evaluationPeriods: 1
         comparisonOperator: GreaterThanThreshold
         pattern: '{$.level > 40}'
+        treatMissingData: ignore
 
 functions:
   alexa-skill:

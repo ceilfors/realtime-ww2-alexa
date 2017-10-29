@@ -10,5 +10,3 @@ jspm_packages
 
 # Lerna
 lerna-debug.log
-
-.serverless-secret.json
