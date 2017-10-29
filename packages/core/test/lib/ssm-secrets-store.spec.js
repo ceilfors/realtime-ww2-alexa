@@ -74,7 +74,7 @@ describe('SsmSecretsStore#getSecrets', function () {
       ssm.getParameters.yieldParams({[parameterName]: 'v1'})
       const secrets = await subject.getSecrets(['p1'])
       expect(secrets).to.not.be.undefined()
-      expect(secrets).to.have.property(parameterName, 'v1')
+      expect(secrets).to.have.property('p1', 'v1')
     })
 
     it('should return an object for multiple parameters', async function () {
@@ -83,8 +83,8 @@ describe('SsmSecretsStore#getSecrets', function () {
         '/base/path/p3': 'v3'
       })
       const secrets = await subject.getSecrets(['p1', 'p3'])
-      expect(secrets).to.have.property('/base/path/p1', 'v1')
-      expect(secrets).to.have.property('/base/path/p3', 'v3')
+      expect(secrets).to.have.property('p1', 'v1')
+      expect(secrets).to.have.property('p3', 'v3')
     })
 
     it('should call SSM with the basic required parameters', async function () {

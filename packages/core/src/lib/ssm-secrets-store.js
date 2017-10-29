@@ -17,9 +17,10 @@ export default class SsmSecretsStore {
     }
     const response = await ssm.getParameters(ssmRequestParams).promise()
     if (response.InvalidParameters.length !== 0) {
-      throw new Error(`Could retrieve secrets for: ${response.InvalidParameters}`)
+      throw new Error(`Secret were not available for: ${response.InvalidParameters}`)
     }
     return Object.assign({},
-      ...response.Parameters.map(p => ({[p.Name]: p.Value})))
+      ...response.Parameters
+        .map(p => ({[p.Name.replace(this.basePath, '')]: p.Value})))
   }
 }
