@@ -2,15 +2,8 @@ const path = require('path')
 // eslint-disable-next-line import/no-unresolved
 const slsw = require('serverless-webpack')
 
-const addBabelPolyfill = (slsEntries) => {
-  return Object.keys(slsEntries)
-    .reduce((acc, key) => Object.assign(acc, {
-      [key]: ['babel-polyfill', 'source-map-support/register', slsEntries[key]]
-    }), {})
-}
-
 module.exports = {
-  entry: addBabelPolyfill(slsw.lib.entries),
+  entry: slsw.lib.entries,
   target: 'node',
   devtool: 'source-map',
   module: {

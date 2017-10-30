@@ -35,6 +35,9 @@ provider:
             - ${self:service}
             - /*
 
+package:
+  individually: true
+
 custom:
   stage: ${opt:stage, self:provider.stage}
   prod:
