@@ -4,7 +4,7 @@
   "description": "The core alexa skill",
   "scripts": {
     "pretest": "standard",
-    "test": "mocha --compilers js:babel-core/register --require babel-polyfill test/{**,}/*.spec.js --color | bunyan -l fatal",
+    "test": "set -o pipefail && mocha --compilers js:babel-core/register --require babel-polyfill test/{**,}/*.spec.js --color | bunyan -l fatal",
     "testDebug": "mocha --compilers js:babel-core/register --require babel-polyfill test/{**,}/*.spec.js --inspect-brk"
   },
   "author": "ceilfors",
