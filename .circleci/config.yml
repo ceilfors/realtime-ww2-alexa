@@ -28,5 +28,8 @@ jobs:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
         
+      # CircleCI by default is using sh instead of bash
+      - run: npm config set script-shell bash
+
       # run tests!
       - run: npm test
