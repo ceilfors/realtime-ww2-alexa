@@ -11,9 +11,13 @@
   "license": "Apache-2.0",
   "private": true,
   "dependencies": {
-    "ajv": "^5.2.2",
     "bunyan": "^1.8.12",
     "moment": "^2.18.1",
     "twitter": "^1.7.1"
+  },
+  "//": "These optional dependencies are used to get rid of webpack warnings. It forces the upgrade of some of the transitive dependencies we use in this package e.g. ajv, har-validator, twitter, etc. See https://github.com/josdejong/jsoneditor/issues/414",
+  "optionalDependencies": {
+    "ajv": "^5.2.2",
+    "request": "^2.82.0"
   }
 }
