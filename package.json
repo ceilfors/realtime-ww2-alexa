@@ -5,9 +5,10 @@
   "scripts": {
     "pretest": "standard",
     "postinstall": "lerna bootstrap",
+    "deploy": "sls deploy",
     "test": "lerna exec npm test",
     "test:aws": "AWS_REGION=eu-west-1 mocha --compilers js:babel-core/register --require babel-polyfill packages/aws-integration-test/integration/**/*.spec.js packages/aws-integration-test/acceptance/**/*.spec.js",
-    "test:all": "lerna run test && sls deploy && npm run test:aws"
+    "test:all": "npm test && npm run deploy && npm run test:aws"
   },
   "repository": {
     "type": "git",
@@ -29,7 +30,7 @@
     "lerna": "^2.2.0",
     "mocha": "^3.5.3",
     "nock": "^9.0.14",
-    "serverless": "^1.22.0",
+    "serverless": "^1.23.0",
     "serverless-plugin-aws-alerts": "^1.2.4",
     "serverless-webpack": "^3.1.2",
     "sinon": "^3.2.1",
