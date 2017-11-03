@@ -96,6 +96,7 @@ functions:
     environment:
       TWEET_CACHE_BUCKET_NAME: ${self:custom.tweetCacheBucketName}
       TWITTER_REST_BASE_URL: ${self:custom.${self:custom.stage}.twitterRestBaseUrl}
+      TWITTER_USER_ID: 364488011
     alarms:
       - functionErrors
   fake-twitter:

@@ -9,7 +9,7 @@ const secretsStore = new SsmSecretsStore('/realtime-ww2/twitter')
 const twitterRestBaseUrl = process.env.TWITTER_REST_BASE_URL
 
 const params = {
-  screen_name: 'RealTimeWWII',
+  user_id: process.env.TWITTER_USER_ID,
   trim_user: true,
   exclude_replies: true,
   include_rts: false,
