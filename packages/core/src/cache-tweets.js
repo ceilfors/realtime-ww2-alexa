@@ -5,7 +5,7 @@ import bunyan from 'bunyan'
 const log = bunyan.createLogger({name: 'cached-twitter-service'})
 
 const tweetRepository = new S3TweetRepository(process.env.TWEET_CACHE_BUCKET_NAME)
-const secretsStore = new SsmSecretsStore('/realtime-ww2/twitter')
+const secretsStore = new SsmSecretsStore(process.env.TWITTER_SECRETS_PATH)
 const twitterRestBaseUrl = process.env.TWITTER_REST_BASE_URL
 
 const params = {
