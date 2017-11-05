@@ -2,6 +2,9 @@
   "name": "@realtime-ww2-alexa/fake-twitter",
   "version": "0.1.0",
   "description": "Fake twitter",
+  "scripts": {
+    "pretest": "standard"
+  },
   "author": "ceilfors",
   "license": "Apache-2.0",
   "private": true

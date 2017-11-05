@@ -2,6 +2,9 @@
   "name": "@realtime-ww2-alexa/aws-integration-test",
   "version": "0.1.0",
   "description": "AWS Integration test",
+  "scripts": {
+    "pretest": "standard"
+  },
   "author": "ceilfors",
   "license": "Apache-2.0",
   "private": true,

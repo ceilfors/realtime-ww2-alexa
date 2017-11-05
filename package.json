@@ -3,7 +3,6 @@
   "version": "0.1.0",
   "description": "Realtime WW2",
   "scripts": {
-    "pretest": "standard",
     "postinstall": "lerna bootstrap",
     "deploy": "sls deploy",
     "test": "lerna exec npm test",
