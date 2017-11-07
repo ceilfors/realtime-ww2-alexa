@@ -4,7 +4,7 @@ import {expect} from 'chai'
 
 describe('acceptance', function () {
   this.timeout(5000)
-  let realtimeWw2 = new RealtimeWw2AlexaDriver('amzn1.ask.skill.8955b37b-4975-4462-a4d9-4aba0ad647f0')
+  let realtimeWw2 = new RealtimeWw2AlexaDriver()
 
   before(async function () {
     await realtimeWw2.setup()

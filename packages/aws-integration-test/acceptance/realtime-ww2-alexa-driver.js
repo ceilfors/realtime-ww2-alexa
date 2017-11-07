@@ -34,8 +34,8 @@ const populateEventDate = events => {
 }
 
 export default class RealtimeWw2AlexaDriver {
-  constructor (alexaApplicationId) {
-    this.alexa = new Alexa(alexaApplicationId, alexaSkillLambdaName)
+  constructor () {
+    this.alexa = new Alexa(alexaSkillLambdaName)
   }
 
   async setup () {

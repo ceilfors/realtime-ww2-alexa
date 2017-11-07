@@ -53,7 +53,7 @@ const createAlexaPayload = (alexaApplicationId, intentName, slots = {}) => {
 const getContent = (alexaResponse) => alexaResponse.replace(/^<speak>\s*/, '').replace(/\s*<\/speak>$/, '')
 
 export default class Alexa {
-  constructor (alexaApplicationId, functionName) {
+  constructor (functionName) {
     this.alexaSkillLambda = new Lambda(functionName)
   }
 
