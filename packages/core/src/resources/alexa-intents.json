@@ -1,0 +1,43 @@
+{
+  "languageModel": {
+    "intents": [
+      {
+        "name": "AMAZON.CancelIntent",
+        "samples": []
+      },
+      {
+        "name": "AMAZON.HelpIntent",
+        "samples": []
+      },
+      {
+        "name": "AMAZON.StopIntent",
+        "samples": []
+      },
+      {
+        "name": "GetLatestEventIntent",
+        "samples": [
+          "What's happening",
+          "Tell me the latest event",
+          "Get me the latest event",
+          "Tell me the latest news"
+        ],
+        "slots": []
+      },
+      {
+        "name": "GetRecentEventsIntent",
+        "samples": [
+          "Get me the events since the last {Duration} hours",
+          "What's happening since the last {Duration} hours",
+          "Tell me what's happening since the last {Duration} hours"
+        ],
+        "slots": [
+          {
+            "name": "Duration",
+            "type": "AMAZON.NUMBER"
+          }
+        ]
+      }
+    ],
+    "invocationName": "real time world war two"
+  }
+}
