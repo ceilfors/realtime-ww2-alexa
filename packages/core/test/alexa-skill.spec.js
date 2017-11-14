@@ -1,7 +1,7 @@
 /* eslint-env mocha */
 import moment from 'moment'
 import intercept from 'intercept-stdout'
-import alexaSkill from '../src/alexa-skill'
+import * as alexaSkill from '../src/alexa-skill'
 import chai from 'chai'
 import sinon from 'sinon'
 import sinonChai from 'sinon-chai'

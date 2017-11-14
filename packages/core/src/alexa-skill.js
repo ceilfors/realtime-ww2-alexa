@@ -85,12 +85,11 @@ const handlers = wrapErrorHandler({
   }
 })
 
-exports.handler = function (event, context, callback) {
+const handler = function (event, context, callback) {
   const alexa = Alexa.handler(event, context, callback)
   alexa.appId = process.env.ALEXA_SKILL_ID
   alexa.registerHandlers(handlers)
   alexa.execute()
 }
 
-exports.createApp = createApp
-exports.handlers = handlers
+export { createApp, handlers, handler }
